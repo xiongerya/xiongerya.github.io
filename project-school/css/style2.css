@@ -1,0 +1,108 @@
+/* width <= 1024px时的页面布局
+利用 @media 媒体查询改变页面布局*/
+@media only screen and (max-width: 1000px){
+    /* header style css */
+    /* header-logo style css */
+   #logo{
+        background-image: none;
+        height: 100%;
+    }
+    .wrapper > a{
+        display: block;
+        padding: 20px 0 30px;
+        text-align: center;
+        position: static;
+    }
+    .wrapper .wrapper-search{
+        float: none;
+        padding: 10px 0;
+        position: static;
+        /* border: 1px solid blue; */
+    }
+    /* header-menu style css */
+
+    /* header-banner style css */
+    #banner{
+        width: 100%;
+    }
+
+
+
+    /* main style css */
+    /* main-top news & notes style css */
+    #main{
+        width: 95%;
+    }
+    .news,
+    .notes{
+        width: 100%;
+    }
+    .notes .icons li{
+        width: 15%;
+    }
+    /* main-middle life style css */
+    #middle .items{
+        overflow: visible;
+    }
+    #middle .items li{
+        width: 45%;
+    }
+    /* main-bottom people & media & video style css */
+    #bottom{
+        display: block;
+    }
+    .people,
+    .media,
+    .video{
+        width: 100%;
+    }
+    .people .items,
+    .media .items,
+    .video .items{
+        width: 100%;
+    }
+    .people .items li,
+    .media .items li,
+    .video .items li{
+        width: 45%;
+        float: none;
+    }
+
+
+
+    /* footer style css */
+    /* footer-tri style css */
+    footer .tri{
+        display: none;
+    }
+    /* footer-info style css */
+    footer .info{
+        height: 100%;
+        position: static;
+    }
+    .info .wrap{
+        padding: 20px 0;
+        position: relative;
+        transform: translateY(0);
+        text-align: center;
+    }
+    .info-left,
+    .info-right{
+        padding: 10px 0;
+        float: none;
+        font-size: 14px;
+        /* border: 1px solid yellow; */
+    }
+    .info-left > img{
+        display: none;
+    }
+    .info-left > p{
+        padding: 0;
+        /* border: 1px solid blue; */
+    }
+}
+@media only screen and (max-width: 780px){
+    .notes .icons li{
+        width: 25%;
+    }
+}
