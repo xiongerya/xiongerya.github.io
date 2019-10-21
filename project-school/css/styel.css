@@ -4,9 +4,10 @@
     margin: 0;
 } 
 body{
+    min-width: 500px;
     background-color: #f1efe3;
 }
-/* 消除浮动使父元素高度塌陷的副作用 */
+/* 消除浮动的副作用：父元素高度塌陷 */
 .clearfix::after{
     content: "";
     display: block;
