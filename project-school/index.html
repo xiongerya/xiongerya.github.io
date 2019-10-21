@@ -10,6 +10,7 @@
         <script type="text/javascript" src="js/animated.js"></script>
         <script type="text/javascript">
         // 当页面width发生改变，重新加载页面
+        // 效果不太好，需要继续改善该动画
             var size = window.innerWidth;
             function resizeFresh(){
                 if(size !== window.innerWidth)
@@ -19,6 +20,7 @@
     </head>
     <body onresize="resizeFresh()">
         <header>
+            <!-- logo & search 部分开始 -->
             <div id="logo">
                 <div class="wrapper">
                     <a href="javascript:;"><img src="images/logo.png" /></a>
@@ -29,7 +31,15 @@
                     </div> 
                 </div>                 
             </div>
+            <!-- menu & sub-menu 部分开始 -->
+            <!-- 此按钮在自适应布局时，menu位于左侧隐藏时，点击按钮，menu出现 -->
+            <ul class="btn">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
             <nav>
+                <p>导航</p>
                 <ul id="menu" class="clearfix">
                     <li><a href="javascript:;">首&nbsp;页</a></li>
                     <li class="sub">
@@ -97,7 +107,8 @@
                     </li>
                 </ul> 
                 <div class="bg"></div>
-            </nav>       
+            </nav>
+            <!--  banner 轮播图部分开始-->
             <div id="banner">
                 <ul class="container clearfix">
                     <li><img src="images/banner/1.jpg" /></li>
@@ -159,7 +170,7 @@
                         </li>
                     </ul>
                 </section>
-                <section class="notes">
+                <section class="notices">
                     <h2 class="title clearfix">通知公告/学校讲座<span class="more"><a href="javascript:;">更多&gt;&gt;</a></span></h2>
                     <ul class="list">
                         <li>
