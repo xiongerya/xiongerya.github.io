@@ -7,7 +7,7 @@ window.addEventListener("load", function(){
 
 
 
-    // menu点击下拉显示sub-menu动画效果
+    // menu点击li.sub显示sub-menu动画效果
     let subs = document.querySelectorAll("#menu > li.sub"),
         bg = document.querySelector(".bg");
 
@@ -23,9 +23,27 @@ window.addEventListener("load", function(){
             flag = !flag;  
         })
     }
+    // 自适应布局下点击ul.btn显示左侧隐藏菜单
+    // 点击li.sub显示sub-menu动画效果
+    let body = document.body,
+        nav = document.querySelector("nav"),
+        showBtn = document.querySelector("header > ul.btn");
+    
+    showBtn.flag = true;
+
+    showBtn.addEventListener("click", function(){
+        if(this.flag){
+            body.style.marginLeft = "200px";
+            nav.style.width = "200px";
+        }else{
+            body.style.marginLeft = "0";
+            nav.style.width = "0";
+        }
+        this.flag = !this.flag;
+    })
 
 
-
+    
     // banner 焦点图轮播动画效果
     let banner = document.querySelector("#banner"),
         prev = banner.querySelector(".prev"),
@@ -38,7 +56,7 @@ window.addEventListener("load", function(){
         animated = false,
         timer = null, 
         num = 0;
-
+    
     // 为每一张轮播图添加一个index属性值
     // 利用index属性值进行越界判断和位移计算
     // 用于轮播图下有btn进行点击跳转的时候
@@ -122,6 +140,7 @@ window.addEventListener("load", function(){
     // 经过平滑滚动回到顶部的过渡效果
     top.addEventListener("click", function(){
         window.timer = setInterval(function(){
+            // 缓动动画效果
             let step = Math.floor((0 - window.pageYOffset) / 10);
             if(window.pageYOffset === 0){
                 clearInterval(window.timer);
