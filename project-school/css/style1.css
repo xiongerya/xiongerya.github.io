@@ -1,6 +1,24 @@
 /* width > 1024px时的页面布局 */
 /* header style sheet css*/
 /* header logo && search style */
+header{
+    position: relative;
+}
+header > ul.btn{
+    list-style: none;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    cursor: pointer;
+    display: none;
+}
+ul.btn li{
+    width: 25px;
+    height: 2px;
+    border-radius: 10px;
+    margin: 4px;
+    background-color: white;
+}
 #logo{
     width: 100%;
     height: 125px;
@@ -8,6 +26,7 @@
 }
 #logo .wrapper{
     width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
 }
@@ -42,8 +61,12 @@ nav{
     width: 100%;
     background-color: #910f0f;
 }
+nav > p{
+    display: none;
+}
 #menu{
     width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
     list-style: none;
     display: flex;
@@ -52,12 +75,12 @@ nav{
 }
 #menu > li{
     flex: 1 1 auto;
-    height: 52px;
+    /* height: 52px; */
     text-align: center;
     position: relative;
 }
 #menu > li > a{
-    display: inline-block;
+    display: block;
     color: #d3c8d6;
     font-size: 17px;
     line-height: 52px;
@@ -71,15 +94,15 @@ nav{
     height: 10px;
     background: url(../images/navj.png) no-repeat right center;
 }
-#menu > li:hover > a{
+#menu > li > a:hover{
     color: white;
 }
-
+/* sub-menu style css */
 .sub-menu{
     list-style: none;
     position: absolute;
     left: 0;
-    top: 100%;
+    top: 125%;
     /* display: none; */
 }
 .sub-menu li{
@@ -90,7 +113,12 @@ nav{
     color: #d3c8d6;
     font-size: 14px;
     line-height: 30px;
+    text-indent: 15px;
     text-decoration: none;
+    white-space: nowrap;
+}
+.sub-menu li a:hover{
+    color: orange;
 }
 .bg{
     display: block;
@@ -106,6 +134,7 @@ nav{
 /* header banner style */
 #banner{
     width: 90%;
+    max-width: 1400px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -116,12 +145,13 @@ nav{
     /* position: relative;
     left: 0; */
     /* display: flex; 
-    flex-flow: row nowrap; */
+    flex-flow: row nowrap;
+    justify-content: flex-start; */
 }
 .container li{
     width: 10%;
     float: left;
-    /* flex: 1 1 auto; */
+    /* flex: 1 1 content; */
 }
 .container li img{
     width: 100%;
@@ -152,46 +182,47 @@ nav{
 /* main style sheet */
 #main{
     width: 90%;
+    max-width: 1400px;
     margin: 10px auto;
 }
 
 
 
 /* main-top notes section icons */
-.notes .icons li:nth-child(1) a{
+.notices .icons li:nth-child(1) a{
     background-position: 0 0;
 }
-.notes .icons li:nth-child(2) a{
+.notices .icons li:nth-child(2) a{
     background-position: -82px 0;
 }
-.notes .icons li:nth-child(3) a{
+.notices .icons li:nth-child(3) a{
     background-position: -166px 0;
 }
-.notes .icons li:nth-child(4) a{
+.notices .icons li:nth-child(4) a{
     background-position: -248px 0;
 }
-.notes .icons li:nth-child(5) a{
+.notices .icons li:nth-child(5) a{
     background-position: -327px 0;
 }
-.notes .icons li:nth-child(6) a{
+.notices .icons li:nth-child(6) a{
     background-position: -410px 0;
 }
-.notes .notes .icons li:nth-child(7) a{
+.notices .notices .icons li:nth-child(7) a{
     background-position: -493px 0;
 }
-.notes .icons li:nth-child(8) a{
+.notices .icons li:nth-child(8) a{
     background-position: -582px 0;
 }
-.notes .icons li:nth-child(9) a{
+.notices .icons li:nth-child(9) a{
     background-position: -668px 0;
 }
-.notes .icons li:nth-child(10) a{
+.notices .icons li:nth-child(10) a{
     background-position: -746px 0;
 }
-.notes .icons li:nth-child(11) a{
+.notices .icons li:nth-child(11) a{
     background-position: -831px 0;
 }
-.notes .icons li:nth-child(12) a{
+.notices .icons li:nth-child(12) a{
     background-position: -910px 0;
 }
 
@@ -202,8 +233,8 @@ nav{
     width: 65%;
     float: left;
 }
-.notes{
-    width: 28%;
+.notices{
+    width: 30%;
     float: right;
 }
 
@@ -284,6 +315,7 @@ footer .tri a{
 /* footer information style css */
 footer .info{
     width: 90%;
+    max-width: 1400px;
     height: 155px;
     margin: 0 auto;
     position: relative;
@@ -316,6 +348,16 @@ footer .info{
     width: 10%;
     position: relative;
 }
+.info-right .icons a{
+    width: 55px;
+    height: 15px;
+    padding-top: 40px;
+    background: url(../images/icon-share.png) no-repeat;
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+    opacity: 0.6;
+}
 .info-right .icons li img{
     width: 100px;
     height: 100px;
@@ -324,17 +366,6 @@ footer .info{
     top: -115px;
     transform: translateX(-50%);
     display: none;
-}
-.info-right .icons a{
-    width: 55px;
-    height: 15px;
-    padding-top: 40px;
-    margin: 0;
-    background: url(../images/icon-share.png) no-repeat;
-    color: white;
-    font-size: 12px;
-    text-decoration: none;
-    opacity: 0.6;
 }
 .info-right .icons li:hover img{
     display: block;
