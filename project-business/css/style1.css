@@ -1,0 +1,153 @@
+/* header style */
+header{
+    width: 100%;
+}
+/* header ad style */
+#ad{
+    width: 100%;
+    height: 80px;
+    background-color: #2616f5;
+}
+#ad .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+#ad .wrap > button.close{
+    width: 16px;
+    height: 16px;
+    border: none;
+    /* background-color: transparent; */
+    background-color: yellow;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+
+
+/* header log style */
+#log{
+    width: 100%;
+    height: 30px;
+    background-color: #e3e4e6;
+}
+#log > .wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+#log .wrap > .location{
+    float: left;
+    position: relative;
+}
+.location > a{
+    display: block;
+    /* width: 50px; */
+    height: 30px;
+    padding: 0 5px;
+    color: #999;
+    font-size: 12px;
+    line-height: 30px;
+    border: 1px solid blue;
+}
+.location > a i{
+    display: inline-block;
+    width: 30px;
+    /* height: 20px;
+    margin: 5px 0; */
+    background-color: tomato;
+}
+.location > .sub{
+    width: 200px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    border: 1px solid red;
+}
+.location  .place{
+    display: flex;
+    flex-flow: row wrap;
+}
+.place > li{
+    width: 25%;
+    margin: 3px 0;
+}
+.place > li a{
+    display: inline-block;
+    padding: 0 3px;
+}
+
+
+
+/* header menu style */
+#log .wrap > .menu{
+    float: right;
+}
+.menu > p,
+.menu > ul
+{
+    display: inline-block;
+}
+.menu > ul > li{
+    height: 10px;
+    margin: 10px 0;
+    border-right: 1px solid #999;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+.menu > ul > li > a{
+    display: block;
+    padding: 0 3px;
+    margin: -10px 10px 0;
+    line-height: 30px;
+    border: 1px solid green;
+}
+.menu > ul > li > a:hover{
+    background-color: white;
+}
+
+
+
+/* menu sub-menu */
+.sub-menu{
+    position: relative;
+}
+.sub-menu > ul{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+
+
+ul.wrap{
+    display: block;
+    border: 1px solid red;
+}
+ul.wrap > li{
+    display: block;
+}
+ul.wrap > li a.title{
+    display: inline-block;
+    padding: 0 8px;
+    color: black;
+    font-weight: bold;
+}
+ul.items{
+    width: 180px;
+    margin: 3px 0;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid yellow;
+}
+ul.items > li{
+    width: 50%;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+
+
+/*  */
