@@ -8,11 +8,14 @@
     display: block;
     clear: both;
 }
-ul, li{
+ul, ol, dl, dt, dd, li{
     list-style: none;
 }
 a{
-    color: black;
+    color: #333;
     font-size: 12px;
     text-decoration: none;
+}
+a:hover{
+    color: red;
 }
