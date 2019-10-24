@@ -2,10 +2,13 @@
     padding: 0;
     margin: 0;
 }
-.clearfix{
+.clearfix::after{
     content: "";
     display: block;
     clear: both;
+}
+body{
+    background-color: orange;
 }
 
 
@@ -54,11 +57,9 @@ nav{
 /* main style sheet css */
 #main{
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
 }
-#main > div{
-    float: left;
-}
+
 
 
 
