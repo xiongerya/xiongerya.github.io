@@ -41,21 +41,30 @@ header{
 #log .wrap > .location{
     float: left;
     position: relative;
+    height: 30px;
 }
 #log .location > a{
-    display: block;
-    height: 30px;
+    display: inline-block;
     padding: 0 5px;
+    border: 1px solid transparent;
     color: #999;
     font-size: 12px;
     line-height: 30px;
+    position: relative;
+    z-index: 2;
+}
+#log .location:hover > a{
+    border-color: #999;
+    border-bottom: none;
+    background-color: white;
 }
 #log .location > a i{
     display: inline-block;
     width: 30px;
-    /* height: 20px;
-    margin: 5px 0; */
-    background-color: tomato;
+    /* 这里使用图像字符/元字符 */
+    /* height: 30px;
+    border: 1px solid red; */
+    /* background-color: orangered; */
 }
 #log .location > .sub{
     width: 200px;
@@ -63,11 +72,21 @@ header{
     position: absolute;
     left: 0;
     top: 100%;
-    border: 1px solid red;
+    border: 1px solid #999;
+    background-color: white;;
     display: none;
+    z-index: 1;
 }
-#log .location  .place{
+#log .location:hover > .sub{
+    display: block;
+}
+#log .location > .sub p{
+    padding: 10px 0;
+    font-size: 12px;
+}
+#log .location .place{
     display: flex;
+    padding: 5px 0;
     flex-flow: row wrap;
 }
 #log .place > li{
@@ -93,8 +112,11 @@ header{
 #log .menu > ul > li{
     height: 10px;
     margin: 10px 0;
-    border-right: 1px solid #999;
+    border-left: 1px solid #999;
     display: inline-block;
+}
+#log .menu > ul > li:first-child{
+    border-color: transparent;
 }
 #log .menu > ul > li > a{
     display: block;
@@ -102,6 +124,8 @@ header{
     margin: -10px 10px 0;
     line-height: 30px;
     border: 1px solid transparent;
+    position: relative;
+    z-index: 2;
 }
 #log .menu ul li:hover > a{
     color: red;
@@ -130,6 +154,7 @@ header{
     background-color: white;
     border: 1px solid #999;
     display: none;
+    z-index: 1;
     /* z-index: -1; */
 }
 #log .sub-menu:hover .wrap{
@@ -203,7 +228,7 @@ header{
     width: 1200px;
     height: 140px;
     margin: 0 auto;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     /* display: none; */
 }
 #search > a:nth-of-type(1){
@@ -276,4 +301,183 @@ header{
 }
 #search > .wrap .menu li a:hover{
     color: red;
+}
+
+
+
+/* header nav menu style */
+/* header nav menu 一级菜单 */
+nav{
+    width: 1200px;
+    margin: 3px auto;
+    border: 1px solid black;
+}
+#menu, 
+#banner,
+#banner-side{
+    float: left;
+    margin: 5px;
+}
+#menu > ul{
+    position: relative;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 6px 0;
+    background-color: #fefefe;
+    border: 1px solid #aaa;
+}
+#menu > ul > li{
+    height: 26px;
+}
+#menu > ul > li:hover{
+    background-color: #ccc;
+}
+#menu > ul > li > a{
+    display: block;
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 26px;
+}
+/* header nav menu 右侧隐藏菜单 */
+#menu > ul > li .container{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    box-sizing: border-box;
+    width: 1000px;
+    height: 480px;
+    display: none;
+    border: 1px solid #aaa;
+    background-color: white;
+    z-index: 1;
+}
+#menu > ul > li:hover .container{
+    display: block;
+}
+#menu .container .left{
+    float: left;
+    width: 75%;
+    /* width: 650px; */
+    height: 100%;
+}
+#menu .container .right{
+    float: right;
+    width: 25%;
+    /* width: 300px; */
+    height: 100%;
+    /* border: 1px solid orange; */
+    background: antiquewhite
+}
+/* header nav menu 列表 & 二/三级菜单 */
+#menu .list,
+#menu .sub-menu{
+    box-sizing: border-box;
+    padding: 10px 0 0 10px;
+}
+#menu .list li{
+    display: inline-block;
+    margin-right: 10px;
+}
+#menu .list li a{
+    display: inline-block;
+    padding: 3px 15px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+}
+#menu .list li a:hover{
+    background-color: #900;
+}
+/* 二级菜单 */
+#menu  .sub-menu > li{
+    display: block;
+    padding: 5px 0;
+}
+#menu .sub-menu > li::after{
+    display: block;
+    content: "";
+    clear:both;
+}
+#menu .sub-menu > li > a{
+    /* display: inline-block; */
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    width: 80px;
+    padding: 5px 10px 0 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+#menu .sub-menu > li > a:hover{
+    color: red;
+}
+/* 三级菜单 */
+#menu .sub-menu > li ul{
+    /* display: inline-block; */
+    float: left;
+    width: 85%;
+}
+#menu .sub-menu > li li{
+    display: inline-block;
+    margin: 0 5px;
+}
+#menu .sub-menu > li a{
+    font-size: 13px;
+}
+/* 右侧品牌logo排列 */
+#menu .brand{
+    padding: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#menu .brand li{
+    width: 45%;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #efefef;
+}
+#menu .brand li img{
+    width: 100%;
+}
+#menu .right > a img{
+    display: block;
+    box-sizing: border-box;
+    width: 95%;
+    height: 20%;
+    margin: 10px auto;
+}
+
+
+
+/* header nav banner style */
+#banner{
+    width: 590px;
+    /* height: 480px; */
+    border: 1px solid transparent;
+    overflow: hidden;
+    position: relative;
+}
+#banner > ul{
+    width: 1000%;
+}
+#banner > ul li{
+    width: 10%;
+    float: left;
+}
+#banner > ul img{
+    width: 100%;
+    height: 480px;
+}
+
+
+
+#banner-side{
+    width: 200px;
+    height: 480px;
+    background-color: coral;
+    position: relative;
 }
