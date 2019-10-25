@@ -472,6 +472,30 @@ nav{
     width: 100%;
     height: 480px;
 }
+#banner > a{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    /* box-sizing: border-box; */
+    width: 30px;
+    padding: 5px;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    background-color: white;
+    opacity: 0.7;
+}
+#banner > a.prev{
+    left: 0;
+    padding-right: 10px;
+    border-radius: 0 50% 50% 0;
+}
+#banner > a.next{
+    right: 0;
+    padding-left: 10px;
+    border-radius: 50% 0 0 50%;
+}
 
 
 
