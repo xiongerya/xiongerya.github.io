@@ -509,6 +509,7 @@ nav{
 
 
 
+/* header nav banner-side styles */
 #banner-side{
     /* width: 200px; */
     /* height: 480px; */
@@ -526,9 +527,6 @@ nav{
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-}
-#banner-side .sub li{
-    /* width: 100%; */
 }
 #banner-side .sub img{
     width: 100%;
@@ -567,4 +565,200 @@ nav{
 
 
 
-/* header banner logIn style */
+/* header nav logIn style */
+#logIn{
+    border: 1px solid red;
+}
+#logIn .head{
+    padding: 10px 0;
+    text-align: center;
+}
+#logIn .container{
+    width: 80%;
+    margin: 0 auto;
+}
+#logIn .container .logo{
+    float: left;
+}
+#logIn .container .logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#logIn .container p,
+#logIn .container ul{
+    float: left;
+    padding-left: 15px;
+}
+#logIn .container li,
+#logIn .head ul li{
+    display: inline-block;
+}
+#logIn .head > ul li{
+    margin: 8px;
+    margin-bottom: 0;
+}
+#logIn .head > ul a{
+    display: block;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+#logIn .head > ul .new a{
+    background-color: red;
+    color: white;
+}
+#logIn .head > ul .plus a{
+    background-color: gray;
+    color: #e1dc9c;
+}
+#logIn .head > ul .new a:hover,
+#logIn .head > ul .plus a:hover{
+    background-color: #a00;
+}
+/* header nav logIn news style */
+#logIn .news .title{
+    padding: 3px 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#logIn .news .title .more{
+    float: right;
+    padding: 0 10px;
+    color: gray;
+    font-size: 12px;
+    font-weight: normal;
+}
+#logIn .news .title .more:hover{
+    color: red;
+}
+#logIn .news .items li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#logIn .news .items .hot{
+    display: inline-block;
+    margin: 5px;
+    color: red;
+    background-color: lightyellow;
+}
+/* header nav logIn icons style */
+#logIn .icons{
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 0;
+    overflow: hidden;
+}
+#logIn .icons .list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#logIn .icons .list li{
+    width: 30%;
+    text-align: center;
+}
+#logIn .icons .list a{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding-top: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    background-clip: padding-box;
+}
+#logIn .icons .list li:nth-child(1) a{
+    background-image: url(../images/icons/huafei.png);
+}
+#logIn .icons .list li:nth-child(1) a:hover{
+    background-image: url(../images/icons/huafei-cover.png);
+}
+#logIn .icons .list li:nth-child(2) a{
+    background-image: url(../images/icons/plane.png);
+}
+#logIn .icons .list li:nth-child(2) a:hover{
+    background-image: url(../images/icons/plane-cover.png);
+}
+#logIn .icons .list li:nth-child(3) a{
+    background-image: url(../images/icons/hotel.png);
+}
+#logIn .icons .list li:nth-child(3) a:hover{
+    background-image: url(../images/icons/hotel-cover.png);
+}
+#logIn .icons .list li:nth-child(4) a{
+    background-image: url(../images/icons/game.png);
+}
+#logIn .icons .list li:nth-child(4) a:hover{
+    background-image: url(../images/icons/game-cover.png);
+}
+#logIn .icons .list li:nth-child(5) a{
+    background-image: url(../images/icons/gas.png);
+}
+#logIn .icons .list li:nth-child(5) a:hover{
+    background-image: url(../images/icons/gas-cover.png);
+}
+#logIn .icons .list li:nth-child(6) a{
+    background-image: url(../images/icons/ticket.png);
+}
+#logIn .icons .list li:nth-child(6) a:hover{
+    background-image: url(../images/icons/ticket-cover.png);
+}
+#logIn .icons .list li:nth-child(7) a{
+    background-image: url(../images/icons/people.png);
+}
+#logIn .icons .list li:nth-child(7) a:hover{
+    background-image: url(../images/icons/people-cover.png);
+}
+#logIn .icons .list li:nth-child(8) a{
+    background-image: url(../images/icons/money.png);
+}
+#logIn .icons .list li:nth-child(8) a:hover{
+    background-image: url(../images/icons/money-cover.png);
+}
+#logIn .icons .list li:nth-child(9) a{
+    background-image: url(../images/icons/baitiao.png);
+}
+#logIn .icons .list li:nth-child(9) a:hover{
+    background-image: url(../images/icons/baitiao-cover.png);
+}
+#logIn .icons .list li:nth-child(10) a{
+    background-image: url(../images/icons/movie.png);
+}
+#logIn .icons .list li:nth-child(10) a:hover{
+    background-image: url(../images/icons/movie-cover.png);
+}
+#logIn .icons .list li:nth-child(11) a{
+    background-image: url(../images/icons/company.png);
+}
+#logIn .icons .list li:nth-child(11) a:hover{
+    background-image: url(../images/icons/company-cover.png);
+}
+#logIn .icons .list li:nth-child(12) a{
+    background-image: url(../images/icons/gift.png);
+}
+#logIn .icons .list li:nth-child(12) a:hover{
+    background-image: url(../images/icons/gift-cover.png);
+}
+#logIn .icons .wrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: pink;
+    /* opacity: 0.5; */
+}
+#logIn .icons .menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#logIn .icons .menu a{
+    display: inline-block;
+    padding: 5px 0;
+    border-bottom: 2px solid red;
+}
+
+
+/* header nav logIn tab style */
