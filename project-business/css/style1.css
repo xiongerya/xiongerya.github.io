@@ -181,7 +181,6 @@ header{
 #log .sub-menu .items > li{
     width: 50%;
     padding: 2px 5px;
-    box-sizing: border-box;
 }
 
 
@@ -215,7 +214,6 @@ header{
 #log .navigation .items li{
     width: 33%;
     padding: 3px 5px;
-    box-sizing: border-box;
 }
 #log .navigation .topic li{
     width: 25%;
@@ -225,23 +223,26 @@ header{
 
 /* header search style */
 #search{
+    /* border: 1px solid blue; */
+    /* display: none; */
+    background-color: white;
+}
+#search .wrap{
     width: 1200px;
     height: 140px;
     margin: 0 auto;
-    /* border: 1px solid blue; */
-    /* display: none; */
 }
-#search > a:nth-of-type(1){
+#search .wrap > a:nth-of-type(1){
     float: left;
 }
-#search > a:nth-of-type(2){
+#search .wrap > a:nth-of-type(2){
     float: right;
 }
-#search > a img{
+#search .wrap > a img{
     width: 210px;
     height: 140px;
 }
-#search > .wrap{
+#search .wrap > .container{
     float: left;
     padding: 40px 10px 0;
 }
@@ -309,7 +310,7 @@ header{
 /* header nav menu 一级菜单 */
 nav{
     width: 1200px;
-    margin: 3px auto;
+    margin: 10px auto 20px;
     /* border: 1px solid black; */
     display: flex;
     flex-flow: row nowrap;
@@ -328,7 +329,6 @@ nav{
 }
 #menu > ul{
     position: relative;
-    box-sizing: border-box;
     /* width: 200px; */
     padding: 6px 0;
     background-color: #fefefe;
@@ -342,7 +342,6 @@ nav{
 }
 #menu > ul > li > a{
     display: block;
-    box-sizing: border-box;
     padding-left: 15px;
     font-size: 14px;
     line-height: 26px;
@@ -352,7 +351,6 @@ nav{
     position: absolute;
     left: 100%;
     top: -1px;
-    box-sizing: border-box;
     width: 1020px;
     height: 480px;
     display: none;
@@ -375,12 +373,11 @@ nav{
     /* width: 300px; */
     height: 100%;
     /* border: 1px solid orange; */
-    background: antiquewhite
+    background: pink;
 }
 /* header nav menu 列表 & 二/三级菜单 */
 #menu .list,
 #menu .sub-menu{
-    box-sizing: border-box;
     padding: 10px 0 0 10px;
 }
 #menu .list li{
@@ -411,7 +408,6 @@ nav{
     /* display: inline-block; */
     float: left;
     display: block;
-    box-sizing: border-box;
     width: 80px;
     padding: 5px 10px 0 0;
     color: #000;
@@ -453,7 +449,6 @@ nav{
 }
 #menu .right > a img{
     display: block;
-    box-sizing: border-box;
     width: 95%;
     height: 20%;
     margin: 10px auto;
@@ -567,10 +562,25 @@ nav{
 
 /* header nav logIn style */
 #logIn{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    background-color: white;
 }
 #logIn .head{
+    height: 95px;
     padding: 10px 0;
+}
+#logIn .news{
+    height: 145px;
+    padding: 10px 0;
+}
+#logIn .icons{
+    height: 240px;
+}
+
+
+
+/* header nav logIn head style */
+#logIn .head{
     text-align: center;
 }
 #logIn .container{
@@ -581,8 +591,8 @@ nav{
     float: left;
 }
 #logIn .container .logo img{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 #logIn .container p,
@@ -615,6 +625,9 @@ nav{
 #logIn .head > ul .plus a:hover{
     background-color: #a00;
 }
+
+
+
 /* header nav logIn news style */
 #logIn .news .title{
     padding: 3px 5px;
@@ -642,12 +655,12 @@ nav{
     color: red;
     background-color: lightyellow;
 }
+
+
+
 /* header nav logIn icons style */
 #logIn .icons{
     position: relative;
-    box-sizing: border-box;
-    padding: 10px 0;
-    overflow: hidden;
 }
 #logIn .icons .list{
     display: flex;
@@ -660,7 +673,6 @@ nav{
 }
 #logIn .icons .list a{
     display: inline-block;
-    box-sizing: border-box;
     width: 100%;
     height: 50px;
     padding-top: 40px;
@@ -746,13 +758,23 @@ nav{
     left: 0;
     top: 0;
     width: 100%;
-    background-color: pink;
+    height: 240px;
+    background-color: white;
     /* opacity: 0.5; */
+    /* display: none; */
 }
-#logIn .icons .menu{
+#logIn .icons .menu,
+#logIn .icons .title{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+}
+#logIn .icons .title{
+    height: 25px;
+    line-height: 25px;
 }
 #logIn .icons .menu a{
     display: inline-block;
@@ -761,4 +783,112 @@ nav{
 }
 
 
+
+
+/* header nav logIn icons tab */
+#logIn .icons .tab{
+    position: relative;
+    /* height: 210px;
+    background-color: white; */
+}
+#logIn .icons .tab > li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 210px;
+    background-color: white;
+}
+#logIn .icons .tab .detail{
+    /* height: 180px; */
+    font-size: 12px;
+    position: relative;
+    /* background-color: white; */
+}
+#logIn .icons .tab .sub-tab{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 180px;
+    background-color: white;
+    /* display: none; */
+}
+#logIn .icons .detail form > *{
+    width: 95%;
+    margin: 5px auto;
+}
+#logIn .icons .detail form input,
+#logIn .icons .detail form select{
+    width: 125px;
+    outline: none;
+}
+#logIn .icons .detail form input[type="submit"]{
+    width: 70px;
+    padding: 2px 0;
+    margin-left: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    outline: none;
+}
+#logIn .icons .sub-huafei .tab-2 select{
+    width: 60px;
+}
+#logIn .icons .sub-plane form ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+#logIn .icons .sub-plane form li > *{
+    width: 20px;
+}
+#logIn .icons .sub-plane .tab-3,
+#logIn .icons .sub-hotel .tab-2{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+#logIn .icons .sub-plane .tab-3 img,
+#logIn .icons .sub-hotel .tab-2 img{
+    display: block;
+    width: 40%;
+    padding: 10px 0 30px;
+}
+#logIn .icons .sub-plane .tab-3 img:last-child{
+    float: right;
+}
+#logIn .icons .sub-hotel input.place{
+    display: block;
+    width: 90%;
+}
+
+
+
 /* header nav logIn tab style */
+#logIn .icons .close{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+#logIn .icons .close a{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: gray;
+    font-size: 18px;
+    line-height: 20px;
+}
+#logIn .icons .close a:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+/* main miaosha style */
