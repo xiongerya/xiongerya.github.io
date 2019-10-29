@@ -9,6 +9,7 @@
     </head>
     <body>
         <aside>
+            <div></div>
         </aside>
         <header>
             <div id="ad">
@@ -236,35 +237,37 @@
                 </div>      
             </div>
             <div id="search">
-                <a href="javascript:;"><img src="images/logo-top.gif" /></a>
                 <div class="wrap">
-                   <form class="search-form">
-                        <input type="search" placeholder="查询商品"/>
-                        <input type="submit" value=" " />
-                        <button type="button">我的购物车</button>
-                    </form>
-                    <ul class="list">
-                        <li><a href="javascript:;">抢手机神券</a></li>
-                        <li><a href="javascript:;">京东超市</a></li>
-                        <li><a href="javascript:;">京东超市</a></li>
-                        <li><a href="javascript:;">京东超市</a></li>
-                        <li><a href="javascript:;">京东超市</a></li>
-                        <li><a href="javascript:;">京东超市</a></li>
-                    </ul> 
-                    <ul class="menu">
-                        <li><a href="javascript:;">秒杀</a></li>
-                        <li><a href="javascript:;">优惠券</a></li>
-                        <li><a href="javascript:;">PLUS会员</a></li>
-                        <li><a href="javascript:;">品牌闪购</a></li>
-                        <li><a href="javascript:;">拍卖</a></li>
-                        <li><a href="javascript:;">京东时尚</a></li>
-                        <li><a href="javascript:;">京东超市</a></li>
-                        <li><a href="javascript:;">京东生鲜</a></li>
-                        <li><a href="javascript:;">海囤全球</a></li>
-                        <li><a href="javascript:;">京东金融</a></li>
-                    </ul>
+                    <a href="javascript:;"><img src="images/logo-top.gif" /></a>
+                    <div class="container">
+                    <form class="search-form">
+                            <input type="search" placeholder="查询商品"/>
+                            <input type="submit" value=" " />
+                            <button type="button">我的购物车</button>
+                        </form>
+                        <ul class="list">
+                            <li><a href="javascript:;">抢手机神券</a></li>
+                            <li><a href="javascript:;">京东超市</a></li>
+                            <li><a href="javascript:;">京东超市</a></li>
+                            <li><a href="javascript:;">京东超市</a></li>
+                            <li><a href="javascript:;">京东超市</a></li>
+                            <li><a href="javascript:;">京东超市</a></li>
+                        </ul> 
+                        <ul class="menu">
+                            <li><a href="javascript:;">秒杀</a></li>
+                            <li><a href="javascript:;">优惠券</a></li>
+                            <li><a href="javascript:;">PLUS会员</a></li>
+                            <li><a href="javascript:;">品牌闪购</a></li>
+                            <li><a href="javascript:;">拍卖</a></li>
+                            <li><a href="javascript:;">京东时尚</a></li>
+                            <li><a href="javascript:;">京东超市</a></li>
+                            <li><a href="javascript:;">京东生鲜</a></li>
+                            <li><a href="javascript:;">海囤全球</a></li>
+                            <li><a href="javascript:;">京东金融</a></li>
+                        </ul>
+                    </div>
+                    <a href="javascript:;"><img src="images/logo-top.gif" /></a>
                 </div>
-                <a href="javascript:;"><img src="images/logo-top.gif" /></a>
             </div>
             <nav>      
                 <div id="menu">
@@ -2542,62 +2545,69 @@
                                         <li><a href="javascript:;">套餐变更</a></li>
                                     </ul>
                                     <ul class="detail">
-                                        <li class="tab-1">
+                                        <li class="tab-1 sub-tab">
                                             <form>
-                                                号码：<input type="tel" placeholder="移动/联通/电信"/>
-                                                面值：<input type="text" value="100元" />
-                                                <select name="num">
-                                                    <option>10元</option>
-                                                    <option>20元</option>
-                                                    <option>30元</option>
-                                                    <option>50元</option>
-                                                    <option>100元</option>
-                                                    <option>200元</option>
-                                                    <option>300元</option>
-                                                    <option>500元</option>
-                                                </select>
+                                                <div>号码：
+                                                    <input type="tel" placeholder="移动/联通/电信"/></div>
+                                                <div>面值：
+                                                    <select name="num">
+                                                        <option>10元</option>
+                                                        <option>20元</option>
+                                                        <option>30元</option>
+                                                        <option>50元</option>
+                                                        <option selected>100元</option>
+                                                        <option>200元</option>
+                                                        <option>300元</option>
+                                                        <option>500元</option>
+                                                    </select>
+                                                </div>
                                                 <p>￥98.0-￥100.0</p>
-                                                <input type="submit" placeholder="快速充值" />
+                                                <input type="submit" value="快速充值" />
                                                 <p><a href="javascript:;">抢90减40元话费券</a></p>
                                             </form>
                                         </li>
-                                        <li class="tab-2">
+                                        <li class="tab-2 sub-tab">
                                             <form>
-                                                号码：<input type="tel" placeholder="移动/联通/电信"/>
-                                                流量：<input type="text" value="全国" />
-                                                <select name="loaction"">
-                                                    <option>全国</option>
-                                                    <option>全省</option>
-                                                </select>
-                                                <input type="text" value="50M" />
-                                                <select name="num">
-                                                    <option>50M</option>
-                                                    <option>100M</option>
-                                                    <option>200M</option>
-                                                    <option>300M</option>
-                                                    <option>500M</option>
-                                                </select>
+                                                <div>号码：
+                                                    <input type="tel" placeholder="移动/联通/电信"/></div>
+                                                <div>流量：
+                                                    <select name="loaction"">
+                                                        <option selected>全国</option>
+                                                        <option>全省</option>
+                                                    </select>
+                                                    <select name="num">
+                                                        <option>50M</option>
+                                                        <option selected>100M</option>
+                                                        <option>200M</option>
+                                                        <option>300M</option>
+                                                        <option>500M</option>
+                                                    </select>
+                                                </div>
+
                                                 <p>￥7.5-￥10.0</p>
                                                 <input type="submit"" value="快速充值" />
                                                 <p><a href="javascript:;">App Store充值卡</a></p>
                                             </form>
                                         </li>
-                                        <li class="tab-3">
+                                        <li class="tab-3 sub-tab">
                                             <form>
-                                                号码：<input type="tel" placeholder="支持部分地区移动"/>
-                                                月费：<input type="text" value="138元" />
-                                                <select name="num">
-                                                    <option>38元</option>
-                                                    <option>48元</option>
-                                                    <option>58元</option>
-                                                    <option>88元</option>
-                                                    <option>138元</option>
-                                                    <option>158元</option>
-                                                    <option>238元</option>
-                                                    <option>268元</option>
-                                                    <option>338元</option>
-                                                    <option>588元</option>
-                                                </select>
+                                                <div>号码：
+                                                    <input type="tel" placeholder="支持部分地区移动"/>
+                                                </div>
+                                                <div> 月费：
+                                                    <select name="num">
+                                                        <option>38元</option>
+                                                        <option>48元</option>
+                                                        <option>58元</option>
+                                                        <option>88元</option>
+                                                        <option>138元</option>
+                                                        <option>158元</option>
+                                                        <option>238元</option>
+                                                        <option>268元</option>
+                                                        <option>338元</option>
+                                                        <option>588元</option>
+                                                    </select>
+                                                </div>
                                                 <p>500分钟1G流量</p>
                                                 <input type="submit" value="变更办理" />
                                                 <p><a href="javascript:;">充100元送30M</a></p>
@@ -2612,64 +2622,35 @@
                                         <li><a href="javascript:;">特惠</a></li>
                                     </ul>
                                     <ul class="detail">
-                                        <li class="tab-1">
+                                        <li class="tab-1 sub-tab">
                                             <form>
-                                                <div class="select">
-                                                    <label for="single">单程</label><input type="radio" id="single" />
-                                                    <label for="double">往返</label><input type="radio" id="double" />
-                                                </div>
-                                                <div class="target">
-                                                    <ul class="city">
-                                                        <li>出发：<input type="text" placeholder="城市"/></li>
-                                                        <li>到达：<input type="text" placeholder="城市"/></li>
-                                                        <li>日期：<input type="time" placeholder="出发"></li>
-                                                    </ul>
-                                                </div>
-                                                <input type="submit" placeholder="机票查询" />
+                                                <ul>
+                                                    <li><input id="single" type="radio" /><label for="single">单程</label></li>
+                                                    <li><input id="double" type="radio" /><label for="double">往返</label></li>
+                                                </ul>
+                                                <div>出发 <input type="text" placeholder="城市"/></div>
+                                                <div>到达 <input type="text" placeholder="城市"/></div>
+                                                <div>日期 <input type="date" placeholder="出发"/></div>
+                                                <input type="submit" value="机票查询" />
                                                 <p><a href="javascript:;">当季热门特惠机票</a></p>
                                             </form>
                                         </li>
-                                        <li class="tab-2">
+                                        <li class="tab-2 sub-tab">
                                             <form>
-                                                号码：<input type="tel" placeholder="移动/联通/电信"/>
-                                                流量：<input type="text" value="全国" />
-                                                <select name="loaction"">
-                                                    <option>全国</option>
-                                                    <option>全省</option>
-                                                </select>
-                                                <input type="text" value="50M" />
-                                                <select name="num">
-                                                    <option>50M</option>
-                                                    <option>100M</option>
-                                                    <option>200M</option>
-                                                    <option>300M</option>
-                                                    <option>500M</option>
-                                                </select>
-                                                <p>￥7.5-￥10.0</p>
-                                                <input type="submit"" value="快速充值" />
-                                                <p><a href="javascript:;">App Store充值卡</a></p>
+                                                <ul>
+                                                    <li><input id="single" type="radio" /><label for="single">单程</label></li>
+                                                    <li><input id="double" type="radio" /><label for="double">往返</label></li>
+                                                </ul>
+                                                <div>出发 <input type="text" placeholder="城市"/></div>
+                                                <div>到达 <input type="text" placeholder="城市"/></div>
+                                                <div>日期 <input type="date" placeholder="出发"/></div>
+                                                <input type="submit" value="机票查询" />
+                                                <p><a href="javascript:;">当季热门特惠机票</a></p>
                                             </form>
                                         </li>
-                                        <li class="tab-3">
-                                            <form>
-                                                号码：<input type="tel" placeholder="支持部分地区移动"/>
-                                                月费：<input type="text" value="138元" />
-                                                <select name="num">
-                                                    <option>38元</option>
-                                                    <option>48元</option>
-                                                    <option>58元</option>
-                                                    <option>88元</option>
-                                                    <option>138元</option>
-                                                    <option>158元</option>
-                                                    <option>238元</option>
-                                                    <option>268元</option>
-                                                    <option>338元</option>
-                                                    <option>588元</option>
-                                                </select>
-                                                <p>500分钟1G流量</p>
-                                                <input type="submit" value="变更办理" />
-                                                <p><a href="javascript:;">充100元送30M</a></p>
-                                            </form>
+                                        <li class="tab-3 sub-tab">
+                                            <img src="images/hotel1.jpg" />
+                                            <img src="images/hotel2.jpg" />
                                         </li>
                                     </ul>
                                 </li>
@@ -2677,71 +2658,27 @@
                                     <ul class="title">
                                         <li><a href="javascript:;">国内/港澳台</a></li>
                                         <li><a href="javascript:;">促销活动</a></li>
-                                        <li><a href="javascript:;">套餐变更</a></li>
                                     </ul>
                                     <ul class="detail">
-                                        <li class="tab-1">
+                                        <li class="tab-1 sub-tab">
                                             <form>
-                                                号码：<input type="tel" placeholder="移动/联通/电信"/>
-                                                面值：<input type="text" value="100元" />
-                                                <select name="num">
-                                                    <option>10元</option>
-                                                    <option>20元</option>
-                                                    <option>30元</option>
-                                                    <option>50元</option>
-                                                    <option>100元</option>
-                                                    <option>200元</option>
-                                                    <option>300元</option>
-                                                    <option>500元</option>
-                                                </select>
-                                                <p>￥98.0-￥100.0</p>
-                                                <input type="submit" placeholder="快速充值" />
-                                                <p><a href="javascript:;">抢90减40元话费券</a></p>
+                                                <div>目的地： <input type="text" placeholder="北京"/>
+                                                </div>
+                                                <div>入住日期 <input type="date"/>
+                                                </div>
+                                                <div>离店日期 <input type="date" />
+                                                </div>
+                                                <input class="place" type="text" placeholder="酒店/商圈/地标" />
+                                                <input type="submit" value="酒店查询" />
+                                                <p><a href="javascript:;">订酒店上京东</a></p>
                                             </form>
                                         </li>
-                                        <li class="tab-2">
-                                            <form>
-                                                号码：<input type="tel" placeholder="移动/联通/电信"/>
-                                                流量：<input type="text" value="全国" />
-                                                <select name="loaction"">
-                                                    <option>全国</option>
-                                                    <option>全省</option>
-                                                </select>
-                                                <input type="text" value="50M" />
-                                                <select name="num">
-                                                    <option>50M</option>
-                                                    <option>100M</option>
-                                                    <option>200M</option>
-                                                    <option>300M</option>
-                                                    <option>500M</option>
-                                                </select>
-                                                <p>￥7.5-￥10.0</p>
-                                                <input type="submit"" value="快速充值" />
-                                                <p><a href="javascript:;">App Store充值卡</a></p>
-                                            </form>
-                                        </li>
-                                        <li class="tab-3">
-                                            <form>
-                                                号码：<input type="tel" placeholder="支持部分地区移动"/>
-                                                月费：<input type="text" value="138元" />
-                                                <select name="num">
-                                                    <option>38元</option>
-                                                    <option>48元</option>
-                                                    <option>58元</option>
-                                                    <option>88元</option>
-                                                    <option>138元</option>
-                                                    <option>158元</option>
-                                                    <option>238元</option>
-                                                    <option>268元</option>
-                                                    <option>338元</option>
-                                                    <option>588元</option>
-                                                </select>
-                                                <p>500分钟1G流量</p>
-                                                <input type="submit" value="变更办理" />
-                                                <p><a href="javascript:;">充100元送30M</a></p>
-                                            </form>
+                                        <li class="tab-2 sub-tab">
+                                            <img src="images/hotel1.jpg" />
+                                            <img src="images/hotel2.jpg" />
                                         </li>
                                     </ul>
+                                    
                                 </li>
                             </ul>
                             <p class="close"><a href="javascript:;">×</a></p>
@@ -2751,7 +2688,10 @@
             </nav>
         </header>
         <div id="main">
-
+            <div class="wrap">
+                <div class="miaosha"></div>
+                <ul></ul>
+            </div>
         </div>
         <footer>
             
