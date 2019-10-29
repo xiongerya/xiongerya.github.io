@@ -72,7 +72,7 @@ window.addEventListener("load", function(){
     // 通过改变container的margin-left值进行轮播效果
     // 设置speed增加平滑滚动的轮播图效果
     function animate(obj, target, callback){ 
-        clearInterval(timer); 
+        //clearInterval(timer); 
         clearInterval(obj.timer);
         obj.timer = setInterval(function(){
             let step = (target - obj.offsetLeft) / 10;
