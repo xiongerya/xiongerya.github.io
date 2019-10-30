@@ -4,10 +4,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
+body{
+    background-color: #ededed;
 }
 ul, ol, dl, dt, dd, li{
     list-style: none;
@@ -20,6 +18,39 @@ a{
 a:hover{
     color: red;
 }
-body{
-    background-color: #ededed;
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/* prev & next btn style */
+.arrow{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 36px;
+    background-color: gray;
+    opacity: 0.5;
+    color: white;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+.arrow:hover{
+    opacity: 1;
+    color: white;
+}
+.prev{
+    left: 0;
+    border-radius: 0 18px 18px 0;
+}
+.next{
+    right: 0;
+    border-radius: 18px 0 0 18px;
 }
