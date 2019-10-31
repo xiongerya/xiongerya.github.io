@@ -6,22 +6,42 @@ header{
 #ad{
     width: 100%;
     height: 80px;
-    background-color: #2616f5;
+    background: url(../images/bg-ad.webp) no-repeat center #925a31;
+    cursor: pointer;
 }
 #ad .wrap{
     width: 1200px;
     margin: 0 auto;
     position: relative;
 }
+#ad .wrap > div{
+    position: absolute;
+   top: 0;
+}
+#ad .wrap > div:first-child{
+    height: 80px;
+    left: 0;
+}
+#ad .wrap > div.part{
+    right: 0;
+    padding: 15px;
+}
+#ad .wrap > div.part a{
+    display: inline-block;
+    margin: 0 10px;
+}
 #ad .wrap > button.close{
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border: none;
-    /* background-color: transparent; */
-    background-color: yellow;
+    background-color: #333;
     position: absolute;
     right: 0;
     top: 0;
+    color: white;
+    font-size: 30px;
+    line-height: 20px;
+    opacity: 0.3;
     cursor: pointer;
 }
 
@@ -820,6 +840,7 @@ nav{
     display: inline-block;
     width: 20px;
     height: 20px;
+    margin: 5px auto;
     border-radius: 50%;
     color: gray;
     font-size: 18px;
@@ -833,7 +854,7 @@ nav{
 
 
 /* main left style */
-#main .wrap{
+#main .miaosha{
     width: 1200px;
     margin: 10px auto;
     display: flex;
@@ -841,12 +862,12 @@ nav{
     justify-content: space-between;
     text-align: center;
 }
-#main .wrap .left,
-#main .wrap .middle,
-#main .wrap .right{
+#main .miaosha .left,
+#main .miaosha .middle,
+#main .miaosha .right{
     height: 260px;
 }
-#main .wrap .left a{
+#main .miaosha .left a{
     display: inline-block;
     width: 190px;
     height: 260px;
@@ -855,36 +876,36 @@ nav{
     color: white;
     letter-spacing: 1px;
 }
-#main .wrap .left a > span{
+#main .miaosha .left a > span{
     display: block;
 }
-#main .wrap .left a > span:first-child{
+#main .miaosha .left a > span:first-child{
     padding-top: 30px;
     font-size: 30px;
     font-weight: bold;
 }
-#main .wrap .left a .text{
+#main .miaosha .left a .text{
     width: 100%;
     padding-top: 100px;
     font-size: 14px;
 }
-#main .wrap .left a .time{
+#main .miaosha .left a .time{
     font-size: 16px;
     font-weight: bold;
 }
-#main .wrap .left a .timer{
+#main .miaosha .left a .timer{
     padding: 15px 0;
 }
-#main .wrap .left a .timer .hour,
-#main .wrap .left a .timer .minute,
-#main .wrap .left a .timer .second{
+#main .miaosha .left a .timer .hour,
+#main .miaosha .left a .timer .minute,
+#main .miaosha .left a .timer .second{
     display: inline-block;
     width: 30px;
     height: 30px;
     margin: 0 5px;
     background-color: #555;
 }
-#main .wrap .left a .timer .point{
+#main .miaosha .left a .timer .point{
     font-size: 18px;
     font-weight: bold;
     vertical-align: top;
@@ -893,13 +914,13 @@ nav{
 
 
 /* main middle style */
-#main .wrap .middle{
+#main .miaosha .middle{
     position: relative;
     width: 800px;
     overflow: hidden;
     background-color: white;
 }
-#main .wrap .middle .items{
+#main .miaosha .middle .items{
     width: 200%;
     position: absolute;
     left: 0;
@@ -908,7 +929,7 @@ nav{
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-#main .wrap .middle .items > li{
+#main .miaosha .middle .items > li{
     width: 50%;
     height: 260px;
     float: left;
@@ -916,19 +937,19 @@ nav{
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-#main .wrap .middle .items .sub a{
+#main .miaosha .middle .items .sub a{
     display: block;
     width: 200px;
     height: 260px;
     padding: 20px;
 }
-#main .wrap .middle .items .sub img{
+#main .miaosha .middle .items .sub img{
     width: 90%;
 }
-#main .wrap .middle .items .sub:hover img{
+#main .miaosha .middle .items .sub:hover img{
     opacity: 0.9;
 }
-#main .wrap .middle .items .sub .text{
+#main .miaosha .middle .items .sub .text{
     display: inline-block;
     width: 100%;
     padding: 10px 5px;
@@ -936,50 +957,136 @@ nav{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#main .wrap .middle .items .sub .price{
+#main .miaosha .middle .items .sub .price{
     display: block;
     height: 30px;
     border: 1px solid #e1251a;
     overflow: hidden;
     position: relative;
 }
-#main .wrap .middle .items .sub .price > span{
+#main .miaosha .middle .items .sub .price > span{
     position: absolute;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
 }
-#main .wrap .middle .items .sub .bg{
+#main .miaosha .middle .items .sub .bg{
     position: absolute;
     left: 0;
     top: 0;
-    width: 100px;
+    width: 90px;
     height: 30px;
     margin-left: -10px;
     background-color: #e1251a;
     transform: skewX(-15deg);
     z-index: 0;
 }
-#main .wrap .middle .items .sub .before,
-#main .wrap .middle .items .sub .after
+#main .miaosha .middle .items .sub .before,
+#main .miaosha .middle .items .sub .after
 {
     position: absolute;
     top: 0;
     width: 50%;
 }
-#main .wrap .middle .items .sub .before{
+#main .miaosha .middle .items .sub .before{
     right: 0;
     color: red;
 }
-#main .wrap .middle .items .sub .after{
+#main .miaosha .middle .items .sub .after{
     left: 0;
     color: white;
 }
 
 
-/* main .wrap right style */
-#main .wrap .right{
+/* main .miaosha right style */
+#main .miaosha .right{
     width: 200px;
-    background-color: yellow;
     position: relative;
+    background-color: white;
+    overflow: hidden;
+}
+#main .miaosha .right .items{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+}
+#main .miaosha .right .items > li{
+    float: left;
+}
+#main .miaosha .right .items > li a{
+    display: inline-block;
+    width: 200px;
+    height: 260px;
+    text-align: center;
+}
+#main .miaosha .right .items > li a:hover{
+    color: inherit;
+}
+#main .miaosha .right .items > li a > *{
+    display: inline-block;
+}
+#main .miaosha .right .items > li img{
+    width: 85%;
+}
+#main .miaosha .right .items > li a:hover img{
+    opacity: 0.9;
+}
+#main .miaosha .right .items > li span{
+    margin: 2px 0;
+    font-size: 14px;
+}
+#main .miaosha .right .items > li span:last-of-type{
+    font-weight: bold;
+}
+#main .miaosha .right .items > li button{
+    padding: 3px 10px;
+    border: 1px solid red;
+    border-radius: 20px;
+    margin: 5px 0;
+    background-color: white;
+    color: red;
+}
+#main .miaosha .right .items > li button:hover{
+    background-color: red;
+    color: white;
+}
+
+
+
+
+/* main class style */
+#main .class{
+    width: 1240px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background: url(../images/bg-class.webp) no-repeat center #925a31;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    cursor: pointer;
+}
+#main .class > a{
+    display: inline-block;
+    width: 200px;
+}
+#main .class ul{
+    width: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+#main .class li{
+    width: 20%;
+    padding: 3px 5px;
+}
+#main .class li img{
+    display: inline-block;
+    width: 100%;
+}
+#main .class li a:hover{
+    opacity: 0.9;
 }
