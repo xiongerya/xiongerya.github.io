@@ -32,7 +32,7 @@ a:hover{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
+    width: 26px;
     height: 36px;
     background-color: gray;
     opacity: 0.5;
@@ -53,4 +53,36 @@ a:hover{
 .next{
     right: 0;
     border-radius: 18px 0 0 18px;
+}
+
+
+/* 轮播图切换按钮，结合JavaScript动态使用 */
+.carousel-btns{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.carousel-btns li{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: orangered;
+    background-clip: padding-box;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.carousel-btns li.on{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid orangered;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: white;
+    background-clip: padding-box;
+    cursor: pointer;
 }
