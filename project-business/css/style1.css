@@ -482,14 +482,15 @@ nav{
     overflow: hidden;
     position: relative;
 }
-#banner > ul{
+#banner > ul:first-child{
     width: 1000%;
+    position: relative;
 }
-#banner > ul li{
+#banner > ul:first-child li{
     width: 10%;
     float: left;
 }
-#banner > ul img{
+#banner > ul:first-child img{
     width: 100%;
     height: 480px;
 }
@@ -504,7 +505,8 @@ nav{
     overflow: hidden;
 }
 #banner-side > ul{
-    width: 600px;
+    width: 800px;
+    position: relative;
 }
 #banner-side .sub{
     float: left;
@@ -921,35 +923,33 @@ nav{
     background-color: white;
 }
 #main .miaosha .middle .items{
-    width: 200%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    width: 400%;
+    position: relative;
 }
 #main .miaosha .middle .items > li{
-    width: 50%;
+    float: left;
+}
+#main .miaosha .middle .items ul{
+    width: 800px;
     height: 260px;
     float: left;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
-#main .miaosha .middle .items .sub a{
+#main .miaosha .middle .items ul a{
     display: block;
     width: 200px;
     height: 260px;
     padding: 20px;
 }
-#main .miaosha .middle .items .sub img{
+#main .miaosha .middle .items ul img{
     width: 90%;
 }
-#main .miaosha .middle .items .sub:hover img{
+#main .miaosha .middle .items ul li:hover img{
     opacity: 0.9;
 }
-#main .miaosha .middle .items .sub .text{
+#main .miaosha .middle .items ul .text{
     display: inline-block;
     width: 100%;
     padding: 10px 5px;
@@ -957,20 +957,20 @@ nav{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#main .miaosha .middle .items .sub .price{
+#main .miaosha .middle .items ul .price{
     display: block;
     height: 30px;
     border: 1px solid #e1251a;
     overflow: hidden;
     position: relative;
 }
-#main .miaosha .middle .items .sub .price > span{
+#main .miaosha .middle .items ul .price > span{
     position: absolute;
     font-size: 18px;
     font-weight: bold;
     line-height: 30px;
 }
-#main .miaosha .middle .items .sub .bg{
+#main .miaosha .middle .items ul .bg{
     position: absolute;
     left: 0;
     top: 0;
@@ -981,21 +981,22 @@ nav{
     transform: skewX(-15deg);
     z-index: 0;
 }
-#main .miaosha .middle .items .sub .before,
-#main .miaosha .middle .items .sub .after
+#main .miaosha .middle .items ul .before,
+#main .miaosha .middle .items ul .after
 {
     position: absolute;
     top: 0;
     width: 50%;
 }
-#main .miaosha .middle .items .sub .before{
+#main .miaosha .middle .items ul .before{
     right: 0;
     color: red;
 }
-#main .miaosha .middle .items .sub .after{
+#main .miaosha .middle .items ul .after{
     left: 0;
     color: white;
 }
+
 
 
 /* main .miaosha right style */
@@ -1006,9 +1007,7 @@ nav{
     overflow: hidden;
 }
 #main .miaosha .right .items{
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
     width: 500%;
 }
 #main .miaosha .right .items > li{
@@ -1019,9 +1018,10 @@ nav{
     width: 200px;
     height: 260px;
     text-align: center;
+    color: black;
 }
 #main .miaosha .right .items > li a:hover{
-    color: inherit;
+    color: black;
 }
 #main .miaosha .right .items > li a > *{
     display: inline-block;
@@ -1033,7 +1033,7 @@ nav{
     opacity: 0.9;
 }
 #main .miaosha .right .items > li span{
-    margin: 2px 0;
+    margin: 1px 0;
     font-size: 14px;
 }
 #main .miaosha .right .items > li span:last-of-type{
