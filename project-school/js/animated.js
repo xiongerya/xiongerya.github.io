@@ -53,7 +53,7 @@ window.addEventListener("load", function(){
 
     let len = imgs.length,
         width = imgs[0].offsetWidth,
-        animated = false,
+        flag = false,
         timer = null, 
         num = 0;
     
@@ -79,29 +79,38 @@ window.addEventListener("load", function(){
             step = step > 0 ? Math.ceil(step) : Math.floor(step);
             if(obj.offsetLeft === target){
                 clearInterval(obj.timer);
+                if(callback) callback();
             }
             obj.style.marginLeft = obj.offsetLeft + step + "px";
         }, 15);
-        if(callback) callback();
-        return;  
     }
 
     // 为prev next 添加轮播图点击动画
     prev.addEventListener("click", function(){
-        if(num === 0){
-            num = len;
-            container.style.marginLeft = -num*width + "px";
-        }
-        num--;
-        animate(container, -num*width);
+        if(flag){
+            flag = false;
+            if(num === 0){
+                num = len;
+                container.style.marginLeft = -num*width + "px";
+            }
+            num--;
+            animate(container, -num*width, function(){
+                flag = true;
+            });
+        }       
     });
     next.addEventListener("click", function(){
-        if(num === len){
-            num = 0;
-            container.style.marginLeft = 0;
+        if(flag){
+            flag = false;
+            if(num === len){
+                num = 0;
+                container.style.marginLeft = 0;
+            }
+            num++;
+            animate(container, -num*width, function(){
+                flag = true;
+            });  
         }
-        num++;
-        animate(container, -num*width);  
     });
 
     // 设置自动播放焦点图动画
