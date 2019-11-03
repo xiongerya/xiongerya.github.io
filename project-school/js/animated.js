@@ -53,7 +53,7 @@ window.addEventListener("load", function(){
 
     let len = imgs.length,
         width = imgs[0].offsetWidth,
-        flag = false,
+        flag_carousel = true,
         timer = null, 
         num = 0;
     
@@ -72,7 +72,6 @@ window.addEventListener("load", function(){
     // 通过改变container的margin-left值进行轮播效果
     // 设置speed增加平滑滚动的轮播图效果
     function animate(obj, target, callback){ 
-        //clearInterval(timer); 
         clearInterval(obj.timer);
         obj.timer = setInterval(function(){
             let step = (target - obj.offsetLeft) / 10;
@@ -80,35 +79,36 @@ window.addEventListener("load", function(){
             if(obj.offsetLeft === target){
                 clearInterval(obj.timer);
                 if(callback) callback();
-            }
-            obj.style.marginLeft = obj.offsetLeft + step + "px";
+            }else{
+                obj.style.marginLeft = obj.offsetLeft + step + "px";
+            } 
         }, 15);
     }
 
     // 为prev next 添加轮播图点击动画
     prev.addEventListener("click", function(){
-        if(flag){
-            flag = false;
+        if(flag_carousel){
+            flag_carousel = false;
             if(num === 0){
                 num = len;
                 container.style.marginLeft = -num*width + "px";
             }
             num--;
             animate(container, -num*width, function(){
-                flag = true;
+                flag_carousel = true;
             });
         }       
     });
     next.addEventListener("click", function(){
-        if(flag){
-            flag = false;
+        if(flag_carousel){
+            flag_carousel = false;
             if(num === len){
                 num = 0;
                 container.style.marginLeft = 0;
             }
             num++;
             animate(container, -num*width, function(){
-                flag = true;
+                flag_carousel = true;
             });  
         }
     });
