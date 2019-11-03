@@ -1,5 +1,23 @@
 window.addEventListener("load", function(){
-    function carousel(obj, interval, time, bool){
+    // 轮播图缓动动画函数
+    function play(obj, target, callback){
+        // 清除定时器，以防多个定时器导致速度叠加
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            // 缓动动画效果
+            let step = (target - obj.offsetLeft) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            if(obj.offsetLeft === target){
+                clearInterval(obj.timer);
+                if(callback) callback();
+            }else{
+                obj.style.left = obj.offsetLeft + step + "px";
+            }
+        }, 15)
+    }
+
+    // 焦点轮播图carousel 封装动画
+    function carousel(obj, interval, bool){
         let width = obj.querySelector("li").offsetWidth,
             prev = obj.parentNode.querySelector(".prev"),
             next = obj.parentNode.querySelector(".next"),
@@ -24,26 +42,11 @@ window.addEventListener("load", function(){
         }
         obj.parentNode.appendChild(buttons);
 
-        // 轮播图动画基础函数
-        function play(target, callback){
-            clearInterval(obj.timer);
-            obj.timer = setInterval(function(){
-                // 缓动动画效果
-                let step = (target - obj.offsetLeft) / 10;
-                step = step > 0 ? Math.ceil(step) : Math.floor(step);
-                if(obj.offsetLeft === target){
-                    clearInterval(obj.timer);
-                    if(callback) callback();
-                }
-                obj.style.left = obj.offsetLeft + step + "px";
-            }, interval)
-        }
-
         // 点击相应按钮，跳转到对应的轮播图图片
         let btn = buttons.querySelectorAll("li");
         for(let i = 0; i < len; i++){
             btn[i].addEventListener("click", function(){
-                play(-width * this.index);
+                play(obj, -width * this.index);
                 for(let i = 0; i < len; i++){
                     btn[i].className = "";
                 }
@@ -70,7 +73,7 @@ window.addEventListener("load", function(){
                     count = len;
                 }
                 count--;
-                play(-width * count, function(){
+                play(obj, -width * count, function(){
                     flag = true;
                 });
                 circle = count;
@@ -85,7 +88,7 @@ window.addEventListener("load", function(){
                     count = 0;
                 }
                 count++;
-                play(-width * count, function(){
+                play(obj, -width * count, function(){
                     flag = true;
                 });
                 circle = count === len ? 0 : count;
@@ -97,7 +100,7 @@ window.addEventListener("load", function(){
         function autoPlay(){
             timer = setInterval(function(){
                 next.click();
-            }, time);
+            }, interval);
         }
 
         // 轮播图停止播放动画效果
@@ -107,11 +110,11 @@ window.addEventListener("load", function(){
         }
 
         autoPlay();
-        obj.addEventListener("mouseenter", function(){
+        obj.addEventListener("mouseover", function(){
             stopPlay();
         })
 
-        obj.addEventListener("mouseleave", function(){
+        obj.addEventListener("mouseout", function(){
            autoPlay();
         })
 
@@ -121,29 +124,125 @@ window.addEventListener("load", function(){
 
     // banner部分焦点图轮播动画
     let carousel_banner = document.querySelector("#banner > ul");
-    carousel(carousel_banner, 8, 2500, true);
+    carousel(carousel_banner, 2500, true);
 
     // banner-side焦点图轮播动画
     let carousel_banner_side = document.querySelector("#banner-side > ul");
-    carousel(carousel_banner_side, 10, 4500);
+    carousel(carousel_banner_side, 4500);
 
     // main 秒杀 middle 焦点图轮播动画
     let carousel_miaosha_middle = document.querySelector("#main .miaosha .middle > ul");
-    carousel(carousel_miaosha_middle, 17, 6000);
+    carousel(carousel_miaosha_middle, 6000);
 
     // main 秒杀 right 焦点图轮播动画
     let carousel_miaosha_right = document.querySelector("#main .miaosha .right > ul");
-    carousel(carousel_miaosha_right, 16, 1500);
+    carousel(carousel_miaosha_right, 1500);
 
 
 
-    // logIn tab栏切换效果 && icons 鼠标移动效果
-    function tab(){
-
+    // logIn tab栏切换效果
+    // tab栏切换动画包装函数
+    function tabChange(menus, tabs){
+        let len = menus.length;
+        
+        for(let i = 0; i < len; i++){
+            menus[i].index = i;
+        }
+        for(let i = 0; i < len; i++){
+            menus[i].addEventListener("mouseenter", function(){
+                for(let j = 0; j < len; j++){
+                    menus[j].querySelector("a").style.color = "#333";
+                    tabs[j].style.display = "none";
+                }
+                this.querySelector("a").style.color = "red";
+                tabs[this.index].style.display = "block";
+            })
+        }
     }
 
+    // 一级tab栏切换
+    let menus = document.querySelectorAll("#logIn .icons .wrap > .menu > li"),
+        tabs = document.querySelectorAll("#logIn .icons .wrap > .tab > li")
+        len = menus.length;
 
+    for(let i = 0; i < len; i++){
+        menus[i].addEventListener("mouseenter", function(){
+            for(let j = 0; j < len; j++){
+                menus[j].querySelector("a").style.borderColor = "transparent";
+            }
+            this.querySelector("a").style.borderColor = "red";
+        })
+    }
+    tabChange(menus, tabs);
 
+    // 二级tab栏切换
+    for(let i = 0; i < len; i++){
+        let sub_menus = tabs[i].querySelectorAll(".menu > li"),
+            sub_tabs = tabs[i].querySelectorAll(".tab > li");
+        tabChange(sub_menus, sub_tabs);
+    }
+      
+    // 点击关闭按钮，关闭wrap里面的tab栏
+    let wrap = document.querySelector("#logIn .icons .wrap"),
+        tab_close = wrap.querySelector(".close a");
+
+    tab_close.addEventListener("click", function(){
+        wrap.style.display = "none";
+    })
+
+    // 鼠标mouseover时，wrap tab栏显示
+    let list = document.querySelectorAll("#logIn .icons .list > li");
+
+    for(let i = 0; i < list.length; i++){
+        list[i].index = i;
+    }
+
+    for(let i = 0; i < len; i++){
+        list[i].addEventListener("mouseover", function(){
+            setTimeout(function(){
+                wrap.style.display = "block";
+            }, 500); 
+            tabs[this.index].style.display = "block";
+
+            for(let j = 0; j < len; j++){
+                menus[j].querySelector("a").style.borderColor = "transparent";
+                tabs[j].querySelector("a").style.color = "#333";
+            }
+            menus[this.index].querySelector("a").style.borderColor = "red";
+            tabs[this.index].querySelector("a").style.color = "red";
+        })
+    }
     
-    //main秒杀倒计时效果
+    
+
+    //main miaosha left秒杀倒计时效果
+    let hour = document.querySelector("#main .left .hour"),
+        minute = document.querySelector("#main .left .minute"),
+        second = document.querySelector("#main .left .second");
+
+    let date = new Date('2019-11-04T12:30:00').getTime(),
+        timer = null;
+
+    function showTime(){
+        let now = Date.now(), h, m, s;
+        let time = Math.ceil((date-now)/1000);
+        if(time <= 0){
+            hour.innerHTML = "00";
+            minute.innerHTML = "00";
+            second.innerHTML = "00";
+            clearInterval(timer);
+        }else{
+            h = Math.floor(time / 3600),
+            m = Math.floor(time % 3600 / 60),
+            s = time % 3600 % 60;
+            hour.innerHTML = h < 10 ? "0"+h : h;
+            minute.innerHTML = m < 10 ? "0"+m : m;
+            second.innerHTML = s < 10 ? "0"+s : s;
+        }
+    }
+    
+    showTime();
+    timer = setInterval(function(){
+        showTime();
+    }, 1000) 
 })
