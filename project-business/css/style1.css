@@ -1,8 +1,4 @@
-/* header style */
-header{
-    width: 100%;
-}
-/* header ad style */
+/* adverse style */
 #ad{
     width: 100%;
     height: 80px;
@@ -48,6 +44,9 @@ header{
 
 
 /* header log style */
+header{
+    width: 100%;
+}
 #log{
     width: 100%;
     height: 30px;
@@ -723,14 +722,15 @@ nav{
     height: 30px;
     background-color: white;
 }
-#logIn .icons .wrap > .tab .menu{
-    height: 25px;
-}
 #logIn .icons .wrap > .menu a{
     display: inline-block;
     padding: 3px 0;
+    margin: 0 15px;
     border-bottom: 2px solid;
     border-color: transparent;
+}
+#logIn .icons .wrap > .tab .menu{
+    height: 25px;
 }
 /* #logIn .icons .wrap > .menu > li:hover a{
     border-color: red;

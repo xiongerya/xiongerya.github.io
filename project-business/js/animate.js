@@ -1,4 +1,14 @@
 window.addEventListener("load", function(){
+    // advertise部分，点击close按钮隐藏
+    let ad = document.querySelector("#ad"),
+        ad_close = ad.querySelector(".close");
+
+    ad_close.addEventListener("click", function(){
+        ad.style.display = "none";
+    })
+
+
+
     // 轮播图缓动动画函数
     function play(obj, target, callback){
         // 清除定时器，以防多个定时器导致速度叠加
@@ -124,15 +134,15 @@ window.addEventListener("load", function(){
 
     // banner部分焦点图轮播动画
     let carousel_banner = document.querySelector("#banner > ul");
-    carousel(carousel_banner, 2500, true);
+    carousel(carousel_banner, 3000, true);
 
     // banner-side焦点图轮播动画
     let carousel_banner_side = document.querySelector("#banner-side > ul");
-    carousel(carousel_banner_side, 4500);
+    carousel(carousel_banner_side, 5000);
 
     // main 秒杀 middle 焦点图轮播动画
     let carousel_miaosha_middle = document.querySelector("#main .miaosha .middle > ul");
-    carousel(carousel_miaosha_middle, 6000);
+    carousel(carousel_miaosha_middle, 4500);
 
     // main 秒杀 right 焦点图轮播动画
     let carousel_miaosha_right = document.querySelector("#main .miaosha .right > ul");
@@ -151,11 +161,19 @@ window.addEventListener("load", function(){
         for(let i = 0; i < len; i++){
             menus[i].addEventListener("mouseenter", function(){
                 for(let j = 0; j < len; j++){
-                    menus[j].querySelector("a").style.color = "#333";
+                    menus[j].querySelector("a").style.color = "inherit";
                     tabs[j].style.display = "none";
                 }
                 this.querySelector("a").style.color = "red";
                 tabs[this.index].style.display = "block";
+
+                let sub_menus = tabs[this.index].querySelectorAll(".menu > li");
+                if(sub_menus.length > 0){
+                    sub_menus[0].querySelector("a").style.color = "red";
+                    for(let i = 1; i < sub_menus.length; i++){
+                         sub_menus[i].querySelector("a").style.color = "inherit";
+                    }
+                }
             })
         }
     }
@@ -209,7 +227,6 @@ window.addEventListener("load", function(){
                 tabs[j].querySelector("a").style.color = "#333";
             }
             menus[this.index].querySelector("a").style.borderColor = "red";
-            tabs[this.index].querySelector("a").style.color = "red";
         })
     }
     
@@ -220,7 +237,7 @@ window.addEventListener("load", function(){
         minute = document.querySelector("#main .left .minute"),
         second = document.querySelector("#main .left .second");
 
-    let date = new Date('2019-11-04T12:30:00').getTime(),
+    let date = new Date('2019-11-04T14:00:00').getTime(),
         timer = null;
 
     function showTime(){
