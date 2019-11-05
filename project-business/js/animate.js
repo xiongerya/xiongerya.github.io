@@ -1,4 +1,9 @@
 window.addEventListener("load", function(){
+    // aside侧边栏&回到顶部动画效果
+    let elevator = document.querySelector(".elevator");
+
+
+    
     // advertise部分，点击close按钮隐藏
     let ad = document.querySelector("#ad"),
         ad_close = ad.querySelector(".close");

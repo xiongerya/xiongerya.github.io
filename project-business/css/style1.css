@@ -43,6 +43,27 @@
 
 
 
+/* aside elevator style*/
+.elevator{
+    position: fixed;
+    right: 0;
+    top: 80px;
+}
+.elevator li{
+    width: 60px;
+    height: 60px;
+    padding: 7px 15px;
+    border: 1px solid red;
+    background-color: white;
+    text-align: center;
+}
+.elevator a{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
 /* header log style */
 header{
     width: 100%;
