@@ -1,9 +1,4 @@
-window.addEventListener("load", function(){
-    // aside侧边栏&回到顶部动画效果
-    let elevator = document.querySelector(".elevator");
-
-
-    
+window.addEventListener("load", function(){  
     // advertise部分，点击close按钮隐藏
     let ad = document.querySelector("#ad"),
         ad_close = ad.querySelector(".close");
@@ -14,7 +9,7 @@ window.addEventListener("load", function(){
 
 
 
-    // 轮播图缓动动画函数
+    // 缓动动画函数
     function play(obj, target, callback){
         // 清除定时器，以防多个定时器导致速度叠加
         clearInterval(obj.timer);
@@ -31,8 +26,76 @@ window.addEventListener("load", function(){
         }, 15)
     }
 
-    // 焦点轮播图carousel 封装动画
-    function carousel(obj, interval, bool){
+    // 焦点轮播图carousel封装动画
+    function carousel(obj, interval){
+        let width = obj.querySelector("li").offsetWidth,
+            prev = obj.parentNode.querySelector(".prev"),
+            next = obj.parentNode.querySelector(".next"),
+            lis = obj.querySelectorAll("li.sub"),
+            len = lis.length;
+
+        let timer = null,   
+            count = 0,
+            flag = true;
+        
+        // clone第一张轮播图，添加到obj末尾
+        obj.appendChild(lis[0].cloneNode(true));
+
+        // 为prev & next 按钮添加点击事件
+        // flag节流阀，防止连续点击图片滚动过快
+        prev.addEventListener("click", function(){
+            if(flag){
+                flag = false;
+                if(count === 0){
+                    obj.style.left = -width * len + "px";
+                    count = len;
+                }
+                count--;
+                play(obj, -width * count, function(){
+                    flag = true;
+                });
+            }
+        })
+        next.addEventListener("click", function(){
+            if(flag){
+                flag = false;
+                if(count === len){
+                    obj.style.left = 0;
+                    count = 0;
+                }
+                count++;
+                play(obj, -width * count, function(){
+                    flag = true;
+                });
+            } 
+        })
+
+        // 轮播图自动播放动画效果
+        function autoPlay(){
+            timer = setInterval(function(){
+                next.click();
+            }, interval);
+        }
+
+        // 轮播图停止播放动画效果
+        function stopPlay(){
+            clearInterval(timer);
+            timer = null;
+        }
+
+        autoPlay();
+        obj.addEventListener("mouseover", function(){
+            stopPlay();
+        })
+
+        obj.addEventListener("mouseout", function(){
+           autoPlay();
+        })
+    }
+
+    // 焦点轮播图carousel-btn封装动画
+    // 带有下方点击/转换按钮
+    function carouselBtn(obj, interval){
         let width = obj.querySelector("li").offsetWidth,
             prev = obj.parentNode.querySelector(".prev"),
             next = obj.parentNode.querySelector(".next"),
@@ -132,26 +195,23 @@ window.addEventListener("load", function(){
         obj.addEventListener("mouseout", function(){
            autoPlay();
         })
-
-        // 由传入的参数bool判断是否显示圆圈点击按钮
-        bool ? buttons.style.display = "block" : buttons.style.display = "none";
     }
 
     // banner部分焦点图轮播动画
     let carousel_banner = document.querySelector("#banner > ul");
-    carousel(carousel_banner, 3000, true);
+    carouselBtn(carousel_banner, 3000);
 
     // banner-side焦点图轮播动画
     let carousel_banner_side = document.querySelector("#banner-side > ul");
-    carousel(carousel_banner_side, 5000);
+    carousel(carousel_banner_side, 4500);
 
     // main 秒杀 middle 焦点图轮播动画
     let carousel_miaosha_middle = document.querySelector("#main .miaosha .middle > ul");
-    carousel(carousel_miaosha_middle, 4500);
+    carousel(carousel_miaosha_middle, 6000);
 
     // main 秒杀 right 焦点图轮播动画
     let carousel_miaosha_right = document.querySelector("#main .miaosha .right > ul");
-    carousel(carousel_miaosha_right, 1500);
+    carousel(carousel_miaosha_right, 2000);
 
 
 
@@ -235,6 +295,44 @@ window.addEventListener("load", function(){
         })
     }
     
+
+
+     // aside侧边栏&回到顶部动画效果
+     let elevator = document.querySelector(".elevator"),
+         elevatorTop = elevator.querySelector(".top"),
+         main = document.querySelector("#main"),
+         mainTop = main.offsetTop;
+
+    // 根据document滚动的距离改变侧边栏的位置
+    document.addEventListener("scroll", function(){
+        if(window.pageYOffset >= mainTop){
+            elevator.style.position = "fixed";
+            elevator.style.top = "80px";
+            elevatorTop.style.display = "block";
+        }else{
+            elevator.style.position = "absolute";
+            elevator.style.top = "0";
+            elevatorTop.style.display = "none";
+        }
+    })
+
+    // 修改缓动动画函数为document滚动动画
+    function scroll(obj, target){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            let step = (target - window.pageYOffset) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            if(window.pageYOffset === target){
+                clearInterval(obj.timer);
+            }else{
+                obj.scroll(0, window.pageYOffset + step);
+            }
+        }, 15)
+    }
+    elevatorTop.addEventListener("click", function(){
+        scroll(window, 0);
+    })
+
     
 
     //main miaosha left秒杀倒计时效果
@@ -242,7 +340,7 @@ window.addEventListener("load", function(){
         minute = document.querySelector("#main .left .minute"),
         second = document.querySelector("#main .left .second");
 
-    let date = new Date('2019-11-04T14:00:00').getTime(),
+    let date = new Date('2019-11-10T14:00:00').getTime(),
         timer = null;
 
     function showTime(){

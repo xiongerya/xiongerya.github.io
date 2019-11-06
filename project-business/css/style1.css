@@ -43,24 +43,141 @@
 
 
 
-/* aside elevator style*/
-.elevator{
+/* aside activity style */
+.activity{
     position: fixed;
     right: 0;
-    top: 80px;
+    top: 0;
+    width: 265px;
+    height: 100%;
+    background-color: #333;
+    z-index: 99;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
-.elevator li{
-    width: 60px;
-    height: 60px;
-    padding: 7px 15px;
-    border: 1px solid red;
-    background-color: white;
+.activity .aside{
+    position: fixed;
+    right: 265px;
+    top: 0;
+}
+.activity .title{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 265px;
+    height: 40px;
+    padding: 0 20px;
+    background: #333;
+    color: white;
+    line-height: 40px;
+}
+.activity .title .close{
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.activity .wrap{
+    text-align: center;
+    padding-top: 40px;
+}
+.activity .wrap a{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.activity .wrap a:hover{
+    opacity: 0.8;
+}
+.activity .wrap .middle,
+.activity .wrap .bottom{
+    width: 90%;
+    margin: 5px auto;
+}
+.activity .wrap .middle img{
+    width: 100%;
+}
+.activity .wrap .bottom a:nth-child(1){
+    float: left;
+}
+.activity .wrap .bottom a:nth-child(2){
+    float: right;
+}
+.activity .list{
+    margin-bottom: 150px;
+}
+.activity .list a{
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+}
+.activity .list .sub{
+    width: 90%;
+    margin: 0 auto;
+    
+} 
+.activity .list .sub > a{
+    width: 100%;
+    height: 30px;
+    margin: 5px auto;
+    border-radius: 30px;
+    background-color: olive;
+    line-height: 30px;
     text-align: center;
 }
-.elevator a{
-    font-size: 14px;
-    font-weight: bold;
+.activity .sub ul{
+    display: none;
 }
+.activity .list .sub:hover > ul{
+    display: block;
+}
+.activity .sub li{
+    display: inline-block;
+    width: 30%;
+    height: 28px;
+    margin: 3px 2px;
+    border-radius: 20px;
+    background-color: gray;
+    line-height: 28px;;
+    text-align: center;
+}
+.activity .sub li:hover a{
+    color: red;
+}
+.activity .footer{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+.activity .footer .icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    background-color: black;
+    vertical-align: middle;
+}
+.activity .footer .erweima{
+    position: absolute;
+    left: 50%;
+    top: -120px;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 110px;
+    display: none;
+}
+.activity .footer:hover .erweima{
+    display: block;
+}
+
 
 
 
@@ -864,6 +981,41 @@ nav{
 
 
 
+/* aside elevator style*/
+#main{
+    position: relative;
+}
+.elevator{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: top 0.5s;
+}
+.elevator li{
+    width: 60px;
+    padding: 10px 16px;
+    background-color: white;
+    text-align: center;
+}
+.elevator li.top{
+    display: none;
+}
+.elevator li.top a{
+    color: red;
+}
+.elevator li:hover{
+    background-color: red;
+}
+.elevator a{
+    font-size: 14px;
+    line-height: 14px;
+}
+.elevator li:hover a{
+    color: white;
+}
+
+
+
 /* main left style */
 #main .miaosha{
     width: 1200px;
@@ -1051,8 +1203,8 @@ nav{
 
 /* main class style */
 #main .class{
-    width: 1240px;
-    padding: 15px 20px;
+    width: 1220px;
+    padding: 15px 10px;
     margin: 20px auto;
     border-radius: 20px;
     background: url(../images/bg-class.webp) no-repeat center #925a31;
