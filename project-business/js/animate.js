@@ -30,7 +30,7 @@ window.addEventListener("load", function(){
         ac_close = ac.querySelector(".close"),
         aside = ac.querySelector(".aside");
 
-    let inWidth = document.body.clientWidth-5,
+    let inWidth = document.body.clientWidth,
         ac_width = ac.offsetWidth,
         aside_width = aside.offsetWidth-6,
         ac_flag = true;
@@ -38,7 +38,7 @@ window.addEventListener("load", function(){
     aside.addEventListener("click", function(){
         let target = 0;
         if(ac_flag){
-            target = inWidth;
+            target = inWidth-5;
             slide(ac, target);
             slide(title, target+5);
             slide(aside, target-aside_width);
