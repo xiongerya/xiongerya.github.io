@@ -9,6 +9,59 @@ window.addEventListener("load", function(){
 
 
 
+
+    // 隐藏/显示侧边栏，slide动画函数
+    function slide(obj, target, callback){
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function(){
+            let step = (target - obj.offsetLeft) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            if(obj.style.left === target){
+                clearInterval(obj.timer);
+                callback && callback();
+            }
+            obj.style.left = obj.offsetLeft + step + "px";
+        }, 15)
+    }
+
+    // activity部分,点击按钮，侧边栏显示隐藏
+    let ac = document.querySelector(".activity"),
+        title = ac.querySelector(".title"),
+        ac_close = ac.querySelector(".close"),
+        aside = ac.querySelector(".aside");
+
+    let inWidth = document.body.clientWidth-5,
+        ac_width = ac.offsetWidth,
+        aside_width = aside.offsetWidth-6,
+        ac_flag = true;
+
+    aside.addEventListener("click", function(){
+        let target = 0;
+        if(ac_flag){
+            target = inWidth;
+            slide(ac, target);
+            slide(title, target+5);
+            slide(aside, target-aside_width);
+        }else{
+            target = inWidth - ac_width;
+            slide(ac, target);
+            slide(title, target+5);
+            slide(aside, target-aside_width);
+        }
+        ac_flag = !ac_flag;
+    })
+    aside.click();
+    ac_close.addEventListener("click", function(){
+        let target = 0;
+        if(ac_flag){
+            target = inWidth;
+            slide(ac, target);
+            slide(title, target+5);
+            slide(aside, target-aside_width);
+        }
+        ac_flag = !ac_flag;
+    })
+
     // 缓动动画函数
     function play(obj, target, callback){
         // 清除定时器，以防多个定时器导致速度叠加
@@ -307,7 +360,7 @@ window.addEventListener("load", function(){
     document.addEventListener("scroll", function(){
         if(window.pageYOffset >= mainTop){
             elevator.style.position = "fixed";
-            elevator.style.top = "80px";
+            elevator.style.top = "145px";
             elevatorTop.style.display = "block";
         }else{
             elevator.style.position = "absolute";

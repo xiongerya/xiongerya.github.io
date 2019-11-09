@@ -48,22 +48,25 @@
     position: fixed;
     right: 0;
     top: 0;
-    width: 265px;
+    width: 270px;
     height: 100%;
+    border-left: 5px solid #7a6e6e;
     background-color: #333;
-    z-index: 99;
+    z-index: 9;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .activity .aside{
     position: fixed;
-    right: 265px;
+    right: 264px;
     top: 0;
+    z-index: -1;
 }
 .activity .title{
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 9;
     width: 265px;
     height: 40px;
     padding: 0 20px;
@@ -77,38 +80,50 @@
     height: 40px;
     border: none;
     outline: none;
+    border: 1px solid transparent;
     background-color: transparent;
     color: white;
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 40px;
     cursor: pointer;
 }
-.activity .wrap{
-    text-align: center;
-    padding-top: 40px;
+.activity .title .close:hover{
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
-.activity .wrap a{
+.activity .wrap{
+    padding-top: 40px;
+    background-color: #333;
+}
+.activity .img{
+    text-align: center;
+}
+.activity .img a{
     display: inline-block;
     margin-bottom: 10px;
 }
-.activity .wrap a:hover{
+.activity .img a:hover{
+    display: inline-block;
     opacity: 0.8;
 }
-.activity .wrap .middle,
-.activity .wrap .bottom{
+.activity .img .middle,
+.activity .img .bottom{
     width: 90%;
-    margin: 5px auto;
+    padding: 5px 0;
+    margin: 0 auto;
 }
-.activity .wrap .middle img{
+.activity .img .middle img{
     width: 100%;
 }
-.activity .wrap .bottom a:nth-child(1){
+.activity .img .bottom a:nth-child(1){
     float: left;
 }
-.activity .wrap .bottom a:nth-child(2){
+.activity .img .bottom a:nth-child(2){
     float: right;
 }
 .activity .list{
-    margin-bottom: 150px;
+    padding-bottom: 150px;
+    background-color: #333;
 }
 .activity .list a{
     display: inline-block;
@@ -117,8 +132,7 @@
 }
 .activity .list .sub{
     width: 90%;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 } 
 .activity .list .sub > a{
     width: 100%;
@@ -159,8 +173,8 @@
 }
 .activity .footer .icon{
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     padding: 10px;
     background-color: black;
     vertical-align: middle;
@@ -993,7 +1007,7 @@ nav{
 }
 .elevator li{
     width: 60px;
-    padding: 10px 16px;
+    padding: 6px 16px;
     background-color: white;
     text-align: center;
 }
