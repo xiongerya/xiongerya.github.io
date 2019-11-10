@@ -252,19 +252,23 @@ window.addEventListener("load", function(){
 
     // banner部分焦点图轮播动画
     let carousel_banner = document.querySelector("#banner > ul");
-    carouselBtn(carousel_banner, 3000);
+    carouselBtn(carousel_banner, 4500);
 
     // banner-side焦点图轮播动画
     let carousel_banner_side = document.querySelector("#banner-side > ul");
-    carousel(carousel_banner_side, 4500);
+    carousel(carousel_banner_side, 6000);
 
     // main 秒杀 middle 焦点图轮播动画
     let carousel_miaosha_middle = document.querySelector("#main .miaosha .middle > ul");
-    carousel(carousel_miaosha_middle, 6000);
+    carousel(carousel_miaosha_middle, 8000);
 
     // main 秒杀 right 焦点图轮播动画
     let carousel_miaosha_right = document.querySelector("#main .miaosha .right > ul");
-    carousel(carousel_miaosha_right, 2000);
+    carousel(carousel_miaosha_right, 3000);
+
+    // main channel 焦点图轮播动画
+    let carousel_channel = document.querySelector("#channel .carousel > ul");
+    carousel(carousel_channel, 12000);
 
 
 
