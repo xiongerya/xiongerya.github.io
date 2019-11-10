@@ -354,14 +354,14 @@ window.addEventListener("load", function(){
     
 
 
-     // aside侧边栏&回到顶部动画效果
+     // elevator侧边栏位置&回到顶部动画效果
      let elevator = document.querySelector(".elevator"),
          elevatorTop = elevator.querySelector(".top"),
          main = document.querySelector("#main"),
          mainTop = main.offsetTop;
 
-    // 根据document滚动的距离改变侧边栏的位置
-    document.addEventListener("scroll", function(){
+    // 判断document当前位置改变elevator动画
+    function position(){
         if(window.pageYOffset >= mainTop){
             elevator.style.position = "fixed";
             elevator.style.top = "145px";
@@ -371,9 +371,16 @@ window.addEventListener("load", function(){
             elevator.style.top = "0";
             elevatorTop.style.display = "none";
         }
+    }
+    // 在scroll事件预先执行一次
+    // 防止刷新时elevator不显示问题
+    position();
+    // 根据document滚动的距离改变侧边栏的位置
+    document.addEventListener("scroll", function(){
+        position();
     })
 
-    // 修改缓动动画函数为document滚动动画
+    // 修改缓动动画函数为document返回顶部动画
     function scroll(obj, target){
         clearInterval(obj.timer);
         obj.timer = setInterval(function(){
@@ -400,6 +407,7 @@ window.addEventListener("load", function(){
     let date = new Date('2019-11-10T14:00:00').getTime(),
         timer = null;
 
+    // 倒计时计算显示函数
     function showTime(){
         let now = Date.now(), h, m, s;
         let time = Math.ceil((date-now)/1000);
@@ -417,7 +425,8 @@ window.addEventListener("load", function(){
             second.innerHTML = s < 10 ? "0"+s : s;
         }
     }
-    
+    // 在定时器之前执行一次
+    // 防止刷新/刚进入页面时显示板时间错误
     showTime();
     timer = setInterval(function(){
         showTime();

@@ -1006,8 +1006,6 @@ nav{
     transition: top 0.5s;
 }
 .elevator li{
-    width: 60px;
-    padding: 6px 16px;
     background-color: white;
     text-align: center;
 }
@@ -1031,8 +1029,11 @@ nav{
     background-color: red;
 }
 .elevator a{
+    display: inline-block;
+    width: 60px;
+    padding: 10px 16px;
     font-size: 14px;
-    line-height: 14px;
+    line-height: 16px;
 }
 .elevator li:hover a{
     color: white;
@@ -1403,21 +1404,18 @@ nav{
     height: 50px;
     padding: 0 10px;
     background: white;
-    background-clip: content-box;
     text-align: center;
-    line-height: 50px;
     display: none;
 }
 #recommend .item:hover a:last-child{
     display: block;
 }
 #recommend .item a:last-child button{
-    display: inline-block;
     padding: 6px 20px;
     border-radius: 25px;
+    margin-top: 5px;
     border: none;
     outline: none;
-    margin: 0 auto;
     background-color: gray;
     color: white;
     cursor: pointer;
