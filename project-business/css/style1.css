@@ -1474,6 +1474,81 @@ footer .slogan .save i{
 footer .info{
     width: 1200px;
     padding: 20px 0;
+    border-bottom: 1px solid gray;
     margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
-
+footer .info > li{
+    width: 15%;
+}
+footer .info .title{
+    color: #333;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: bold;
+}
+footer .info .cover{
+    text-align: center;
+}
+footer .info .cover .title{
+    line-height: 3;
+}
+footer .info .cover .dir{
+    color: #555;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+}
+footer .info .cover .more{
+    float: right;
+}
+/* footer menu style */
+footer .menu{
+    padding: 10px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+footer .menu li{
+    display: inline-block;
+}
+footer .menu a{
+    display: block;
+}
+footer .menu a::after{
+    content: "|";
+    display: inline-block;
+    padding: 0 5px;
+    color: #999;
+}
+footer .menu li:last-child a::after{
+    content: "";
+}
+/* footer warn style */
+footer .warn{
+    padding: 15px 0;
+    text-align: center;
+}
+footer .warn a{
+    display: inline-block;
+    width: 123px;
+    height: 32px;
+    padding: 0 10px;
+    background: url(../images/bg.png) no-repeat center;
+}
+footer .warn a:nth-child(1){
+    background-position: -205px 0;
+}
+footer .warn a:nth-child(2){
+    background-position: -205px -37px;
+}
+footer .warn a:nth-child(3){
+    background-position: -205px -74px;
+}
+footer .warn a:nth-child(4){
+    background-position: -205px -110px;
+}
+footer .warn a:nth-child(5){
+    background-position: -205px -148px;
+}
