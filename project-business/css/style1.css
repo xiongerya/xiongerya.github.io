@@ -1428,3 +1428,52 @@ nav{
     display: inline-block;
     padding-right: 5px;
 }
+
+
+
+/* footer slogan style */
+footer .slogan{
+    width: 1200px;
+    padding: 50px 0;
+    border-bottom: 1px solid gray;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+footer .slogan li{
+    height: 42px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .slogan i{
+    float: left;
+    width: 40px;
+    height: 42px;
+    background: url(../images/bg.png) no-repeat center;
+}
+footer .slogan span{
+    float: left;
+    line-height: 42px;
+ }
+footer .slogan .more i{
+    background-position: 0 -192px;
+}
+footer .slogan .fast i{
+    background-position: -41px -192px;
+}
+footer .slogan .good i{
+    background-position: -82px -192px;
+}
+footer .slogan .save i{
+    background-position: -123px -192px;
+}
+/* footer info style */
+footer .info{
+    width: 1200px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+

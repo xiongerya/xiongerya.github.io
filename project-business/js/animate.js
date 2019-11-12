@@ -9,7 +9,6 @@ window.addEventListener("load", function(){
 
 
 
-
     // 隐藏/显示侧边栏，slide动画函数
     function slide(obj, target, callback){
         clearInterval(obj.timer);
@@ -362,7 +361,7 @@ window.addEventListener("load", function(){
 
     // 判断document当前位置改变elevator动画
     function position(){
-        if(window.pageYOffset >= mainTop){
+        if(window.pageYOffset > mainTop){
             elevator.style.position = "fixed";
             elevator.style.top = "145px";
             elevatorTop.style.display = "block";
