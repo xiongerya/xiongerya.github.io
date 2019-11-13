@@ -357,17 +357,18 @@ window.addEventListener("load", function(){
      let elevator = document.querySelector(".elevator"),
          elevatorTop = elevator.querySelector(".top"),
          main = document.querySelector("#main"),
-         mainTop = main.offsetTop;
+         miaosha = document.querySelector("#main .miaosha"),
+         miaoshaTop = main.offsetTop + miaosha.offsetTop;
 
     // 判断document当前位置改变elevator动画
     function position(){
-        if(window.pageYOffset > mainTop){
+        if(window.pageYOffset > miaoshaTop){
             elevator.style.position = "fixed";
             elevator.style.top = "145px";
             elevatorTop.style.display = "block";
         }else{
             elevator.style.position = "absolute";
-            elevator.style.top = "0";
+            elevator.style.top = miaosha.offsetTop + "px";
             elevatorTop.style.display = "none";
         }
     }

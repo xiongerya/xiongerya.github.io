@@ -12,7 +12,7 @@
 }
 #ad .wrap > div{
     position: absolute;
-   top: 0;
+    top: 0;
 }
 #ad .wrap > div:first-child{
     height: 80px;
@@ -334,7 +334,7 @@ header{
 
 
 
-#log .sub-menu .wrap  li{
+#log .sub-menu .wrap li{
     padding: 10px;
 }
 #log .sub-menu .title{
@@ -390,6 +390,56 @@ header{
     width: 25%;
 }
 
+
+
+/* header log menu last-menu style */
+#log .track:hover > a{
+    border-color: transparent;
+    background-color: inherit;
+}
+#log .track .wrap{
+    left: -165%;
+}
+#log .track .wrap li{
+    width: 200px;
+    padding: 10px;
+    border-bottom: 1px solid #999;
+    background-color: white;
+}
+#log .track .wrap img{
+    width: 40%;
+    float: left;
+}
+#log .track .wrap span{
+    float: left;
+    width: 60%;
+    padding: 0 6px;
+}
+#log .track .wrap i{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    background: url(../images/erweima/mobile.png) no-repeat;
+}
+#log .track .wrap .android{
+    background-position: 0 -25px;
+}
+#log .track .wrap .ipad{
+    background-position: 0 -50px;
+}
+#log .track .triangle{
+    position: absolute;
+    left: 45%;
+    bottom: -110%;
+    z-index: 2;
+    border: 6px solid transparent;
+    border-bottom-color: white;
+    display: none; 
+}
+#log .track:hover .triangle{
+    display: block;
+}
 
 
 /* header search style */
@@ -477,12 +527,61 @@ header{
 
 
 
-/* header nav menu style */
-/* header nav menu 一级菜单 */
+/* main style */
+/* aside elevator style*/
+#main{
+    position: relative;
+    width: 100%;
+    background: url(../images/nav-bg.webp) no-repeat;
+    background-position: 50% 0;
+}
+.elevator{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: top 0.8s;
+}
+.elevator li{
+    background-color: white;
+    text-align: center;
+}
+.elevator li.eleven{
+    width: 60px;
+    height: 60px;
+    background: url(../images/111.gif) no-repeat;
+    background-size: 60px 60px;
+}
+.elevator li.eleven:hover{
+    background: url(../images/11.png) no-repeat;
+    background-size: 60px 60px;
+}
+.elevator li.top{
+    display: none;
+}
+.elevator li.top a{
+    color: red;
+}
+.elevator li:hover{
+    background-color: red;
+}
+.elevator a{
+    display: inline-block;
+    width: 60px;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.elevator li:hover a{
+    color: white;
+}
+
+
+
+/* nav menu style */
+/* nav menu 一级菜单 */
 nav{
     width: 1200px;
-    margin: 10px auto 20px;
-    /* border: 1px solid black; */
+    margin: 10px auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -517,7 +616,7 @@ nav{
     font-size: 14px;
     line-height: 26px;
 }
-/* header nav menu 右侧隐藏菜单 */
+/* nav menu 右侧隐藏菜单 */
 #menu > ul > li .container{
     position: absolute;
     left: 100%;
@@ -546,7 +645,7 @@ nav{
     /* border: 1px solid orange; */
     background: pink;
 }
-/* header nav menu 列表 & 二/三级菜单 */
+/* nav menu 列表 & 二/三级菜单 */
 #menu .list,
 #menu .sub-menu{
     padding: 10px 0 0 10px;
@@ -627,7 +726,7 @@ nav{
 
 
 
-/* header nav banner style */
+/* nav banner style */
 #banner{
     width: 590px;
     height: 480px;
@@ -638,7 +737,7 @@ nav{
 
 
 
-/* header nav banner-side styles */
+/* nav banner-side styles */
 #banner-side{
     width: 200px;
     height: 480px;
@@ -654,7 +753,7 @@ nav{
 
 
 
-/* header nav logIn style */
+/* nav logIn style */
 #logIn{
     /* border: 1px solid red; */
     background-color: white;
@@ -673,7 +772,7 @@ nav{
 
 
 
-/* header nav logIn head style */
+/* nav logIn head style */
 #logIn .head{
     text-align: center;
 }
@@ -722,7 +821,7 @@ nav{
 
 
 
-/* header nav logIn news style */
+/* nav logIn news style */
 #logIn .news .title{
     padding: 3px 5px;
     font-size: 14px;
@@ -752,7 +851,7 @@ nav{
 
 
 
-/* header nav logIn icons style */
+/* nav logIn icons style */
 #logIn .icons{
     position: relative;
 }
@@ -907,7 +1006,7 @@ nav{
 
 
 
-/* header nav logIn icons tab */
+/* nav logIn icons tab */
 #logIn .icons .detail form > div,
 #logIn .icons .detail form > p{
     width: 95%;
@@ -970,7 +1069,7 @@ nav{
 
 
 
-/* header nav logIn tab style */
+/* nav logIn tab style */
 #logIn .icons .close{
     position: absolute;
     left: 0;
@@ -995,56 +1094,10 @@ nav{
 
 
 
-/* aside elevator style*/
-#main{
-    position: relative;
-}
-.elevator{
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: top 0.5s;
-}
-.elevator li{
-    background-color: white;
-    text-align: center;
-}
-.elevator li.eleven{
-    width: 60px;
-    height: 60px;
-    background: url(../images/111.gif) no-repeat;
-    background-size: 60px 60px;
-}
-.elevator li.eleven:hover{
-    background: url(../images/11.png) no-repeat;
-    background-size: 60px 60px;
-}
-.elevator li.top{
-    display: none;
-}
-.elevator li.top a{
-    color: red;
-}
-.elevator li:hover{
-    background-color: red;
-}
-.elevator a{
-    display: inline-block;
-    width: 60px;
-    padding: 10px 16px;
-    font-size: 14px;
-    line-height: 16px;
-}
-.elevator li:hover a{
-    color: white;
-}
-
-
-
 /* main left style */
 #main .miaosha{
     width: 1200px;
-    margin: 10px auto;
+    margin: 20px auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -1402,8 +1455,9 @@ nav{
     bottom: 0;
     width: 100%;
     height: 50px;
-    padding: 0 10px;
-    background: white;
+    padding: 0 5px;
+    background-color: white;
+    background-clip: content-box;
     text-align: center;
     display: none;
 }
