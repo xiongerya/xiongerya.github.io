@@ -311,6 +311,7 @@ header{
 /* a:hover sub-menu display:none/block */
 #log .sub-menu{
     position: relative;
+    z-index: 2;
 }
 #log .sub-menu:hover > a{
     border: 1px solid #999;
@@ -326,7 +327,6 @@ header{
     border: 1px solid #999;
     display: none;
     z-index: 1;
-    /* z-index: -1; */
 }
 #log .sub-menu:hover .wrap{
     display: block; 
@@ -465,7 +465,7 @@ header{
 }
 #search .wrap > .container{
     float: left;
-    padding: 40px 10px 0;
+    padding: 30px 10px 0;
 }
 .search-form{
     margin-left: 30px;
@@ -485,16 +485,41 @@ header{
     margin-left: -5px;
     background-color: red; 
 }
-.search-form > button{
+.search-form .cart{
+    position: relative;
+    display: inline-block;
+}
+.search-form .cart button{
     width: 130px;
-    height: 34px;
+    height: 36px;
     margin-left: 10px;
-    border: 1px solid #999;
+    border: 1px solid #ddd;
     outline: none;
     background-color: white;
+    color: #d00;
+    position: relative;
+    z-index: 1;
 }
-.search-form > button:hover{
+.search-form .cart button:hover{
     border-color: red;
+    border-bottom-color: transparent;
+}
+.search-form .cart .list{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 250%;
+    height: 70px;
+    padding: 25px 0;
+    padding-left: 100px;
+    border: 1px solid red;
+    background: url(../images/cart.png) no-repeat 30px center white;
+    color: gray;
+    font-size: 12px;
+    display: none;
+}
+.search-form .cart:hover .list{
+    display: block;
 }
 #search > .wrap .list{
     margin: 5px 0  0 30px;
@@ -512,7 +537,7 @@ header{
     color: red;
 }
 #search > .wrap .menu{
-    margin: 15px 0 3px;
+    padding-top: 18px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
