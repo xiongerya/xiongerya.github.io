@@ -229,6 +229,12 @@ header{
     border-bottom: none;
     background-color: white;
 }
+@font-face{
+    font-family: "location";
+    src: url(../font/font_7vv3mdcrv7r/iconfont.eot);
+    src: url(../font/font_7vv3mdcrv7r/iconfont.ttf) format("truetype"),
+    url(../font/font_7vv3mdcrv7r/iconfont.woff) format("woff");
+}
 #log .location > a i{
     display: inline-block;
     width: 30px;
