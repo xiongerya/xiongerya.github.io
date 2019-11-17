@@ -1,6 +1,21 @@
 /* header log location 部分定位icons */
 @font-face{
-    
+    font-family: "dingwei";
+    src: url(../font/dingwei/iconfont.eot);
+    src: url(../font/dingwei/iconfont.woff2) format('woff2'),
+    url(../font/dingwei/iconfont.woff) format('woff'),
+    url(../font/dingwei/iconfont.ttf) format('truetype'),
+    url(../font/dingwei/iconfont.svg) format('svg');
+}
+.icon-dingwei{
+    display: inline-block;
+    padding: 0 5px;
+    color: red;
+    font-family: "dingwei" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -15,8 +30,33 @@
     url(../font/arrow-down/iconfont.svg) format('svg');
 }
 .icon-arrow-down{
+    display: inline-block;
+    padding: 0 5px;
     font-family: "arrow-down" !important;
     font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+/* header search 部分cart icon  */
+@font-face{
+    font-family: "cart";
+    src: url(../font/cart/iconfont.eot);
+    src: url(../font/cart/iconfont.woff2) format('woff2'),
+    url(../font/cart/iconfont.woff) format('woff'),
+    url(../font/cart/iconfont.ttf) format('truetype'),
+    url(../font/cart/iconfont.svg) format('svg');
+}
+.icon-cart{
+    display: inline-block;
+    padding: 0 3px;
+    font-family: "cart" !important;
+    font-size: 16px;
+    font-weight: bold;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

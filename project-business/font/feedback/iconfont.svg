@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="fankui" unicode="&#58922;" d="M815.74 483.74c29.72 29.71 46.09 69.22 46.09 111.25s-16.37 81.55-46.09 111.25L712.25 809.74C682.54 839.44 643.02 855.81 601 855.81s-81.55-16.37-111.25-46.08L117.42 437.4 85.11 79.09l358.33 32.32 372.3 372.33zM546.35 753.13c30.13 30.13 79.17 30.13 109.3 0l103.49-103.49c30.13-30.13 30.13-79.17 0-109.3L425.38 206.58 212.6 419.37l333.75 333.76zM188.18 330.58L336.6 182.16l-163.14-14.72 14.72 163.14zM928.96-6.94H95.71c-22.11 0-40.03-17.93-40.03-40.03S73.6-87 95.71-87h833.25c22.11 0 40.03 17.93 40.03 40.03s-17.91 40.03-40.03 40.03z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>
