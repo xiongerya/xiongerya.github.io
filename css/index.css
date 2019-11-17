@@ -1,18 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-}
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-body{
-    background-color: orange;
-}
-
-
-
 /* header style sheet css */
 header{
     width: 100%;
@@ -23,8 +8,6 @@ header{
 }
 nav{
     width: 80%;
-    /* min-width: 800px;
-    max-width: 1200px; */
     margin: 0 auto;
 }
 #logo{
