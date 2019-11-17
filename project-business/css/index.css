@@ -229,19 +229,11 @@ header{
     border-bottom: none;
     background-color: white;
 }
-@font-face{
-    font-family: "location";
-    src: url(../font/font_7vv3mdcrv7r/iconfont.eot);
-    src: url(../font/font_7vv3mdcrv7r/iconfont.ttf) format("truetype"),
-    url(../font/font_7vv3mdcrv7r/iconfont.woff) format("woff");
-}
-#log .location > a i{
+#log .location > a span{
     display: inline-block;
     width: 30px;
-    /* 这里使用图像字符/元字符 */
-    /* height: 30px;
-    border: 1px solid red; */
-    /* background-color: orangered; */
+    color: red;
+    font-size: 16px;
 }
 #log .location > .sub{
     width: 200px;
@@ -366,11 +358,17 @@ header{
 #log .navigation{
     position: static;
 }
+#log .navigation:hover > a{
+    position: relative;
+    z-index: 3;
+}
 #log .navigation .wrap{
     width: 100%;
     position: absolute;
     left: 0;
     top: 30px;
+    z-index: 2;
+    display: none;
 }
 #log .navigation .wrap > ul{
     display: flex;

@@ -1,0 +1,23 @@
+/* header log location 部分定位icons */
+@font-face{
+    
+}
+
+
+
+/* header log menu 部分下拉菜单icons */
+@font-face{
+    font-family: "arrow-down";
+    src: url(../font/arrow-down/iconfont.eot);
+    src: url(../font/arrow-down/iconfont.woff2) format('woff2'),
+    url(../font/arrow-down/iconfont.woff) format('woff'),
+    url(../font/arrow-down/iconfont.ttf) format('truetype'),
+    url(../font/arrow-down/iconfont.svg) format('svg');
+}
+.icon-arrow-down{
+    font-family: "arrow-down" !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

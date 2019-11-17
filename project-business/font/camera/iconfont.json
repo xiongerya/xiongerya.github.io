@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "924330",
+      "name": "camera",
+      "font_class": "camera",
+      "unicode": "e8bb",
+      "unicode_decimal": 59579
+    }
+  ]
+}
