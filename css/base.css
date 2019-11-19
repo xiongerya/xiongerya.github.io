@@ -1,10 +1,15 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
-    background-color: orange;
+    background-color: #6d676e;
     font-family: sans-serif;
+}
+a{
+    color: #fbfffe;
+    text-decoration: none;
 }
 
 

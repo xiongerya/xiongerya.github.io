@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4237401",
+      "name": "项目",
+      "font_class": "xiangmu",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    }
+  ]
+}
