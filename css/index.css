@@ -1,53 +1,100 @@
-/* nav menu style */
-nav{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
+/* header style */
+header{
+    padding: 25px 120px;
+    margin: 0 1px;
+    background-color: #1b1b1e;
+    color: #faa916;  
+}
+
+
+
+/* main style */
+#main{
+    margin: 15px 105px;
+}
+#main h4{
+    font-size: 18px;
+}
+#main section{
+    padding: 20px;
+    margin: 20px 0;
     background-color: #1b1b1e;
 }
-nav .menu a{
+#main section .more{
     display: inline-block;
-    margin: 20px 0;
-    text-align: center;
-}
-nav .menu i{
-    display: inline-block;
-    width: 50px;
-    font-size: 26px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-nav .menu .title{
-    display: inline-block;
+    padding: 0 20px;
+    color: #96031a;
     font-size: 14px;
-    font-weight: bold;
-    text-align: left;
-    width: 0;
-    opacity: 0;
-    transition: width 0.3s 0s, opacity 0s -0.1s;
+    font-weight: normal;
 }
-nav .menu:hover .title{
-    width: 100px;
+
+
+
+/* main project style */
+#main .project .container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#main .project .container > figure{
+    /* width: 50%; */
+    margin: 20px 0;
+}
+#main .project .container > figure:last-child{
+    display: none;
+}
+#main .project .container > figure img{
+    width: 90%;
+}
+
+
+
+/* main blog style */
+#main .blog .list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#main .blog .list > li{
+    width: 30%;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+/* main study style */
+#main .study .items li{
+    padding: 5px 0;
+    margin-left: 10px;
+}
+#main .study .item{
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+}
+#main .study .item span{
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    padding: 5px;
+    background: url(../images/icons/加号.png) no-repeat center;
+    background-size: 14px 14px;
+}
+#main .study .sub{
     padding-left: 10px;
-    opacity: 1;
-    transition: width 0.3s 0s, opacity 0s 0.1s;   
+    /* display: none; */
+}
+#main .study .sub .link{
+    display: inline-block;
+    padding-left: 20px;
+    color: #6d676e;
 }
 
 
-body{
-    margin-left: 150px;
-}
-/* header style sheet css */
-header{
-    border: 1px solid green;
-}
-
-
-
-
-/* footer style sheet css */
+/* footer style */
 
 
 
