@@ -36,21 +36,29 @@ content{
 /* carousel style */
 .carousel{
     position: relative;
+    overflow: hidden;
 }
-.carousel > ul{
+.carousel .arrow{
+    display: inline-block;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.carousel .prev{
     left: 0;
-    top: 0;
-    width: 1000%;
+}
+.carousel .next{
+    right: 0;
+}
+.carousel ul{
+    list-style-type: none;
+    position: relative; 
 }
 .carousel > ul > li{
-    list-style-type: none;
     float: left;
-    width: 10%;
-}
-.carousel > ul > li a{
-    display: block;
 }
 .carousel > ul > li img{
+    display: inline-block;
     width: 100%;
 }
