@@ -49,7 +49,7 @@ content{
     width: 10%;
 }
 .carousel > ul > li a{
-    display: inline-block;
+    display: block;
 }
 .carousel > ul > li img{
     width: 100%;

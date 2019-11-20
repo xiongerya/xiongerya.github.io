@@ -1,0 +1,41 @@
+/* main style */
+#main section .container{
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+#main section .container figure{
+    width: 40%;
+}
+#main section .container figcaption{
+    padding: 10px 0;
+}
+#main section .container figcaption a{
+    color: #6d676e;
+}
+#main section .container .link{
+    display: block;
+}
+#main section .container img{
+    width: 100%;
+}
+#main section .container .info{
+    width: 60%;
+    padding-left: 20px;
+}
+#main section .container .info h3{
+    color: #faa916;
+    margin-bottom: 10px;
+}
+#main section .container dt{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#main section .container dd{
+    /* padding-left: 20px; */
+    text-indent: 2em;
+}
+

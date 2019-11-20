@@ -9,17 +9,6 @@ header{
 
 
 /* main style */
-#main{
-    margin: 15px 105px;
-}
-#main h4{
-    font-size: 18px;
-}
-#main section{
-    padding: 20px;
-    margin: 20px 0;
-    background-color: #1b1b1e;
-}
 #main section .more{
     display: inline-block;
     padding: 0 20px;
@@ -37,11 +26,8 @@ header{
     justify-content: space-between;
 }
 #main .project .container > figure{
-    /* width: 50%; */
+    width: 50%;
     margin: 20px 0;
-}
-#main .project .container > figure:last-child{
-    display: none;
 }
 #main .project .container > figure img{
     width: 90%;

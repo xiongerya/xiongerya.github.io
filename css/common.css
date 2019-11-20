@@ -44,10 +44,21 @@ header{
     background-color: #1b1b1e;
     color: #faa916;  
 }
+
+
+
 /* main style */
 #main{
-    /* margin: 15px 105px; */
+    margin: 15px 105px;
 }
+#main section{
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #1b1b1e;
+}
+
+
+
 /* footer copyright style */
 footer{
     margin: 25px 0;
