@@ -56,6 +56,10 @@ header{
     margin: 20px 0;
     background-color: #1b1b1e;
 }
+#main section h2{
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
 
 
 

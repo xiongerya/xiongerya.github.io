@@ -1,10 +1,15 @@
+/* main book style */
 #main .book .carousel .arrow{
     background-color: #6d676e;
     display: table;
     vertical-align: top;
     text-align: center;
     font-size: 30px;
-    color: #1b1b1e;
+    color: #fbfffe;
+    opacity: 0.5;
+}
+#main .book .carousel:hover .arrow{
+    opacity: 0.7;
 }
 #main .book .carousel .prev{
     left: 10px;
@@ -18,9 +23,33 @@
 }
 #main .book .items{
     width: 1000%;
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 #main .book .items > li{
     width: 2.5%;
     padding: 0 10px;
+}
+
+
+
+/* main list style */
+#main section .list{
+    list-style-type: none;
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; */
+    padding: 0 10px;
+}
+#main section .list li{
+    /* width: 45%; */
+    margin: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#main section .list li a:visited{
+    color: #6d676e;
+}
+#main section .list li a:hover{
+    color: #faa916;
 }
