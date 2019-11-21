@@ -28,6 +28,10 @@
 }
 
 
+#main .container .system ul,
+#main .container .system li{
+    list-style-type: none;
+}
 #main .container .system h3{
     margin: 15px 0;
     cursor: pointer;
@@ -41,9 +45,11 @@
 #main .container .system .icon-more{
     float: right;
 }
-#main .container .system .list,
+#main .container .system .list{
+    display: none;
+}
 #main .container .system .sub-list{
-    list-style-type: none;
+    display: none;
 }
 #main .container .system .list > li{
     padding-left: 10px;
@@ -56,33 +62,13 @@
 
 /* main system tags style */
 #main .container .system .tags li{
-    /* display: inline-block; */
+    display: inline-block;
     height: 30px;
     padding: 5px;
-    margin: 5px;
+    margin: 3px;
     border: 1px solid #fbfffe;
     border-radius: 30px;
-    display: none;
-}
-#main .container .system .tags:hover li{
-    display: inline-block;
 }
 #main .container .system .tags li:hover{
     border-color: #faa916;
-}
-
-
-
-/* main system class style */
-#main .container .system .class .list{
-    display: none;
-}
-#main .container .system .class:hover .list{
-    display: block;
-}
-#main .container .system .class .sub-list{
-    display: none;
-}
-#main .container .system .class .list > li:hover .sub-list{
-    display: block;
 }

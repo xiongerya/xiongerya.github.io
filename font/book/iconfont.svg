@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="book" unicode="&#59628;" d="M288 640c-35.296 0-64 28.704-64 64s28.704 64 64 64h512V848H288c-79.408 0-144-64.608-144-144v-576c0-120.224 71.776-192 192-192h544V640H288z m512-624H336c-76.4 0-112 35.584-112 112V575.2a142.896 142.896 0 0 1 64-15.2h512v-544z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

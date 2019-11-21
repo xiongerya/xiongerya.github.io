@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7573276",
+      "name": "video",
+      "font_class": "video",
+      "unicode": "e6fa",
+      "unicode_decimal": 59130
+    }
+  ]
+}

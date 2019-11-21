@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
     // study点击显示下拉菜单，并且icon切换
-    let items = document.querySelectorAll(".study .items > li"),
-        len = items.length;
+    let lis = document.querySelectorAll(".study .items > li"),
+        len = lis.length;
 
     for(let i = 0; i < len ; i++){
         let flag = true;
@@ -17,9 +17,9 @@ window.addEventListener("load", function(){
             }
             flag = !flag;
         }
-        let title = items[i].querySelector(".title");
+        let title = lis[i].querySelector(".title");
         title.addEventListener("click", function(){
-            showSub(items[i]);
+            showSub(lis[i]);
         })
     }
 
