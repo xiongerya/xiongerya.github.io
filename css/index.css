@@ -63,15 +63,24 @@ header{
 }
 #main .study .title span{
     display: inline-block;
-    width: 20px;
+    width: 30px;
     height: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     background: url(../images/icons/加号.png) no-repeat center;
     background-size: 14px 14px;
 }
+#main .study .title .jianhao{
+    /* display: inline-block;
+    width: 20px;
+    height: 10px;
+    padding: 5px; */
+    background: url(../images/icons/减号.png) no-repeat center;
+    background-size: 14px 14px;
+    
+}
 #main .study .sub{
     padding-left: 10px;
-    /* display: none; */
+    display: none;
 }
 #main .study .sub .link{
     display: inline-block;

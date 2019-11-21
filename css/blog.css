@@ -1,0 +1,88 @@
+#main{
+    margin: 15px 50px;
+}
+#main .container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#main .container .items{
+    width: 74%;
+    background-color: #1b1b1e;
+}
+#main .container .system{
+    width: 25%;
+    padding: 0 25px;
+    background-color: #1b1b1e;
+}
+
+
+
+#main .container .items .item{
+    margin: 20px;
+    border-bottom: 1px solid #6d676e;
+}
+#main .container .items .item h2{
+    padding-bottom: 15px;
+}
+
+
+#main .container .system h3{
+    margin: 15px 0;
+    cursor: pointer;
+}
+#main .container .system h3:hover{
+    color: #faa916;
+}
+#main .container .system li:hover > a{
+    color: #faa916;
+}
+#main .container .system .icon-more{
+    float: right;
+}
+#main .container .system .list,
+#main .container .system .sub-list{
+    list-style-type: none;
+}
+#main .container .system .list > li{
+    padding-left: 10px;
+}
+#main .container .system .sub-list > li{
+    padding-left: 15px;
+}
+
+
+
+/* main system tags style */
+#main .container .system .tags li{
+    /* display: inline-block; */
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #fbfffe;
+    border-radius: 30px;
+    display: none;
+}
+#main .container .system .tags:hover li{
+    display: inline-block;
+}
+#main .container .system .tags li:hover{
+    border-color: #faa916;
+}
+
+
+
+/* main system class style */
+#main .container .system .class .list{
+    display: none;
+}
+#main .container .system .class:hover .list{
+    display: block;
+}
+#main .container .system .class .sub-list{
+    display: none;
+}
+#main .container .system .class .list > li:hover .sub-list{
+    display: block;
+}
