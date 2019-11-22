@@ -18,8 +18,9 @@ window.addEventListener("load", function(){
             flag = !flag;
         }
         let title = lis[i].querySelector(".title");
-        title.addEventListener("click", function(){
+        title.addEventListener("click", function(e){
             showSub(lis[i]);
+            e.stopPropagation();
         })
     }
 

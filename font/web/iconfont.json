@@ -6,11 +6,11 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "705032",
-      "name": "web",
-      "font_class": "web",
-      "unicode": "eb8e",
-      "unicode_decimal": 60302
+      "icon_id": "7204913",
+      "name": "Web",
+      "font_class": "Web",
+      "unicode": "e610",
+      "unicode_decimal": 58896
     }
   ]
 }

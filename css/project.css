@@ -1,15 +1,35 @@
 /* main style */
+#main section{
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+#main section .expand{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: #1b1b1e;
+}
+#main section .expand .more{
+    float: right;
+    padding: 0 10px;
+    cursor: pointer;
+}
 #main section .container{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
+    position: relative;
+    margin-bottom: 20px;
 }
 #main section .container figure{
     width: 40%;
 }
 #main section .container figcaption{
-    padding: 10px 0;
+    padding-top: 10px;
 }
 #main section .container figcaption a{
     color: #6d676e;
@@ -36,5 +56,6 @@
 #main section .container dd{
     /* padding-left: 20px; */
     text-indent: 2em;
+    color: #6d676e;
 }
 

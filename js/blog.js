@@ -19,33 +19,10 @@ window.addEventListener("load", function(){
             flag = !flag;
         }
         let title = lis[i].querySelector(".title");
-        title.addEventListener("click", function(){
-            showSub(lis[i]);
-        })
-    }
-
-
-    let class_lis = document.querySelectorAll(".system .class .list > li"),
-        class_len = class_lis.length;
-
-    console.log(class_lis);
-    for(let i = 0; i < class_len ; i++){
-        let class_flag = true;
-        function showSub(obj){
-            let sub = obj.querySelector(".sub-list");
-            if(class_flag){
-                sub.style.display = "block";
-            }else{
-                sub.style.display = "none";
-            }
-            class_flag = !class_flag;
-        }
-        let title = class_lis[i].querySelector(".sub-title");
         title.addEventListener("click", function(e){
-            showSub(class_lis[i]); e.stopPropagation();
+            showSub(lis[i]);
+            e.stopPropagation();
         })
     }
-    
-
 
 })

@@ -10,7 +10,11 @@
         <link rel="styleSheet" type="text/css" href="css/project.css" />
         <!-- iconfont style link-->
         <!-- font-class 引用方式 -->
+        <link rel="styleSheet" type="text/css" href="font/more/iconfont.css" />
+
+
         <script type="text/javascript" src="./js/common.js"></script>
+        <script type="text/javascript" src="./js/project.js"></script>
     </head>
     <body>
         <nav>
@@ -33,54 +37,56 @@
             <h1>Project | Welcome to here</h1>    
         </header>
         <div id="main">
-            <section>
+            <section class="wrap">
                 <h2>学校官网（仿站）</h2>
                 <div class="container">
                     <figure>
-                        <a class="blank" class="link" href="./project-school/index.html"><img src="./images/project/school.jpg"/></a>
-                        <figcaption><a href="">点击跳转源地址</a></figcaption>
+                        <a class="blank link" href="./project-school/index.html"><img src="./images/project/school.jpg"/></a>
+                        <figcaption><a class="blank" href="http://www.ntu.edu.cn/main.htm">点击跳转源地址</a></figcaption>
                     </figure>
                     <div class="info">
                         <h3>技术&问题解决</h3>
                         <dl class="list">
                             <dt>响应式布局</dt>
                             <dd>
-                                利用媒体查询：@media screen and (min-width / max-width: --px)，改变不同宽度下的css样式，结合使用flex弹性盒子，改变不同页面宽度下的弹性元素占弹性容器的width百分比，达到自适应。</dd>
+                                利用媒体查询：@media screen and (min-width / max-width: --px)，改变不同宽度下的css样式。结合使用flex弹性盒子，改变不同页面宽度下的弹性元素占弹性容器的width百分比，达到自适应。</dd>
                             <dt>css三角形</dt>
-                            <dd></dd>
+                            <dd>利用边框绘制三角形</dd>
                             <dt>焦点图切换</dt>
                             <dd></dd>
                             <dt>背景图片定位</dt>
-                            <dd></dd>
+                            <dd>background-position对背景图片进行定位，百分比和关键字/数值定位方式有较大差别。</dd>
                         </dl>
                     </div>
                 </div>
+                <div class="expand"><span class="more" href="./study.html">more<i class="iconfont icon-more"></i></span></div>
             </section>
-            <section>
+            <section class="wrap">
                 <h2>京东商城（仿站）</h2>
                 <div class="container">
                     <figure>
-                        <a class="blank" class="link" href="./project-business/index.html"><img src="./images/project/business.jpg" /></a>
-                        <figcaption><a href="">点击跳转源地址</a></figcaption>
+                        <a class="blank link" href="./project-business/index.html"><img src="./images/project/business.jpg" /></a>
+                        <figcaption><a class="blank" href="https://www.jd.com/">点击跳转源地址</a></figcaption>
                     </figure>
                     <div class="info">
                         <h3>技术&问题解决</h3>
                         <dl class="list">
                             <dt>页面布局</dt>
-                            <dd>flex弹性盒子布局</dd>
+                            <dd>利用display：flex，进行弹性盒子布局；对弹性容器/弹性元素，主轴/垂直轴分别设置</dd>
                             <dt>下拉菜单</dt>
                             <dd></dd>
                             <dt>tab栏切换</dt>
                             <dd></dd>
                             <dt>侧边栏显示/隐藏</dt>
-                            <dd></dd>
+                            <dd>position：fixed对侧边栏进行定位，改变left/right值滑动显示/隐藏</dd>
                             <dt>倒计时效果</dt>
-                            <dd></dd>
+                            <dd>设置活动结束时间，获取当前时间，对对时/分/秒分别进行计算。利用setInterval()，每秒为间隔。</dd>
                             <dt>position & z-index</dt>
-                            <dd></dd>
+                            <dd>position = static时，元素遮盖方式处于正常文档流，即后来居上；而在position ≠ static时，元素的遮盖脱离文档流（在文档流上方进行遮盖），z-index。</dd>
                         </dl>
                     </div>
                 </div>
+                <div class="expand"><span class="more" href="./study.html">more<i class="iconfont icon-more"></i></span></div>
             </section>
         </main>
         <footer>

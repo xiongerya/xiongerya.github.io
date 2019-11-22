@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 body{
     margin-left: 50px;
@@ -54,6 +55,8 @@ content{
 .carousel ul{
     list-style-type: none;
     position: relative; 
+    left: 0;
+    top: 0;
 }
 .carousel > ul > li{
     float: left;

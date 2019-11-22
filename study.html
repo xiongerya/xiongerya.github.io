@@ -10,7 +10,15 @@
         <link rel="styleSheet" type="text/css" href="css/study.css" />
         <!-- iconfont style link-->
         <!-- font-class 引用方式 -->
+        <link rel="styleSheet" type="text/css" href="./font/book/iconfont.css" />
+        <link rel="styleSheet" type="text/css" href="./font/web/iconfont.css" />
+        <link rel="styleSheet" type="text/css" href="./font/code/iconfont.css" />
+        <link rel="styleSheet" type="text/css" href="./font/video/iconfont.css" />
+        <link rel="styleSheet" type="text/css" href="./font/other/iconfont.css" />
+
+
         <script type="text/javascript" src="./js/common.js"></script>
+        <script type="text/javascript" src="./js/study.js"></script>
     </head>
     <body>
         <nav>
@@ -33,32 +41,102 @@
             <h1>Study | Welcome to here</h1>   
         </header>
         <div id="main">
-            <section class="book">
-                <h2>阅读书目</h2>
+            <section class="book wrap">
+                <h2>阅读书目<i class="iconfont icon-book"></i></h2>
                 <div class="carousel">
                     <ul class="items clearfix">
                         <li>
                             <img src="images/book/css.jpg" />
+                            <section class="detail">
+                                <h3 class="title">《CSS权威指南》</h3>
+                                <ul class="info">
+                                    <li>选择器/特指度/层叠</li>
+                                    <li>字体&文本属性</li>
+                                    <li>视觉格式化基础</li>
+                                    <li>盒子模型</li>
+                                    <li>颜色&背景</li>
+                                    <li>定位：float/position/flex/grid</li>
+                                    <li>表格&列表（ul/ol/dl）</li>
+                                    <li>变形&过渡&动画</li>
+                                    <li>滤镜&媒体查询</li>
+                                </ul>
+                            </section>
                         </li>
                         <li>
                             <img src="images/book/css1.jpg" />
+                            <section class="detail">
+                                <h3 class="title">《CSS世界》</h3>
+                                <ul class="info">
+                                    <li>选择器/特指度/层叠</li>
+                                    <li>字体&文本属性</li>
+                                    <li>视觉格式化基础</li>
+                                    <li>盒子模型</li>
+                                    <li>颜色&背景</li>
+                                    <li>定位：float/position/flex/grid</li>
+                                    <li>表格&列表（ul/ol/dl）</li>
+                                    <li>变形&过渡&动画</li>
+                                    <li>滤镜&媒体查询</li>
+                                </ul>
+                            </section>
                         </li>
                         <li>
                             <img src="images/book/js.jpg" />
+                            <section class="detail">
+                                <h3 class="title">《JavaScript权威指南》</h3>
+                                <ul class="info">
+                                    <li>选择器/特指度/层叠</li>
+                                    <li>字体&文本属性</li>
+                                    <li>视觉格式化基础</li>
+                                    <li>盒子模型</li>
+                                    <li>颜色&背景</li>
+                                    <li>定位：float/position/flex/grid</li>
+                                    <li>表格&列表（ul/ol/dl）</li>
+                                    <li>变形&过渡&动画</li>
+                                    <li>滤镜&媒体查询</li>
+                                </ul>
+                            </section>
                         </li>
                         <li>
                             <img src="images/book/js1.jpg" />
+                            <section class="detail">
+                                <h3 class="title">《JavaScript高级程序设计》</h3>
+                                <ul class="info">
+                                    <li>选择器/特指度/层叠</li>
+                                    <li>字体&文本属性</li>
+                                    <li>视觉格式化基础</li>
+                                    <li>盒子模型</li>
+                                    <li>颜色&背景</li>
+                                    <li>定位：float/position/flex/grid</li>
+                                    <li>表格&列表（ul/ol/dl）</li>
+                                    <li>变形&过渡&动画</li>
+                                    <li>滤镜&媒体查询</li>
+                                </ul>
+                            </section>
                         </li>
                         <li>
                             <img src="images/book/js-es6.jpg" />
+                            <section class="detail">
+                                <h3 class="title">《ES6标准入门》</h3>
+                                <ul class="info">
+                                    <li>选择器/特指度/层叠</li>
+                                    <li>字体&文本属性</li>
+                                    <li>视觉格式化基础</li>
+                                    <li>盒子模型</li>
+                                    <li>颜色&背景</li>
+                                    <li>定位：float/position/flex/grid</li>
+                                    <li>表格&列表（ul/ol/dl）</li>
+                                    <li>变形&过渡&动画</li>
+                                    <li>滤镜&媒体查询</li>
+                                </ul>
+                            </section>
                         </li>
                     </ul>
                     <a class="arrow prev">&lt;</a>
                     <a class="arrow next">&gt;</a>
                 </div>
             </section>
-            <section class="doc">
-                <h2>文档博客</h2>
+            <section class="doc wrap">
+                <h2>文档博客<i class="iconfont icon-Web"></i></h2>
                 <ul class="list">
                     <li><a class="blank" href="https://developer.mozilla.org/zh-CN/">MDN Web 文档：https://developer.mozilla.org/zh-CN/</a></li>
                     <li><a class="blank" href="http://www.ruanyifeng.com/blog/">阮一峰的网络日志：http://www.ruanyifeng.com/blog/</a></li>
@@ -66,8 +144,8 @@
                     <li><a class="blank" href=""></a></li>
                 </ul>
             </section>
-            <section class="code">
-                <h2>代码练习</h2>
+            <section class="code wrap">
+                <h2>代码练习<i class="iconfont icon-code"></i></h2>
                 <ul class="list">
                     <li><a class="blank" href="https://edabit.com">edabit：https://edabit.com</a></li>
                     <li><a class="blank" href="https://www.freecodecamp.org">freecodecamp：https://www.freecodecamp.org</a></li>
@@ -75,8 +153,8 @@
                     <li><a class="blank" href=""></a></li>
                 </ul>
             </section>
-            <section class="video">
-                <h2>视频网站</h2>
+            <section class="video wrap">
+                <h2>视频网站<i class="iconfont icon-video"></i></h2>
                 <ul class="list">
                     <li><a class="blank" href="https://www.imooc.com/">慕课网：https://www.imooc.com/</a></li>
                     <li><a class="blank" href="https://www.bilibili.com/">哔哩哔哩：https://www.bilibili.com/</a></li>
@@ -84,8 +162,8 @@
                     <li><a class="blank" href=""></a></li>
                 </ul>
             </section>
-            <section class="other">
-                <h2>其他内容</h2>
+            <section class="other wrap">
+                <h2>其他内容<i class="iconfont icon-other"></i></h2>
                 <ul class="list">
                     <li><a class="blank" href=""></a></li>
                     <li><a class="blank" href=""></a></li>
