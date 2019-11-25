@@ -82,12 +82,17 @@ header{
     padding-left: 10px;
     display: none;
 }
-#main .study .sub .link{
+#main .study .sub a{
     display: inline-block;
     padding-left: 20px;
+    color: #fbfffe;
+}
+#main .study .sub a:visited{
     color: #6d676e;
 }
-
+#main .study .sub a:hover{
+    color: #faa916;
+}
 
 /* footer style */
 

@@ -14,15 +14,13 @@ window.addEventListener("load", function(){
             ul.style.display = flag ? "block" : "none";
             flag = !flag;
             e.stopPropagation();
-            console.log(this.innerHTML + ": " + flag);
+            // console.log(this.innerHTML + ": " + flag);
         })
-        
     }
 
     for(let i = 0; i < lis.length; i++){
         let flag = true;   
         showOrHide(lis[i], flag);
-        
         let sub_lis = lis[i].querySelectorAll(".menu > li");
         for(let j = 0; j < sub_lis.length; j++){
             let sub_flag = true;

@@ -9,7 +9,6 @@
 }
 #main .container .items{
     width: 74%;
-    height: 1000px;
     background-color: #1b1b1e;
 }
 #main .container .system{
@@ -37,12 +36,11 @@
     list-style-type: none;
 }
 #main .container .system .title{
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 5px 0 10px;
 }
-#main .container .system h3:hover{
-    color: #faa916;
-}
+#main .container .system h3:hover,
+#main .container .system .title:hover a,
 #main .container .system li:hover > a{
     color: #faa916;
 }
