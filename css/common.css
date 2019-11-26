@@ -50,7 +50,7 @@ header{
 
 /* main style */
 #main{
-    margin: 15px 105px;
+    margin: 0 105px;
 }
 #main section.wrap{
     padding: 20px;

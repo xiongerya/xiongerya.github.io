@@ -1,21 +1,17 @@
 window.addEventListener("load", function(){
     // 点击expand展开全部信息
     let wraps = document.querySelectorAll(".wrap"),
-        mores = document.querySelectorAll(".wrap .expand .more"),
+        spans = document.querySelectorAll(".expand span"),
         len = wraps.length;
 
     for(let i = 0; i < len; i++){
-        mores[i].index = i;
+        spans[i].index = i;
     }
-
     for(let i = 0; i < len; i++){
         let flag = true;
-        mores[i].addEventListener("click", function(){
-            if(flag){
-                wraps[this.index].style.height = "100%";
-            }else{
-                wraps[this.index].style.height = "400px";
-            }
+        spans[i].addEventListener("click", function(){
+            wraps[this.index].style.height = flag ? "100%" : "300px";
+            this.innerHTML = flag ? "收起" : "展开";
             flag = !flag;
         })
     }

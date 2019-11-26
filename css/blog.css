@@ -1,26 +1,29 @@
 #main{
-    margin: 15px 50px;
+    margin: 0 50px;
 }
 #main .container{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 20px 0;
 }
 #main .container .items{
     width: 74%;
+    padding: 20px;
+    border-radius: 10px;
     background-color: #1b1b1e;
 }
 #main .container .system{
     width: 24%;
     padding: 0 25px;
+    border-radius: 10px;
     background-color: #1b1b1e;
 }
 
 
 
 #main .container .items .item{
-    margin: 20px;
     border-bottom: 1px solid #6d676e;
 }
 #main .container .items .item h2{
