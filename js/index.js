@@ -1,27 +1,25 @@
 window.addEventListener("load", function(){
-    // study点击显示下拉菜单，并且icon切换
-    let lis = document.querySelectorAll(".study .items > li"),
-        len = lis.length;
-
-    for(let i = 0; i < len ; i++){
-        let flag = true;
-        function showSub(obj){
-            let sub = obj.querySelector(".sub"),
-                span = obj.querySelector(".title > span");
-            if(flag){
-                sub.style.display = "block";
-                span.className = "jianhao";
-            }else{
-                sub.style.display = "none";
-                span.className = "";
-            }
-            flag = !flag;
-        }
-        let title = lis[i].querySelector(".title");
+    // click下拉菜单显示/隐藏动画封装函数
+    function showOrHide(obj, flag){
+        let title = obj.querySelector(".title"),
+            span = title.querySelector("span"),
+            ul = obj.querySelector("ul");
+        
         title.addEventListener("click", function(e){
-            showSub(lis[i]);
+            ul.style.display = flag ? "block" : "none";
+            span.className = flag ? "jianhao" : "";
+            flag = !flag;
             e.stopPropagation();
         })
+    }
+
+
+    // study点击显示下拉菜单，并且icon切换
+    let lis = document.querySelectorAll(".study .items > li");
+    
+    for(let i = 0; i < lis.length ; i++){
+        let flag = true;
+        showOrHide(lis[i], flag);
     }
 
 })

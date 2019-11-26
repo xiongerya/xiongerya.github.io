@@ -4,37 +4,43 @@
     font-weight: normal;
     padding: 0 10px;
 }
+#main .book .carousel{
+    border-radius: 5px;
+}
 #main .book .carousel .arrow{
-    background-color: #6d676e;
     display: table;
     vertical-align: top;
     text-align: center;
     font-size: 30px;
     color: #fbfffe;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 #main .book .carousel:hover .arrow{
-    opacity: 0.7;
+    opacity: 1;
 }
 #main .book .carousel .prev{
-    /* left: 10px; */
-    padding-left: 5px;
-    border-radius: 20px 0 0 20px;
+    left: -10px;
 }
 #main .book .carousel .next{
-    /* right: 10px; */
-    padding-right: 5px;
-    border-radius: 0 20px 20px 0;
+    right: -10px;
 }
 #main .book .items{
     width: 1000%;
-    /* padding: 20px 0; */
+    padding: 20px 0;
+    background-color: #464246;
 }
 #main .book .items > li{
     width: 2.5%;
-    padding: 0 0.125%;
+    perspective: 1000px;
+}
+#main .book .items .wrap{
+    padding: 0 5%;
     position: relative;
-    overflow: hidden;
+    transform-style: preserve-3d;/*父容器应用，用于制造3D效果*/
+    transition: transform 1s;
+}
+#main .book .items > li:hover .wrap{
+    transform: rotateY(0.5turn);
 }
 #main .book .items .detail{
     position: absolute;
@@ -42,20 +48,24 @@
     top: 0;
     width: 90%;
     height: 100%;
-    padding: 10px 5px;
+    padding: 10px;
     margin: 0 5%;
-    background-color: #fbfffe;
-    color: #6d676e;
-    z-index: -1;
+    background-color: #1b1b1e;
+    color: #fbfffe;
+    /* z-index: -1; */
+    transform: rotateY(0.5turn) translateZ(1px);/*简写和分开写效果相差很大*/
+    opacity: 0.6;
+    transition: opacity 1s 0.5s;
+}
+#main .book .items > li:hover .detail{
+    opacity: 1;
 }
 #main .book .items .detail .title{
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 #main .book .items .detail .info{
-    text-indent: 5px;
-    line-height: 20px;
-    
-    /* list-style-type: square; */
+    text-indent: 10px;
+    line-height: 18px; 
 }
 
 

@@ -10,6 +10,7 @@ nav .menu a{
     display: inline-block;
     margin: 20px 0;
     text-align: center;
+    /* color: #FFC312; */
 }
 nav .menu i{
     display: inline-block;
@@ -54,13 +55,14 @@ header{
 #main section.wrap{
     padding: 20px;
     margin: 20px 0;
+    border-radius: 10px;
     background-color: #1b1b1e;
 }
 #main section.wrap h2{
     margin-bottom: 20px;
     letter-spacing: 1px;
+    color: #fbfffe;
 }
-
 
 
 /* footer copyright style */
