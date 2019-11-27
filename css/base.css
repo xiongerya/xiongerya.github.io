@@ -17,11 +17,18 @@ a{
 }
 /* website color */
 content{
+    /* section color */
     color: #1b1b1e;
+    /* body color */
     color: #464246;
+    /* title color */
     color: #faa916;
+    /* icons color */
     color: #EA2027;
+    /* font color */
     color: #fbfffe;
+    /* font sub color */
+    color: #6d676e;
 }
 
 
