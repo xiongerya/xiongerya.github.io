@@ -16,10 +16,15 @@
     flex-flow: row wrap;
     justify-content: space-between;
 }
-#main .project .container > figure{
+#main .project .container figure{
     width: 50%;
 }
-#main .project .container > figure img{
+#main .project .container figure > a{
+    display: block;
+    height: 280px;
+    overflow: hidden;
+}
+#main .project .container figure img{
     width: 90%;
 }
 
