@@ -28,13 +28,13 @@
                 <li><a href="./blog.html">
                     <i class="icon-blog">&#xe603;</i><span class="title">Blog</span>
                 </a></li>
-                <li><a href="./study.html">
-                    <i class="icon-study">&#xe634;</i><span class="title">Study</span>
+                <li><a href="./learn.html">
+                    <i class="icon-study">&#xe634;</i><span class="title">Learn</span>
                 </a></li>
             </ul>
         </nav>
         <header>
-            <h1>Project | Welcome to here</h1>    
+            <h1>Project | My own projects</h1>    
         </header>
         <div id="main">
             <section class="wrap">
@@ -49,13 +49,19 @@
                         <dl class="list">
                             <dt>响应式布局</dt>
                             <dd>
-                                利用媒体查询：@media screen and (min-width / max-width: --px)，改变不同宽度下的css样式。结合使用flex弹性盒子，改变不同页面宽度下的弹性元素占弹性容器的width百分比，达到自适应。</dd>
-                            <dt>css三角形</dt>
-                            <dd>利用边框绘制三角形</dd>
+                                在不同页面宽度下@media screen and (min-width / max-width: --px)，设置相对应的CSS样式，以及改变display:flex下弹性元素的width百分比，达到页面宽度自适应的响应式布局。</dd>
+                            <dt>CSS三角形</dt>
+                            <dd>
+                                将元素border以内均设置为0，border-width设置CSS三角形的形状（锐角/钝角），border-color设置CSS三角形的方向和颜色（例如：三角向上，border-color： transparent，border-bottom-color： black)
+                            </dd>
                             <dt>焦点图切换</dt>
-                            <dd></dd>
+                            <dd>
+                                缓动动画效果切换焦点图，利用position：relative中的left实现焦点图切换效果。JS为轮播图添加index属性，并在轮播图末尾clone添加首张轮播图，通过条件判断达到无缝滚动效果。
+                            </dd>
                             <dt>背景图片定位</dt>
-                            <dd>background-position对背景图片进行定位，百分比和关键字/数值定位方式有较大差别。</dd>
+                            <dd>
+                                background-position对背景图片进行定位问题，关键字/数值定位与百分比定位的区别：关键字/数值定位时对于元素位置来设置图片位置，而百分比定位是将元素和图片上百分比位置相同的点对其。
+                            </dd>
                         </dl>
                     </div>
                 </div>
@@ -72,17 +78,25 @@
                         <h3>技术&问题解决</h3>
                         <dl class="list">
                             <dt>页面布局</dt>
-                            <dd>利用display：flex，进行弹性盒子布局；对弹性容器/弹性元素，主轴/垂直轴分别设置</dd>
-                            <dt>下拉菜单</dt>
-                            <dd></dd>
+                            <dd>
+                                设置display：flex下弹性元素的width百分比，以及主轴（justify-content）和垂轴（align-items），实现元素的整齐分布效果。
+                            </dd>
                             <dt>tab栏切换</dt>
-                            <dd></dd>
+                            <dd>
+                                双重tab栏切换，在html中搭建合理嵌套结构。JS中为每一级title设置index属性，实现不同title下的mouseover切换至对应的tab。
+                            </dd>
                             <dt>侧边栏显示/隐藏</dt>
-                            <dd>position：fixed对侧边栏进行定位，改变left/right值滑动显示/隐藏</dd>
+                            <dd>
+                                利用position：fixed将侧边栏定位至页面某处，利用缓动动画通过改变left/right值来达到侧边栏显示/隐藏的平滑运动效果。
+                            </dd>
                             <dt>倒计时效果</dt>
-                            <dd>设置活动结束时间，获取当前时间，对对时/分/秒分别进行计算。利用setInterval()，每秒为间隔。</dd>
+                            <dd>
+                                设置活动结束时间，并获取当前时间，封装一个对时/分/秒分别进行计算的时间转换函数，并在setInterval（）之前调用一次，目的是消除页面重新加载时出现的时间空白。
+                            </dd>
                             <dt>position & z-index</dt>
-                            <dd>position = static时，元素遮盖方式处于正常文档流，即后来居上；而在position ≠ static时，元素的遮盖脱离文档流（在文档流上方进行遮盖），z-index。</dd>
+                            <dd>
+                                position = static时，元素遮盖方式处于正常文档流，即后来居上原则。而在position ≠ static时，元素的遮盖脱离文档流（即在正常文档流上方），z-inddex默认值为auto，不会自动创建本地堆叠上下文（即position ≠ static的元素实行后来居上原则）；创建本地堆叠上下文后，z-index将指定元素在当前堆叠上下文中的堆叠层级，同时创建一个新的本地堆叠上下文。
+                            </dd>
                         </dl>
                     </div>
                 </div>

@@ -1,0 +1,93 @@
+/* main book style */
+#main section h2 .iconfont{
+    font-size: inherit;
+    font-weight: normal;
+    padding: 0 10px;
+}
+#main .book .carousel{
+    border-radius: 5px;
+}
+#main .book .carousel .arrow{
+    display: table;
+    vertical-align: top;
+    text-align: center;
+    font-size: 30px;
+    color: #fbfffe;
+    opacity: 0.8;
+}
+#main .book .carousel:hover .arrow{
+    opacity: 1;
+}
+#main .book .carousel .prev{
+    left: -10px;
+}
+#main .book .carousel .next{
+    right: -10px;
+}
+#main .book .items{
+    width: 1000%;
+    padding: 20px 0;
+    background-color: #464246;
+}
+#main .book .items > li{
+    width: 2.5%;
+    perspective: 1000px;
+}
+#main .book .items .wrap{
+    padding: 0 5%;
+    position: relative;
+    transform-style: preserve-3d;/*父容器应用，用于制造3D效果*/
+    transition: transform 1s;
+}
+#main .book .items > li:hover .wrap{
+    transform: rotateY(0.5turn);
+}
+#main .book .items .detail{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    margin: 0 5%;
+    background-color: #1b1b1e;
+    transform: rotateY(0.5turn) translateZ(1px);/*简写和分开写效果相差很大*/
+    opacity: 0.6;
+    transition: opacity 1s 0.5s;
+    overflow: hidden;
+}
+#main .book .items > li:hover .detail{
+    opacity: 1;
+}
+#main .book .items .detail .title{
+    padding-bottom: 5px;
+}
+#main .book .items .detail .info li{
+    padding: 3px 0;
+    text-indent: 10px;
+    color: #bcb9bd;
+}
+
+
+
+/* main list style */
+#main section .list{
+    list-style-type: none;
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; */
+    padding: 0 10px;
+}
+#main section .list li{
+    /* width: 45%; */
+    margin: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#main section .list li a:visited{
+    color: #6d676e;
+}
+#main section .list li a:hover{
+    color: #faa916;
+}
