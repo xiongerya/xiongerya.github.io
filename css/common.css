@@ -10,7 +10,10 @@ nav .menu a{
     display: inline-block;
     margin: 20px 0;
     text-align: center;
-    /* color: #FFC312; */
+    /* color: ##faa916; */
+}
+nav .menu a:hover{
+    color: #faa916;
 }
 nav .menu i{
     display: inline-block;
@@ -69,4 +72,8 @@ header{
 footer{
     margin: 25px 0;
     text-align: center;
+}
+footer a{
+    color: #faa916;  
+    font-weight: bold;
 }
