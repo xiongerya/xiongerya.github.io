@@ -13,10 +13,10 @@ window.addEventListener("load", function(){
     }
 
     let nav = document.querySelector("nav");
-    add(nav, "nav.html", "html")
+    add(nav, "common_nav.html", "html")
 
     let footer = document.querySelector("footer");
-    add(footer, "footer.html", "html")
+    add(footer, "common_footer.html", "html")
 
      // 为所有.blank的锚点添加target="_blank"属性
      let blanks = document.querySelectorAll("a.blank");
