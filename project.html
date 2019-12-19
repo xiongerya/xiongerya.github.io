@@ -7,16 +7,15 @@
         <link rel="styleSheet" type="text/css" href="css/base.css" />
         <link rel="styleSheet" type="text/css" href="css/common.css" />
         <link rel="styleSheet" type="text/css" href="css/font.css" />
+        <link rel="styleSheet" type="text/css" href="css/load.css" />
         <link rel="styleSheet" type="text/css" href="css/project.css" />
         <!-- iconfont style link-->
+
         <!-- font-class 引用方式 -->
-        <link rel="styleSheet" type="text/css" href="font/more/iconfont.css" />
-
-
-        <script type="text/javascript" src="./js/common.js"></script>
-        <script type="text/javascript" src="./js/project.js"></script>
+        <link rel="styleSheet" type="text/css" href="font/more/iconfont.css" /> 
     </head>
     <body>
+        <div id="load"></div>
         <nav></nav>
         <header>
             <h1>Project | My own projects</h1>    
@@ -80,7 +79,7 @@
                             </dd>
                             <dt>position & z-index</dt>
                             <dd>
-                                position = static时，元素遮盖方式处于正常文档流，即后来居上原则。而在position ≠ static时，元素的遮盖脱离文档流（即在正常文档流上方），z-inddex默认值为auto，不会自动创建本地堆叠上下文（即position ≠ static的元素实行后来居上原则）；创建本地堆叠上下文后，z-index将指定元素在当前堆叠上下文中的堆叠层级，同时创建一个新的本地堆叠上下文。
+                                position = static时，元素遮盖方式处于正常文档流，即后来居上原则。而在position ≠ static时，元素的遮盖脱离文档流（即在正常文档流上方），z-index默认值为auto，不会自动创建本地堆叠上下文（即position ≠ static的元素实行后来居上原则）；创建本地堆叠上下文后，z-index将指定元素在当前堆叠上下文中的堆叠层级，同时创建一个新的本地堆叠上下文。
                             </dd>
                         </dl>
                     </div>
@@ -90,4 +89,7 @@
         </div>
         <footer></footer>
     </body>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/project.js"></script>
 </html>

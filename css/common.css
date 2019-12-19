@@ -10,7 +10,6 @@ nav .menu a{
     display: inline-block;
     margin: 20px 0;
     text-align: center;
-    /* color: ##faa916; */
 }
 nav .menu a:hover{
     color: #faa916;
