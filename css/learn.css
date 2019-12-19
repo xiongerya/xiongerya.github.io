@@ -64,8 +64,11 @@
 }
 #main .book .items .detail .info li{
     padding: 3px 0;
-    text-indent: 10px;
+    /* text-indent: 10px; */
     color: #bcb9bd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 #main .book a.link{
     color: #faa916;
