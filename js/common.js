@@ -23,7 +23,7 @@ window.addEventListener("load", function(){
     add(load, "common_load.html", "html")
     // 页面加载完成之后隐藏
     if(document.readyState = "400"){
-        load.style.display = "none";
+        // load.style.display = "none";
     }
 
      // 为所有.blank的锚点添加target="_blank"属性

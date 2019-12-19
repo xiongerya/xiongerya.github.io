@@ -46,7 +46,7 @@
 /* aside activity style */
 .activity{
     position: fixed;
-    right: 0;
+    right: -265px;
     top: 0;
     width: 270px;
     height: 100%;
@@ -58,13 +58,13 @@
 }
 .activity .aside{
     position: fixed;
-    right: 264px;
+    right: -1px;
     top: 0;
     z-index: -1;
 }
 .activity .title{
     position: fixed;
-    right: 0;
+    right: -265px;
     top: 0;
     z-index: 9;
     width: 265px;
@@ -76,19 +76,18 @@
 }
 .activity .title .close{
     float: right;
-    width: 40px;
-    height: 40px;
     border: none;
     outline: none;
     border: 1px solid transparent;
     background-color: transparent;
     color: white;
-    font-size: 28px;
-    line-height: 40px;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
 }
 .activity .title .close:hover{
-    transform: rotate(180deg);
+    transform: rotateZ(180deg);
     transition: 0.5s;
 }
 .activity .wrap{

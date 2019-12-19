@@ -35,25 +35,15 @@ window.addEventListener("load", function(){
         ac_flag = true;
 
     aside.addEventListener("click", function(){
-        let target = 0;
-        if(ac_flag){
-            target = inWidth-5;
-            slide(ac, target);
-            slide(title, target+5);
-            slide(aside, target-aside_width);
-        }else{
-            target = inWidth - ac_width;
-            slide(ac, target);
-            slide(title, target+5);
-            slide(aside, target-aside_width);
-        }
+        let target = ac_flag ? inWidth - ac_width : inWidth-5;
+        slide(ac, target);
+        slide(title, target+5);
+        slide(aside, target-aside_width);
         ac_flag = !ac_flag;
     })
-    aside.click();
     ac_close.addEventListener("click", function(){
-        let target = 0;
-        if(ac_flag){
-            target = inWidth;
+        if(!ac_flag){
+            let target = inWidth-5;
             slide(ac, target);
             slide(title, target+5);
             slide(aside, target-aside_width);
