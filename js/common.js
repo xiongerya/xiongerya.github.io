@@ -22,13 +22,13 @@ window.addEventListener("load", function(){
     let load = document.querySelector("#load");
     add(load, "common_load.html", "html")
     // 页面加载完成之后隐藏
-    setTimeout(function(){
-        load.style.display = "none";
-    }, 3000);
-
-    // if(document.readyState = "400"){
+    // setTimeout(function(){
     //     load.style.display = "none";
-    // }
+    // }, 3000);
+
+    if(document.readyState == "complete"){
+        load.style.display = "none";
+    }
 
      // 为所有.blank的锚点添加target="_blank"属性
      let blanks = document.querySelectorAll("a.blank");
