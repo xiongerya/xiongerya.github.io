@@ -10,52 +10,48 @@
 #load ul,
 #load li{
     list-style-type: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
+}
+#load ul{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+}
+#load li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid #fbfffe;
     border-radius: 50%;
+    background-color: #fbfffe;
+    opacity: 0;
+    animation: animated 1.5s linear 0s infinite;
 }
 /* 设置加载动画效果 */
 @keyframes animated{
     0%{
         transform: scale(0);
+        opacity: 0;
     }
-    25%{
-        transform: scale(0.25);
-    }
-    50%{
-        transform: scale(0.5);
-    }
-    75%{
-        transform: scale(0.75);
+    5%{
+        opacity: 1;
     }
     100%{
         transform: scale(1);
+        opacity: 0;
     }
 }
-#load li{
-    border-radius: 50%;
-    background-color: #fbfffe;
-    opacity: 0.8;
-}
 #load li:nth-of-type(1){
-    animation: animated 1.5s ease-in-out 0s infinite;
+    animation-delay: 0s;
 }
 #load li:nth-of-type(2){
-    animation: animated 1.5s ease-in-out 0.75s infinite;
+    animation-delay: 0.2s;
 }
 #load li:nth-of-type(3){
-    animation: animated 1.5s ease-in-out 1.5s infinite;
+    animation-delay: 0.4s;
 }
 #load li:nth-of-type(4){
-    animation: animated 1.5s ease-in-out 1.5s infinite;
-}
-#load li:nth-of-type(5){
-    animation: animated 1.5s ease-in-out 2s infinite;
-}
-#load li:nth-of-type(6){
-    animation: animated 1.5s ease-in-out 2.5s infinite;
+    animation-delay: 0.6s;
 }
