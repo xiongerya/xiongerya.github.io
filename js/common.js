@@ -12,23 +12,23 @@ window.addEventListener("load", function(){
         request.send();
     }
 
-    let nav = document.querySelector("nav");
+    let nav = document.querySelector("#nav");
     add(nav, "common_nav.html", "html")
 
-    let footer = document.querySelector("footer");
+    let footer = document.querySelector("#footer");
     add(footer, "common_footer.html", "html")
 
     // loading动画效果加载
     let load = document.querySelector("#load");
     add(load, "common_load.html", "html")
     // 页面加载完成之后隐藏
-    // setTimeout(function(){
-    //     load.style.display = "none";
-    // }, 3000);
-
-    if(document.readyState == "complete"){
+    setTimeout(function(){
         load.style.display = "none";
-    }
+    }, 1500);
+
+    // if(document.readyState == "complete"){
+    //     load.style.display = "none";
+    // }
 
      // 为所有.blank的锚点添加target="_blank"属性
      let blanks = document.querySelectorAll("a.blank");

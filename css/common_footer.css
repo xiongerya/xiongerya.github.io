@@ -1,0 +1,9 @@
+/* footer copyright style */
+footer{
+    margin: 25px 0;
+    text-align: center;
+}
+footer a{
+    color: #faa916;  
+    font-weight: bold;
+}
