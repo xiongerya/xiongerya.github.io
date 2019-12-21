@@ -11,9 +11,9 @@ nav .menu a{
     margin: 20px 0;
     text-align: center;
 }
-nav .menu a:hover{
+/* nav .menu a:hover{
     color: #faa916;
-}
+} */
 nav .menu i{
     display: inline-block;
     width: 50px;
