@@ -1,6 +1,8 @@
 window.addEventListener("load", function(){
     let body = document.body;
 
+    // ajax载入nav侧边栏
+    // 并实现不同页面下侧边栏图标颜色改变
     let nav = body.querySelector("#nav");
     let nav_xhr = new XMLHttpRequest();
     nav_xhr.open("get", "common_nav.html");
@@ -23,6 +25,32 @@ window.addEventListener("load", function(){
     }
 
 
+
+    // ajax载入header部分
+    // 并利用json数据填入不同页标题
+    let header = body.querySelector("#header");
+
+    let header_xhr = new XMLHttpRequest();
+    header_xhr.open("get", "common_header.html");
+    header_xhr.responseType = "html";
+    header_xhr.send();
+
+    header_xhr.onload = function(){
+        header.innerHTML = header_xhr.response;
+
+        let XHR = new XMLHttpRequest();
+        XHR.open('get', '../json/header.json');
+        XHR.responseType = "json";
+        XHR.send();
+
+        XHR.onload = function(){
+            let text = XHR.response,
+                id = body.id,
+                h1 = document.querySelector("#header header h1");
+            h1.textContent = text[id];
+        }       
+    }
+
     // 利用Ajax加载header/footer等部分
     function ajax(obj, url, type){
         let request = new XMLHttpRequest();
@@ -32,7 +60,7 @@ window.addEventListener("load", function(){
 
         request.onload = function(){
             obj.innerHTML = request.response;
-        }        
+        }
     }
 
     // 引入load部分，页面加载完成后隐藏
@@ -47,21 +75,7 @@ window.addEventListener("load", function(){
         load.style.display = "none";
     }
      
-    // 载入header部分，并引入文字标题
-    let header = body.querySelector("#header");
-    ajax(header, "common_header.html", "html")
-
-    let XHR = new XMLHttpRequest();
-    XHR.open('get', '../json/header.json');
-    XHR.responseType = "json";
-    XHR.send();
-
-    XHR.onload = function(){
-        let text = XHR.response,
-            id = document.body.id,
-            h1 = document.querySelector("#header header h1");
-        h1.textContent = text[id];
-    }
+    
 
     // 引入footer部分
     let footer = body.querySelector("#footer");
