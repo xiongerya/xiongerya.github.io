@@ -37,3 +37,56 @@ nav .menu:hover .title{
     opacity: 1;
     transition: width 0.3s 0s, opacity 0s 0.1s;   
 }
+
+
+/* nav icon-font style*/
+@font-face{
+    font-family: "icon-home";
+    src: url(../font/home/iconfont.eot);
+    src: url(../font/home/iconfont.woff2) format('woff2'),
+         url(../font/home/iconfont.woff) format('woff'),
+         url(../font/home/iconfont.ttf) format('truetype'),
+         url(../font/home/iconfont.svg) format('svg');
+}
+.icon-home{
+    font-family: "icon-home" !important;
+}
+
+
+@font-face{
+    font-family: "icon-project";
+    src: url(../font/project/iconfont.eot);
+    src: url(../font/project/iconfont.woff2) format('woff2'),
+         url(../font/project/iconfont.woff) format('woff'),
+         url(../font/project/iconfont.ttf) format('truetype'),
+         url(../font/project/iconfont.svg) format('svg');
+}
+.icon-project{
+    font-family: "icon-project" !important;
+}
+
+
+@font-face{
+    font-family: "icon-blog";
+    src: url(../font/blog/iconfont.eot);
+    src: url(../font/blog/iconfont.woff2) format('woff2'),
+         url(../font/blog/iconfont.woff) format('woff'),
+         url(../font/blog/iconfont.ttf) format('truetype'),
+         url(../font/blog/iconfont.svg) format('svg');
+}
+.icon-blog{
+    font-family: "icon-blog" !important;
+}
+
+
+@font-face{
+    font-family: "icon-study";
+    src: url(../font/study/iconfont.eot);
+    src: url(../font/study/iconfont.woff2) format('woff2'),
+         url(../font/study/iconfont.woff) format('woff'),
+         url(../font/study/iconfont.ttf) format('truetype'),
+         url(../font/study/iconfont.svg) format('svg');
+}
+.icon-study{
+    font-family: "icon-study" !important;
+}
