@@ -5,7 +5,7 @@ window.addEventListener("load", function(){
     // 并实现不同页面下侧边栏图标颜色改变
     let nav = body.querySelector("#nav");
     let nav_xhr = new XMLHttpRequest();
-    nav_xhr.open("get", "common_nav.html");
+    nav_xhr.open("get", "public_nav.html");
     nav_xhr.responseType = "html";
     nav_xhr.send();
 
@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
     let header = body.querySelector("#header");
 
     let header_xhr = new XMLHttpRequest();
-    header_xhr.open("get", "common_header.html");
+    header_xhr.open("get", "public_header.html");
     header_xhr.responseType = "html";
     header_xhr.send();
 
@@ -65,7 +65,7 @@ window.addEventListener("load", function(){
 
     // 引入load部分，页面加载完成后隐藏
     let load = body.querySelector("#load");
-    ajax(load, "common_load.html", "html")
+    ajax(load, "public_load.html", "html")
 
     // setTimeout(function(){
     //     load.style.display = "none";
@@ -79,7 +79,7 @@ window.addEventListener("load", function(){
 
     // 引入footer部分
     let footer = body.querySelector("#footer");
-    ajax(footer, "common_footer.html", "html")
+    ajax(footer, "public_footer.html", "html")
 
 
 
