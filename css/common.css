@@ -1,3 +1,10 @@
+/* 为页面设置最小宽度 */
+body{
+    min-width: 1000px;
+}
+
+
+
 /* main style */
 #main{
     margin: 0 105px;
