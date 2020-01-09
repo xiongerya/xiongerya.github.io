@@ -32,11 +32,12 @@ nav .menu .title{
     transition: width 0.3s 0s, opacity 0s -0.1s;
 }
 nav .menu:hover .title{
-    width: 100px;
+    width: 90px;
     padding-left: 10px;
     opacity: 1;
     transition: width 0.3s 0s, opacity 0s 0.1s;   
 }
+
 
 
 /* nav icon-font style*/

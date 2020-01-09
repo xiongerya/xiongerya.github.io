@@ -1,29 +1,26 @@
 /* main style */
 #main section{
-    height: 300px;
     overflow: hidden;
     position: relative;
 }
 #main section .expand{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #1b1b1e;
-    cursor: pointer;
+    text-align: right;
 }
 #main section .expand span{
-    float: right;
-    padding: 0 20px;
-    padding-bottom: 10px;
+    display: inline-block;
+    padding: 5px 3px;
+    color: #faa916;
+    font-weight: bold;
+    cursor: pointer;   
 }
 #main section .container{
+    height: 200px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
     position: relative;
-    margin-bottom: 20px;
+    overflow: hidden;
 }
 #main section .container figure{
     width: 40%;
@@ -44,12 +41,15 @@
     width: 60%;
     padding-left: 20px;
 }
+#main section .container .info *{
+    line-height: 20px;
+}
 #main section .container .info h3{
     color: #faa916;
-    /* margin-bottom: 10px; */
+    line-height: 40px;
 }
 #main section .container dt{
-    padding: 15px 0 3px;
+    padding: 10px 0;
     font-size: 15px;
     font-weight: bold;
 }
