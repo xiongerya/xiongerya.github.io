@@ -394,7 +394,7 @@ window.addEventListener("load", function(){
         minute = document.querySelector("#main .left .minute"),
         second = document.querySelector("#main .left .second");
 
-    let date = new Date('2019-11-10T14:00:00').getTime(),
+    let date = new Date('2020-02-06T14:00:00').getTime(),
         timer = null;
 
     // 倒计时计算显示函数

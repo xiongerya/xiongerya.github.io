@@ -4,6 +4,7 @@ nav{
     left: 0;
     top: 0;
     height: 100%;
+    border-right: 1px solid #464246;
     background-color: #1b1b1e;
 }
 nav .menu a{
@@ -31,7 +32,7 @@ nav .menu .title{
     opacity: 0;
     transition: width 0.3s 0s, opacity 0s -0.1s;
 }
-nav .menu:hover .title{
+nav:hover .title{
     width: 90px;
     padding-left: 10px;
     opacity: 1;
