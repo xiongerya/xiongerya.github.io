@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
 
     // ajax载入nav侧边栏
     // 并实现不同页面下侧边栏图标颜色改变
-    let nav = body.querySelector("#nav");
+    let nav = document.querySelector("#nav");
     let nav_xhr = new XMLHttpRequest();
     nav_xhr.open("get", "public_nav.html");
     nav_xhr.responseType = "html";
@@ -12,7 +12,7 @@ window.addEventListener("load", function(){
     nav_xhr.onload = function(){
         nav.innerHTML = nav_xhr.response;
 
-        let lis = body.querySelectorAll("nav li a"),
+        let lis = document.querySelectorAll("#nav nav li a"),
             len = lis.length, 
             id = body.id;
 
@@ -26,7 +26,7 @@ window.addEventListener("load", function(){
 
     // ajax载入header部分
     // 并利用json数据填入不同页标题
-    let header = body.querySelector("#header");
+    let header = document.querySelector("#header");
 
     let header_xhr = new XMLHttpRequest();
     header_xhr.open("get", "public_header.html");
@@ -50,7 +50,7 @@ window.addEventListener("load", function(){
     }
 
     // 利用Ajax加载footer部分
-    let footer = body.querySelector("#footer");
+    let footer = document.querySelector("#footer");
     let footer_xhr = new XMLHttpRequest();
     footer_xhr.open('get', "public_footer.html");
     footer_xhr.responseType = "html";
