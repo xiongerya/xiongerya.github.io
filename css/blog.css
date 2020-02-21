@@ -1,6 +1,3 @@
-#main{
-    margin: 0 50px;
-}
 #main .container{
     display: flex;
     flex-flow: row nowrap;
@@ -9,14 +6,14 @@
     margin: 20px 0;
 }
 #main .container .items{
-    width: 74%;
-    padding: 20px;
+    width: 70%;
+    padding:20px;
     border-radius: 10px;
     background-color: #1b1b1e;
 }
 #main .container .system{
-    width: 24%;
-    padding: 0 25px;
+    width: 25%;
+    padding: 20px;
     border-radius: 10px;
     background-color: #1b1b1e;
 }
@@ -31,9 +28,6 @@
 }
 
 
-#main .container .system{
-    padding: 20px;
-}
 #main .container .system ul,
 #main .container .system li{
     list-style-type: none;

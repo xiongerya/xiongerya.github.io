@@ -80,3 +80,26 @@ content{
     display: block;
     width: 100%;
 }
+
+/* 为页面设置最小宽度 */
+body{
+    min-width: 1000px;
+}
+
+
+
+/* main style */
+#main{
+    margin: 0 105px;
+}
+#main section.wrap{
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #1b1b1e;
+}
+#main section.wrap h2{
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #fbfffe;
+}
