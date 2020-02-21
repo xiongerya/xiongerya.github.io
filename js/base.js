@@ -24,8 +24,6 @@ window.addEventListener("load", function(){
 
     }
 
-
-
     // ajax载入header部分
     // 并利用json数据填入不同页标题
     let header = body.querySelector("#header");
@@ -51,38 +49,18 @@ window.addEventListener("load", function(){
         }       
     }
 
-    // 利用Ajax加载header/footer等部分
-    function ajax(obj, url, type){
-        let request = new XMLHttpRequest();
-        request.open('get', url);
-        request.responseType = type;
-        request.send();
-
-        request.onload = function(){
-            obj.innerHTML = request.response;
-        }
-    }
-
-    // 引入load部分，页面加载完成后隐藏
-    let load = body.querySelector("#load");
-    ajax(load, "public_load.html", "html")
-
-    // setTimeout(function(){
-    //     load.style.display = "none";
-    // }, 1500);
-
-    if(document.readyState == "complete"){
-        load.style.display = "none";
-    }
-     
-    
-
-    // 引入footer部分
+    // 利用Ajax加载footer部分
     let footer = body.querySelector("#footer");
-    ajax(footer, "public_footer.html", "html")
+    let footer_xhr = new XMLHttpRequest();
+    footer_xhr.open('get', "public_footer.html");
+    footer_xhr.responseType = "html";
+    footer_xhr.send();
 
+    footer_xhr.onload = function(){
+        footer.innerHTML = footer_xhr.response;
+    }
 
-
+    
      // 为所有.blank的锚点添加target="_blank"属性
      let blanks = document.querySelectorAll("a.blank");
      for(let i = 0, len = blanks.length; i < len; i++){
