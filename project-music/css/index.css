@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul, ol, li{
+    list-style-type: none;
+}
+#header{
+    padding: 10px 0;
+}
+.wrap{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 800px;
+    border: 1px solid #dc3545;
+    background-color: #eee;
+}
+.item{
+    height: 400px;
+}
