@@ -11,13 +11,8 @@ ul, ol, li{
     top: 50%;
     transform: translate(-50%, -60%);
     width: 800px;
-    border: 1px solid #dc3545;
-    padding: 10px 0;
-    background-color: hsl(354, 55%, 80%);
+    border: 1px solid #007bff;
 }
 .menu-list{
     height: 400px;
-}
-.menu-list a{
-    color: #dc3545;
 }

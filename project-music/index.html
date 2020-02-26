@@ -10,13 +10,13 @@
 <body>
     <div class="wrap" id="music">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">Music player</div>
+            <div class="row bg-dark">
+                <div class="col-md-6 text-white font-weight-bold">Music player</div>
                 <div class="col-md-6">
                     <form class="form-inline">
                         <div class="form-group">
                             <input type="search" placeholder="输入歌名/歌手" class="form-control"/>
-                            <input type="button" value="点击搜索" class="btn btn-danger"/>
+                            <button type="button" class="btn btn-primary"><span class="icon-search"></span>点击搜索</button>
                         </div>
                     </form>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="menu-list col-md-3">
                     <ul class="list-group">
                         <li class="list-group-item" v-for="(item, index) in list">
-                            <span class="badge">{{ index + 1 + ". " }}</span><a href="javascript:;" class="">{{ item }}</a>
+                            <span class="badge">{{ index + 1 + ". " }}</span><a href="javascript:;" class="dark-text">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
