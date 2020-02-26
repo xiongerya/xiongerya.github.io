@@ -11,7 +11,7 @@
     <div class="wrap" id="music">
         <div class="container">
             <div class="row">
-                <div class="col-md-6"></div>
+                <div class="col-md-6">Music player</div>
                 <div class="col-md-6">
                     <form class="form-inline">
                         <div class="form-group">
@@ -25,15 +25,15 @@
         
         <div class="container">
             <div class="row">
-                <div class="item col-md-3">
+                <div class="menu-list col-md-3">
                     <ul class="list-group">
                         <li class="list-group-item" v-for="(item, index) in list">
-                            <span class="badge">{{ index + 1 + ". " }}</span>{{ item }}
+                            <span class="badge">{{ index + 1 + ". " }}</span><a href="javascript:;" class="">{{ item }}</a>
                         </li>
                     </ul>
                 </div>
-                <div class="item col-md-6"></div>
-                <div class="item col-md-3"></div>
+                <div class="menu-list col-md-6"></div>
+                <div class="menu-list col-md-3"></div>
             </div>
         </div>
     </div>
@@ -41,6 +41,9 @@
     <!-- JavaScript -->
     <script src="lib/jquery-3.4.1.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
+    <!-- axios库CDN引用 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Vue框架CDN引用 -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="js/vue.js"></script>
 </body>

@@ -5,9 +5,6 @@
 ul, ol, li{
     list-style-type: none;
 }
-#header{
-    padding: 10px 0;
-}
 .wrap{
     position: absolute;
     left: 50%;
@@ -15,8 +12,12 @@ ul, ol, li{
     transform: translate(-50%, -60%);
     width: 800px;
     border: 1px solid #dc3545;
-    background-color: #eee;
+    padding: 10px 0;
+    background-color: hsl(354, 55%, 80%);
 }
-.item{
+.menu-list{
     height: 400px;
+}
+.menu-list a{
+    color: #dc3545;
 }
