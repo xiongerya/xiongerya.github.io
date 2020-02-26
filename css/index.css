@@ -17,11 +17,21 @@
     justify-content: space-between;
 }
 #main .project .container figure{
+    display: flex;
+    flex-flow: column;
     width: 50%;
+    justify-content: space-around;
+}
+#main .project .container figcaption{
+    padding: 5px;
+    color: #faa916;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 #main .project .container figure > a{
     display: block;
-    height: 240px;
+    height: 250px;
     overflow: hidden;
 }
 #main .project .container figure img{
