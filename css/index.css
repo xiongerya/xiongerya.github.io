@@ -47,35 +47,52 @@
 
 
 /* main study style */
-#main .study .items li{
-    margin: 5px 0;
-    margin-left: 10px;
+#main .study .items{
+    list-style-type: none;
+    margin: 10px;
+}
+#main .study .items > li{
+    display: flex;
+    padding: 5px;
+    border-top: 1px solid #6d676e;
 }
 #main .study .title{
+    width: 10%;
+    min-width: 100px;
     display: inline-block;
-    padding: 5px 0;
+    padding: 10px 0;
+    color: #faa916;
+    font-size: 16px;
+    line-height: 16px;
     cursor: pointer;
+}
+#main .study .sub{
+    width: 90%;
+    display: none;
 }
 #main .study .title span{
     display: inline-block;
-    width: 30px;
-    height: 10px;
-    padding: 5px 10px;
-    background: url(../images/icons/加号.png) no-repeat center;
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+    background: url(../images/icons/加号.png) center no-repeat;
     background-size: 14px 14px;
 }
 #main .study .title .jianhao{
-    background: url(../images/icons/减号.png) no-repeat center;
+    background: url(../images/icons/减号.png) center no-repeat;
     background-size: 14px 14px;
-    
 }
-#main .study .sub{
-    list-style-type: square;
-    display: none;
+#main .study .sub li{
+    margin: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #main .study .sub a{
-    display: inline-block;
     color: #fbfffe;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #main .study .sub a:visited{
     color: #6d676e;

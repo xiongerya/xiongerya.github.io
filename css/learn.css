@@ -67,8 +67,8 @@
     /* text-indent: 10px; */
     color: #bcb9bd;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #main .book a.link{
     color: #faa916;
