@@ -5,7 +5,7 @@
 ul, ol, li{
     list-style-type: none;
 }
-.wrap{
+#music{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -13,6 +13,12 @@ ul, ol, li{
     width: 800px;
     border: 1px solid #007bff;
 }
-.menu-list{
+#header{
+    height: 50px;
+}
+#main .row > div{
     height: 400px;
+}
+#footer{
+    height: 30px;
 }

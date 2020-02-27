@@ -9,8 +9,8 @@
     <link rel="styleSheet" type="text/css" href="css/index.css" />
 </head>
 <body>
-    <div class="wrap" id="music">
-        <div class="container">
+    <div id="music">
+        <div class="container" id="header">
             <div class="row bg-dark">
                 <div class="col-md-6 text-white font-weight-bold">Music player</div>
                 <div class="col-md-6">
@@ -24,19 +24,35 @@
             </div>
         </div>
        
-        <div class="container">
+        <div class="container" id="main">
             <div class="row">
-                <div class="menu-list col-md-3">
+                <div class="col-md-4  border-right">
                     <ul class="list-group">
                         <li class="list-group-item" v-for="(item, index) in list">
-                            <span class="badge">{{ index + 1 + ". " }}</span><a href="javascript:;" class="dark-text">{{ item }}</a>
+                            <!-- <span class="badge">{{ index + 1 + ". " }}</span> -->
+                            <i class="fas fa-music    "></i>
+                            <a href="javascript:;" class="dark-text">{{ item }}</a>
+                            <i class="fas fa-play float-right"></i>
                         </li>
                     </ul>
                 </div>
-                <div class="menu-list col-md-6"></div>
-                <div class="menu-list col-md-3"></div>
+                <div class="col-md-8  border-right"></div>
+                <!-- <div class="col-md-3  border-right"></div> -->
             </div>
         </div>
+
+        <div class="container bg-dark" id="footer">
+            <div class="col-md-4">
+                <div class="text-white">
+                    <i class="fas fa-arrow-circle-left   "></i>
+                    <i class="fas fa-play-circle    "></i>
+                    <i class="fas fa-arrow-circle-right    "></i>
+                </div>
+            </div>
+            <div class="col-md-8"></div>
+            <!-- <div class="col-md-3"></div> -->
+        </div>
+
     </div>
 
     <!-- JavaScript -->
