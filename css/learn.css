@@ -13,6 +13,7 @@
     text-align: center;
     font-size: 30px;
     color: #fbfffe;
+    color: var(--text-color, #fbfffe);
     opacity: 0.8;
 }
 #main .book .carousel:hover .arrow{
@@ -28,6 +29,7 @@
     width: 1000%;
     padding: 20px 0;
     background-color: #464246;
+    background-color: var(--back-color);
 }
 #main .book .items > li{
     width: 2.5%;
@@ -51,6 +53,7 @@
     padding: 10px;
     margin: 0 5%;
     background-color: #1b1b1e;
+    background-color: var(--front-color, #1b1b1e);
     transform: rotateY(0.5turn) translateZ(1px);/*简写和分开写效果相差很大*/
     opacity: 0.6;
     transition: opacity 1s 0.5s;
@@ -66,12 +69,14 @@
     padding: 3px 0;
     /* text-indent: 10px; */
     color: #bcb9bd;
+    color: var(--text-color, #bcb9bd);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 #main .book a.link{
     color: #faa916;
+    color: var(--link-color, #faa916);
 }
 
 
@@ -93,7 +98,9 @@
 }
 #main section .list li a:visited{
     color: #6d676e;
+    color: var(--visited-color, #6d676e);
 }
 #main section .list li a:hover{
     color: #faa916;
+    color: var(--hover-color, #faa916);
 }

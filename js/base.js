@@ -18,7 +18,7 @@ window.addEventListener("load", function(){
 
         for(let i = 0; i < len; i++){
             if(lis[i].className == id){
-                lis[i].style.color = "#faa916"
+                lis[i].style.color = "#f84842";
             }
         }
 

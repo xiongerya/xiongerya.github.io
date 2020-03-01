@@ -10,18 +10,22 @@
     padding:20px;
     border-radius: 10px;
     background-color: #1b1b1e;
+    background-color: var(--front-color, #1b1b1e);
 }
 #main .container .system{
     width: 25%;
     padding: 20px;
     border-radius: 10px;
     background-color: #1b1b1e;
+    background-color: var(--front-color, #1b1b1e);
 }
 
 
 
 #main .container .items .item{
-    border-bottom: 1px solid #6d676e;
+    border-bottom: 1px solid;
+    border-bottom-color: #6d676e;
+    border-bottom-color: var(--back-color, #6d676e);
 }
 #main .container .items .item h2{
     padding-bottom: 15px;
@@ -32,14 +36,19 @@
 #main .container .system li{
     list-style-type: none;
 }
+#main .container .system h3 a{
+    color: #faa916;
+    color: var(--sub-title-color, #faa916);
+}
 #main .container .system .title{
     /* cursor: pointer; */
-    padding: 5px 0 10px;
+    padding: 5px 0 10px; 
 }
 #main .container .system h3:hover,
 #main .container .system .title:hover a,
 #main .container .system li:hover > a{
     color: #faa916;
+    color: var(--hover-color, #faa916);
 }
 #main .container .system .icon-more{
     float: right;
@@ -60,6 +69,7 @@
 }
 #main .container .system .sub-list a{
     color: #464246;
+    color: var(--back-color, #464246);
 }
 
 
@@ -70,10 +80,13 @@
     height: 30px;
     padding: 0 10px;
     margin: 3px;
-    border: 1px solid #fbfffe;
+    border: 1px solid;
+    border-color: #fbfffe;
+    border-color: var(--text-color, #fbfffe);
     border-radius: 30px;
     line-height: 30px;
 }
 #main .container .system .tags li:hover{
     border-color: #faa916;
+    border-color: var(--hover-color, #faa916);
 }

@@ -2,5 +2,7 @@
 header{
     padding: 25px 110px;
     background-color: #1b1b1e;
-    color: #faa916;  
+    background-color: var(--front-color, #1b1b1e);
+    color: #faa916;
+    color: var(--title-color, #faa916);
 }

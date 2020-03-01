@@ -4,8 +4,11 @@
     left: 0;
     top: 0;
     height: 100%;
-    border-right: 1px solid #464246;
+    border-right: 1px solid;
+    border-right-color: #464246;
+    border-right-color: var(--back-color, #464246);
     background-color: #1b1b1e;
+    background-color: var(--front-color, #1b1b1e);
 }
 #nav nav .menu a{
     display: inline-block;

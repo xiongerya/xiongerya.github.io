@@ -18,9 +18,11 @@ footer .icon-github{
 }
 
 footer a.github:hover{
-    color: #faa916; 
+    color: #faa916;
+    color: var(--sub-title-color, #faa916); 
 }
 
 footer a.link{
-    color: #faa916;  
+    color: #faa916;
+    color: var(--sub-title-color, #faa916); 
 }

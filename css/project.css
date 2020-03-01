@@ -10,6 +10,7 @@
     display: inline-block;
     padding: 5px 3px;
     color: #faa916;
+    color: var(--sub-title-color, #faa916);
     font-weight: bold;
     cursor: pointer;   
 }
@@ -30,6 +31,7 @@
 }
 #main section .container figcaption a{
     color: #6d676e;
+    color: var(--text-color, #6d676e);
 }
 #main section .container .link{
     display: block;
@@ -46,6 +48,7 @@
 }
 #main section .container .info h3{
     color: #faa916;
+    color: var(--sub-title-color, #faa916);
     line-height: 40px;
 }
 #main section .container dt{
@@ -58,5 +61,6 @@
     text-indent: 2em;
     /* font-size: 12px; */
     color: #bcb9bd;
+    color: var(--text-color, #bcb9bd);
 }
 
