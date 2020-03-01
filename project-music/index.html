@@ -9,55 +9,52 @@
     <link rel="styleSheet" type="text/css" href="css/index.css" />
 </head>
 <body>
+
     <div id="music">
-        <div class="container" id="header">
-            <div class="row bg-dark">
-                <div class="col-md-6 text-white font-weight-bold">Music player</div>
-                <div class="col-md-6">
-                    <form class="form-inline">
-                        <div class="form-group badge badge-pill badge-light">
-                            <input type="search" placeholder="输入歌名/歌手" class="form-control form-control-sm"/>
-                            <button type="button" class="btn btn-sm btn-light"><span class="fa fa-search"></span></button>
-                        </div>
-                    </form>
+        <nav class="nav bg-dark" style="padding: 15px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 text-white"><h1>Music player</h1></div>
+                    <div class="col-md-3">
+                        <form class="form-inline">
+                            <div class="form-group badge badge-pill badge-light">
+                                <input type="search" placeholder="输入歌名/歌手" class="form-control border-0" style="margin: 0 3px;"/>
+                                <button type="button" class="btn border-0"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </nav>
         
-        <div class="container" id="main">
-            <div class="row">
-                <div class="col-md-4  border-right bg-light">
-                    <ul class="list-group">
-                        <li class="list-group-item" v-for="(item, index) in list">
-                            <!-- <span class="badge">{{ index + 1 + ". " }}</span> -->
-                            <i class="fas fa-music    "></i>
-                            <a href="javascript:;" class="dark-text">{{ item }}</a>
-                            <i class="fas fa-play float-right"></i>
-                        </li>
-                    </ul>
+        <div class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4  border-right">
+                        <h5 class="bg-danger text-white font-weight-bold" style="padding: 15px 30px;">音乐列表</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item" v-for="(item, index) in list">
+                                <a href="javascript:;" class="text-danger"><i class="fas fa-music"></i> {{ item }} </a>
+                                <a href="javascript:;" class="text-danger"><i class="fas fa-play float-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8  border-right">
+                    </div>
                 </div>
-                <div class="col-md-8  border-right"></div>
-                <!-- <div class="col-md-3  border-right"></div> -->
+            </div>  
+        </div> 
+        
+        <footer class="fixed-bottom bg-light border">
+            <div class="container text-danger" style="font-size: 30px;">
+                <i class="fas fa-arrow-alt-circle-left"></i>
+                <i class="fas fa-play-circle"></i>
+                <i class="fas fa-arrow-alt-circle-right"></i>
             </div>
-        </div>
-
-        <div class="container bg-dark" id="footer">
-            <div class="col-md-4">
-                <div class="text-white">
-                    <i class="fas fa-arrow-circle-left   "></i>
-                    <i class="fas fa-play-circle    "></i>
-                    <i class="fas fa-arrow-circle-right    "></i>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%"></div>
-                </div>
-            </div>
-            <!-- <div class="col-md-3"></div> -->
-        </div>
-
+        </footer>
     </div>
+    
 
     <!-- JavaScript -->
     <script src="lib/jquery-3.4.1.min.js"></script>
