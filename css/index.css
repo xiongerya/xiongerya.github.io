@@ -14,7 +14,7 @@
 /* main project style */
 #main .project .container{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
 }
 #main .project .container figure{
@@ -33,7 +33,7 @@
 }
 #main .project .container figure > a{
     display: block;
-    height: 250px;
+    /* height: 250px; */
     overflow: hidden;
 }
 #main .project .container figure img{
