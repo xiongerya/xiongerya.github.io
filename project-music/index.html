@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music player</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="./css/.css" />
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
 <body>
 
     <div class="wrap">
         
         <div id="header">
-            <div class="logo">
-                <h1>
-                    <i class="fa fa-music"></i>&nbsp;&nbsp;<span>Music Player</span>
-                </h1>
-            </div>
+            <h1 class="logo">
+                <i class="fa fa-music"></i>&nbsp;&nbsp;<span>Music Player</span>
+            </h1>
             <form class="search">
                 <input type="text" placeholder="输入曲名/歌手" v-model="keyword"/>
                 <span class="fa fa-search" @click="getMusic"></span>
