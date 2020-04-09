@@ -1,6 +1,6 @@
 /* width <= 1024px时的页面布局
 利用 @media 媒体查询改变页面布局*/
-@media only screen and (max-width: 1000px){
+@media screen and (max-width: 1024px){
     /* header style css */
     /* header-logo style css */
     header > ul.btn{
@@ -173,7 +173,7 @@
         /* border: 1px solid yellow; */
     }
     .info-left > img{
-        display: none;
+        display: none
     }
     .info-left > p{
         padding: 0;
