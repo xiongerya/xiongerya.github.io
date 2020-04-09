@@ -9,7 +9,7 @@ html{
     font-size: 9px;
 }
 body{
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     font-size: 1.6rem;
     line-height: 1.5;
 }
