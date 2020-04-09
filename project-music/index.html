@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="wrap" v-cloak>
+    <div id="wrap">
         
         <div id="header">
             <h1 class="logo">
@@ -27,13 +27,13 @@
             <div class="list">
                 <ul>
                     <li v-for="item in songs">
-                        <a class="song" @click="getDetail(item.id)" v-cloak><i class="fa fa-play"></i>{{ item.name }}</a>
+                        <a class="song" @click="getDetail(item.id)"><i class="fa fa-play"></i>{{ item.name }}</a>
                         <i class="fa fa-youtube-play" aria-hidden="true" v-show="item.mvid" @click="getMv(item.id)"></i>
                     </li>
                 </ul>
             </div>
             <div class="picture">
-                <div class="wrap" v-bind:class="{animated: music}">
+                <div class="container" v-bind:class="{animated: music}">
                     <img class="cover" v-bind:src="imgUrl" />
                     <img class="record" src="images/record.png" alt="黑胶唱片"/>
                 </div>  
@@ -52,21 +52,24 @@
             </div>
         </div>
 
+        <audio v-bind:src="musicUrl" @play="isPlay" @pause="isPause" autoplay controls volume loop></audio>
+
         <!-- <div class="mv" v-bind:class="{show: mv}">
             <video v-bind:src="mvUrl" controls></video>
         </div> -->
 
-        <div id="footer">
+        <!-- <div id="footer">
             <audio v-bind:src="musicUrl" @play="isPlay" @pause="isPause" autoplay controls volume loop></audio>
-        </div>
+        </div> -->
     
     </div>
 
     <!-- javascript -->
     <script src="../lib/jquery-3.4.1.min.js"></script>
+    <script src="../lib/vue.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <script src="./js/vue.js"></script>
 
 </body>

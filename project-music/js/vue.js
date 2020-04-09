@@ -1,5 +1,5 @@
 let app = new Vue({
-    el: ".wrap",
+    el: "#wrap",
     data: {
         keyword: "胡歌",
         musicId: "",
