@@ -14,7 +14,7 @@ let app = new Vue({
         comments: [],
         music: false,
         musicUrl: "",
-        imgUrl: "./images/music.jpg",
+        imgUrl: "./images/music.png",
         mv: false,
         mvUrl: ""
     },

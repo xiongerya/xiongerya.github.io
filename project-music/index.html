@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div class="wrap">
+    <div class="wrap" v-cloak>
         
         <div id="header">
             <h1 class="logo">
@@ -27,7 +27,7 @@
             <div class="list">
                 <ul>
                     <li v-for="item in songs">
-                        <a class="song" @click="getDetail(item.id)"><i class="fa fa-play"></i>{{ item.name }}</a>
+                        <a class="song" @click="getDetail(item.id)" v-cloak><i class="fa fa-play"></i>{{ item.name }}</a>
                         <i class="fa fa-youtube-play" aria-hidden="true" v-show="item.mvid" @click="getMv(item.id)"></i>
                     </li>
                 </ul>
