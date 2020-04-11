@@ -1,79 +1,80 @@
 let app = new Vue({
     el: "#wrap",
     data: {
-        keyword: "胡歌",
-        musicId: "",
-        songs: [
-            {name: "逍遥叹", id: 4875306}, 
-            {name: "一吻天荒 ", id: 391566}, 
-            {name: "倔强", id: 386175},
-            {name: "练习", id: 554191989}, 
-            {name: "爱的供养 ", id: 393335}, 
-            {name: "来生缘", id: 112908}
-        ],
+        keyword: "",
+        songs: [],
+        musicUrl: "",
+        picUrl: "./images/music.png",
+        mvUrl: "",
         comments: [],
         music: false,
-        musicUrl: "",
-        imgUrl: "./images/music.png",
-        mv: false,
-        mvUrl: ""
+        mv: false
     },
     methods: {
-        getMusic: function(){
+        getSongs(){
             let that = this;
             axios
             .get("https://autumnfish.cn/search?keywords=" + that.keyword)
             .then(response => {
-                that.songs = response.data.result.songs;
+                let result =  response.data.result.songs;
+                result.map(x => {
+                    // 获取song的musicUrl
+                    axios
+                    .get("https://autumnfish.cn/song/url?id=" + x.id)
+                    .then(response => {
+                        x.musicUrl = response.data.data[0].url;
+                    })
+                    .catch(err => console.log("出错啦：" + err));
+                    // 获取song的imgUrl
+                    axios
+                    .get("https://autumnfish.cn/song/detail?ids=" + x.id)
+                    .then(response => {
+                        x.picUrl = response.data.songs[0].al.picUrl;
+                    })
+                    .catch(err => console.log("出错啦：" + err));
+                    // 获取song的mvUrl
+                    axios
+                    .get("https://autumnfish.cn/mv/url?id=" + x.id)
+                    .then(response => {
+                        x.mvUrl = response.data.data.url;
+                    })
+                    .catch(err => console.log("出错啦：" + err));
+                    // 获取song的comments
+                    axios
+                    .get("https://autumnfish.cn/comment/hot?type=0&id=" + x.id)
+                    .then(response => {
+                        x.comments = response.data.hotComments;
+                    })
+                    .catch(err => console.log("出错啦：" + err));
+                });
+                setTimeout(() => that.songs = result, 500)
             })
-            .catch(error => console.log(error));
+            .catch(err => console.log("出错啦：" + err));
         },
-        getMv: function(str){
-            this.musicId = str;
-            let that = this;
-            // 获取歌曲MV
-            axios
-            .get("https://autumnfish.cn/mv/url?id=" + that.musicId)
-            .then(response => {
-                // console.log(response);
-                that.mvUrl = response.data.data.url;
-                console.log(that.mvUrl);
-            })
-            .catch(error => console.log(error));
-            this.mv = !!this.mvUrl;
+        playMusic(obj){
+            this.musicUrl = obj.musicUrl;
+            this.picUrl = obj.picUrl ? obj.picUrl : this.picUrl;
+            this.comments = obj.comments;
+            // console.log(obj.name)
+            // console.log(obj.id)
+            // console.log(obj.musicUrl);
+            // console.log(obj.picUrl)
         },
-        getDetail: function(str){
-            this.musicId = str;
-            let that = this;
-            // 获取music地址
-            axios
-            .get("https://autumnfish.cn/song/url?id=" + that.musicId)
-            .then(response => {
-                that.musicUrl = response.data.data[0].url;
-                // console.log(that.musicUrl);
-            })
-            .catch(error => console.log(error));
-            // 获取歌曲封面地址
-            axios
-            .get("https://autumnfish.cn/song/detail?ids=" + that.musicId)
-            .then(response => {
-                that.imgUrl = response.data.songs[0].al.picUrl;
-            })
-            .catch(error => console.log(error));
-            // 获取歌曲评论
-            axios
-            .get("https://autumnfish.cn/comment/hot?type=0&id=" + that.musicId)
-            .then(response => {
-                // console.log(response);
-                that.comments = response.data.hotComments;
-            })
-            .catch(error => console.log(error));
+        playMv(str){
+            this.mvUrl = str;
+            // console.log(this.mvUrl)
         },
-        isPlay: function(){
+        isPlay(){
             this.music = true;
         },
-        isPause: function(){
+        isPause(){
             this.music = false;
         }
     }
 })
+
+setTimeout(() => {
+    app.keyword = "杨幂";
+    app.getSongs();
+    app.keyword = "";
+}, 0)
