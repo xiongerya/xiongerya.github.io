@@ -12,32 +12,40 @@
 
 
 /* main project style */
+#main section.project{
+    padding-bottom: 0;
+}
 #main .project .container{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
+    overflow: hidden;
 }
 #main .project .container figure{
-    display: flex;
-    flex-flow: column;
-    width: 50%;
-    justify-content: space-around;
+    width: 48%;
+}
+@media screen and (max-width: 1000px){
+    #main .project .container figure{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1400px){
+    #main .project .container figure{
+        width: 31%;
+    }
 }
 #main .project .container figcaption{
-    padding: 5px;
+    margin-bottom: 20px;
     color: #faa916;
     color: var(--text-color, #faa916);
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    text-align: center;
 }
 #main .project .container figure > a{
     display: block;
-    /* height: 250px; */
     overflow: hidden;
 }
 #main .project .container figure img{
-    width: 90%;
+    width: 100%;
 }
 
 

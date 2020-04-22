@@ -12,10 +12,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 body{
-    margin-left: 50px;
     background-color: #464246;
     background-color: var(--back-color, #464246);
     color: #fbfffe;
@@ -77,16 +76,25 @@ a{
     width: 100%;
 }
 
-/* 为页面设置最小宽度 */
-body{
-    min-width: 1000px;
-}
-
 
 
 /* main style */
 #main{
-    margin: 0 105px;
+    margin: 0 150px;
+    /* max-width: 70%; */
+}
+@media screen and (max-width: 1000px){
+    #main{
+        margin:0;
+        margin-left: 150px;
+    }
+}
+@media screen and (min-width: 1400px){
+    #main{
+        width: 80%;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 }
 #main section.wrap{
     padding: 20px;

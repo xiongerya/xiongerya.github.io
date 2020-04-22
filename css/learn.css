@@ -84,17 +84,22 @@
 /* main list style */
 #main section .list{
     list-style-type: none;
-    /* display: flex;
+    display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; */
+    justify-content: space-between;
     padding: 0 10px;
 }
 #main section .list li{
-    /* width: 45%; */
-    margin: 10px 0;
+    width: 100%;
+    margin: 5px 0;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media screen and (min-width: 1400px){
+    #main section .list li{
+        width: 45%;
+    }
 }
 #main section .list li a:visited{
     color: #6d676e;

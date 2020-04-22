@@ -15,52 +15,43 @@
     cursor: pointer;   
 }
 #main section .container{
-    height: 200px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: stretch;
-    position: relative;
-    overflow: hidden;
 }
 #main section .container figure{
     width: 40%;
 }
+#main section .container .info{
+    width: 55%;
+}
+@media screen and (max-width: 1000px){
+    #main section .container figure,
+    #main section .container .info{
+        width: 100%;
+    }
+}
 #main section .container figcaption{
-    padding-top: 10px;
+    text-align: center;
 }
 #main section .container figcaption a{
     color: #6d676e;
     color: var(--text-color, #6d676e);
 }
 #main section .container .link{
-    display: block;
+    display: inline-block;
 }
 #main section .container img{
     width: 100%;
 }
-#main section .container .info{
-    width: 60%;
-    padding-left: 20px;
-}
-#main section .container .info *{
-    line-height: 20px;
-}
 #main section .container .info h3{
     color: #faa916;
     color: var(--sub-title-color, #faa916);
-    line-height: 40px;
 }
-#main section .container dt{
-    padding: 10px 0;
-    font-size: 15px;
-    font-weight: bold;
+#main section .container .info .list{
+    margin: 0 20px; 
 }
-#main section .container dd{
-    /* padding-left: 20px; */
-    text-indent: 2em;
-    /* font-size: 12px; */
-    color: #bcb9bd;
-    color: var(--text-color, #bcb9bd);
+#main section .container .info .list > li{
+    margin: 10px 0;
 }
-
