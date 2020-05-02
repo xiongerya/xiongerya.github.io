@@ -6,8 +6,9 @@
 }
 html{
     --bg-color: hsl(0,100%, 30%);
-    font-size: 9px;
+    font-size: 8px;
 }
+
 body{
     /* overflow-y: scroll; */
     font-size: 1.6rem;
