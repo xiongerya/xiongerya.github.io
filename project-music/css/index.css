@@ -119,6 +119,10 @@
         transform: rotate(360deg);
     }
 }
+#main .picture h3{
+    color: var(--bg-color);
+    padding: 0 2rem;
+}
 #main .picture .container img{
     display: block;
     width: 90%;
@@ -195,7 +199,7 @@
     background-color: #666;
 }
 .video video{
-    width: 120rem;
+    width: 100rem;
     /* video不可使用margin居中 */
     /* margin: 1.5rem auto 0; */
     position: absolute;
@@ -209,3 +213,6 @@
 .show{
     display: block;
 }
+/* .active{
+    border: 1px solid var(--bg-color);
+} */

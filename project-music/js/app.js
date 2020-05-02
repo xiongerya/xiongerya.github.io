@@ -7,7 +7,7 @@ let app = new Vue({
         picUrl: "./images/music.png",
         mvUrl: "",
         comments: [],
-        music: "",
+        music: "music name",
         isPlay: false
     },
     methods: {
@@ -20,7 +20,7 @@ let app = new Vue({
             )
             .then(value => {
                 let result =  value.map(x => {
-                    let song = {name: x.name, id: x.id};
+                    let song = {name: x.name, id: x.id, mvId: x.mvid};
                     // 获取song的musicUrl
                     axios
                     .get("https://autumnfish.cn/song/url?id=" + x.id)
@@ -37,7 +37,7 @@ let app = new Vue({
                     .catch(err => console.log("出错啦：" + err));
                     // 获取song的mvUrl
                     axios
-                    .get("https://autumnfish.cn/mv/url?id=" + song.id)
+                    .get("https://autumnfish.cn/mv/url?id=" + song.mvId)
                     .then(response => {
                         song.mvUrl = response.data.data.url;
                     })
@@ -54,17 +54,22 @@ let app = new Vue({
                 return result;
             })
             .then(value => {
-                setTimeout(() => that.songs = value, 800)
-                // that.songs = value;
+                // setTimeout(() => that.songs = value, 1000)
+                that.songs = value;
             })
             .catch(err => console.log("出错啦：" + err));
         },
-        playMusic(obj){  
-            this.music = obj.name;
-            this.musicUrl = obj.musicUrl;
-            this.picUrl = obj.picUrl ? obj.picUrl : this.picUrl;
-            this.comments = obj.comments;
-            this.isPlay = true;
+        playMusic(obj){ 
+            // console.log(obj);
+            if(!obj.musicUrl){
+                alert("歌曲地址走丢了")
+            }else{
+                this.music = obj.name;
+                this.musicUrl = obj.musicUrl;
+                this.picUrl = obj.picUrl ? obj.picUrl : this.picUrl;
+                this.comments = obj.comments;
+                this.isPlay = true;
+            }
         },
         change(){
             this.isPlay = !this.isPlay;
@@ -83,6 +88,6 @@ let app = new Vue({
 
 
 //开始前执行getSongs()，构建一份歌曲目录
-app.keyword = "杨幂";
+app.keyword = "胡歌";
 app.getSongs();
 app.keyword = "";

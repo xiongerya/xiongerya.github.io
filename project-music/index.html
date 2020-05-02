@@ -28,14 +28,14 @@
             <div id="main">
                 <div class="list">
                     <ul v-for="item in songs">
-                        <li v-if="item.musicUrl">
+                        <li>
                             <a class="song" @click="playMusic(item)"><i class="fa fa-play"></i>{{ item.name }}</a>
-                            <i class="fa fa-youtube-play" aria-hidden="true" v-if="item.mvUrl" @click="playMv(item.mvUrl)"></i>
+                            <i class="fa fa-youtube-play" aria-hidden="true" v-if="item.mvId" @click="playMv(item.mvUrl)"></i>
                         </li>
                     </ul>
                 </div>
                 <div class="picture">
-                    <!-- <p>{{ this.music }}</p> -->
+                    <h3>{{ this.music }}</h3>
                     <div class="container" v-bind:class="{animated: isPlay}" v-on:click="change">        
                         <img class="cover" v-bind:src="picUrl" />
                         <img class="record" src="./images/record.png" alt="黑胶唱片"/>
