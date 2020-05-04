@@ -1,3 +1,10 @@
+window.addEventListener("resize", function(){
+    window.location.reload(); 
+    window.location.href = "";
+});
+
+
+
 window.addEventListener("load", function(){
     // 获取body下的第一个子元素
     let page = document.body.children[0];
