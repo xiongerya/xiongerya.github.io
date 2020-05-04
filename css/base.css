@@ -21,6 +21,7 @@ body{
     color: var(--text-color,#fbfffe);
     font-size: 14px;
     font-family: sans-serif;
+    width: 100%;
 }
 a{
     color: #fbfffe;
@@ -87,7 +88,7 @@ a{
 @media screen and (max-width: 768px){
     #main{
         width: 100%;
-        margin-left: 65px;
+        padding-left: 65px;
     }
 }
 #main section.wrap{

@@ -73,25 +73,36 @@
 }
 #main .study .items > li{
     display: flex;
+    flex-wrap: nowrap;
     padding: 5px;
     border-top: 1px solid;
     border-top-color: #6d676e;
     border-top-color: var(--back-color, #6d676e);
-    /* overflow: hidden; */
 }
 #main .study .title{
-    width: 100px;
-    display: inline-block;
+    width: 12%;
+    min-width: 100px;
     padding: 10px 0;
     color: #faa916;
-    color: var(--text-color, #faa916);
+    color: var(--sub-title-color, #faa916);
     font-size: 16px;
     line-height: 16px;
-    cursor: pointer;
+    cursor: pointer;    
 }
 #main .study .sub{
+    width: 88%;
     display: none;
-    overflow: hidden;
+}
+@media screen and (max-width: 768px){
+    #main .study .items > li{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #main .study .title,
+    #main .study .sub{
+        width: 100%;
+    }
+
 }
 #main .study .title span{
     display: inline-block;
