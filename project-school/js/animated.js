@@ -9,17 +9,15 @@ window.addEventListener("load", function(){
 
     // menu点击li.sub显示sub-menu动画效果
     let subs = document.querySelectorAll("#menu > li.sub"),
+        sub_menus = document.querySelectorAll("#menu .sub-menu");
         bg = document.querySelector(".bg");
 
     let flag = true;
 
     for(let i = 0; i < subs.length; i++){
        subs[i].addEventListener("click", function(){
-            if(flag){
-                bg.style.height = "270px";
-            }else{
-                bg.style.height = "0";
-            } 
+           sub_menus.forEach(x => x.style.opacity = 1);
+           bg.style.height = flag ? "270px" : 0;
             flag = !flag;  
         })
     }

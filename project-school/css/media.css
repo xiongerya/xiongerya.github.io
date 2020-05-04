@@ -52,6 +52,9 @@
         display: block;
         position: static;
     }
+    .sub-menu{
+        opacity: 1;
+    }
     #menu > li{
         /* height: 100%;  */
         text-align: left;
@@ -180,7 +183,7 @@
         /* border: 1px solid blue; */
     }
 }
-@media only screen and (max-width: 780px){
+@media only screen and (max-width: 768px){
     .notices .icons li{
         width: 25%;
     }

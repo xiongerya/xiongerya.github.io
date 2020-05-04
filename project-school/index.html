@@ -7,18 +7,8 @@
         <link rel="styleSheet" type="text/css" href="css/common.css" />
         <link rel="styleSheet" type="text/css" href="css/index.css" />
         <link rel="styleSheet" type="text/css" href="css/media.css" />
-        <script type="text/javascript" src="js/animated.js"></script>
-        <script type="text/javascript">
-        // 当页面width发生改变，重新加载页面
-        // 效果不太好，需要继续改善该动画
-            var size = window.innerWidth;
-            function resizeFresh(){
-                if(size !== window.innerWidth)
-                    location.reload();
-            }
-        </script>
     </head>
-    <body onresize="resizeFresh()">
+    <body>
         <header>
             <!-- logo & search 部分开始 -->
             <div id="logo">
@@ -377,5 +367,13 @@
                 <p>Copyright © NanTong University 苏ICP备05007127号</p>
            </div>
         </footer>
+
+        <script type="text/javascript">
+            window.addEventListener("resize", function(){
+                window.location.reload(); 
+                window.location.href = "";
+            });
+        </script>
+        <script type="text/javascript" src="js/animated.js"></script>
     </body>
 </html>
