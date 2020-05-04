@@ -80,20 +80,14 @@ a{
 
 /* main style */
 #main{
-    margin: 0 150px;
-    /* max-width: 70%; */
+    width: 80%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 768px){
     #main{
-        margin:0;
-        margin-left: 150px;
-    }
-}
-@media screen and (min-width: 1400px){
-    #main{
-        width: 80%;
-        max-width: 1400px;
-        margin: 0 auto;
+        width: 100%;
+        margin-left: 65px;
     }
 }
 #main section.wrap{

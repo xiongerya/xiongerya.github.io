@@ -22,16 +22,16 @@
     overflow: hidden;
 }
 #main .project .container figure{
-    width: 48%;
+    width: 32%;
 }
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 768px){
     #main .project .container figure{
-        width: 100%;
+        width: 49%;
     }
 }
-@media screen and (min-width: 1400px){
+@media screen and (max-width: 400px){
     #main .project .container figure{
-        width: 31%;
+        width: 100%;
     }
 }
 #main .project .container figcaption{
@@ -77,10 +77,10 @@
     border-top: 1px solid;
     border-top-color: #6d676e;
     border-top-color: var(--back-color, #6d676e);
+    /* overflow: hidden; */
 }
 #main .study .title{
-    width: 10%;
-    min-width: 100px;
+    width: 100px;
     display: inline-block;
     padding: 10px 0;
     color: #faa916;
@@ -90,8 +90,8 @@
     cursor: pointer;
 }
 #main .study .sub{
-    width: 90%;
     display: none;
+    overflow: hidden;
 }
 #main .study .title span{
     display: inline-block;

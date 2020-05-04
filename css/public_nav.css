@@ -3,6 +3,7 @@
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 2;
     height: 100%;
     border-right: 1px solid;
     border-right-color: #464246;
