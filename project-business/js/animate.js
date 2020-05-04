@@ -1,3 +1,11 @@
+window.addEventListener("resize", function(){
+    window.location.reload(); 
+    window.location.href = "";
+});
+
+
+
+
 window.addEventListener("load", function(){  
     // advertise部分，点击close按钮隐藏
     let ad = document.querySelector("#ad"),
