@@ -1,3 +1,20 @@
+/* 公用样式引入 */
+@import url("./base.css");
+@import url("./public_nav.css");
+@import url("./public_header.css");
+@import url("./public_footer.css");
+
+
+
+/* font-class 引用方式引用icon */
+@import url("../font/book/iconfont.css");
+@import url("../font/web/iconfont.css");
+@import url("../font/code/iconfont.css");
+@import url("../font/video/iconfont.css");
+@import url("../font/other/iconfont.css");
+
+
+
 /* main book style */
 #main section h2 .iconfont{
     font-size: inherit;
@@ -40,6 +57,7 @@
     position: relative;
     transform-style: preserve-3d;/*父容器应用，用于制造3D效果*/
     transition: transform 1s;
+    /* overflow: hidden; */
 }
 #main .book .items > li:hover .wrap{
     transform: rotateY(0.5turn);
@@ -58,22 +76,19 @@
     opacity: 0.6;
     transition: opacity 1s 0.5s;
     overflow: hidden;
+    display: table;
 }
 #main .book .items > li:hover .detail{
     opacity: 1;
 }
 #main .book .items .detail .title{
-    padding-bottom: 5px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3;
+    /* border: 1px solid green; */
 }
-#main .book .items .detail .info li{
-    padding: 3px 0;
-    /* text-indent: 10px; */
-    color: #bcb9bd;
-    color: var(--text-color, #bcb9bd);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+
 #main .book a.link{
     color: #faa916;
     color: var(--link-color, #faa916);

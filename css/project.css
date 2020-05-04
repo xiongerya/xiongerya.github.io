@@ -1,3 +1,16 @@
+/* 公用样式引入 */
+@import url("./base.css");
+@import url("./public_nav.css");
+@import url("./public_header.css");
+@import url("./public_footer.css");
+
+
+
+/* font-class 引用方式引用icon */
+@import url("../font/more/iconfont.css");
+
+
+
 /* main style */
 #main section{
     overflow: hidden;
