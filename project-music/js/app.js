@@ -82,12 +82,12 @@ let app = new Vue({
         stopMv(){
             this.mvUrl = "";
         }
+    },
+    // mounted生命周期中获取默认歌曲目录
+    mounted() {
+        this.$nextTick(() => {
+            this.keyword = "胡歌";
+            this.getSongs();
+        })
     }
 })
-
-
-
-//开始前执行getSongs()，构建一份歌曲目录
-app.keyword = "胡歌";
-app.getSongs();
-app.keyword = "";
