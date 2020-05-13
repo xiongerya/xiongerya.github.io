@@ -1,0 +1,113 @@
+/* common style sheet */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ededed;
+}
+ul, ol, dl, dt, dd, li{
+    list-style: none;
+}
+a{
+    color: #333;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* carousel 轮播图结构布局 style*/
+.carousel{
+    position: relative;
+    overflow: hidden;
+}
+.carousel > ul:first-child{
+    width: 1000%;
+    position: relative;
+}
+.carousel > ul:first-child::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+.carousel > ul:first-child > li{
+    width: 10%;
+    float: left;
+}
+.carousel > ul:first-child > li a{
+    display: inline-block;
+}
+.carousel > ul:first-child > li img{
+    width: 100%;
+}
+
+
+
+/* carousel 轮播图切换按钮，结合JavaScript动态使用 */
+.carousel-buttons{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.carousel-buttons li{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 2px solid transparent;
+    background-color: orangered;
+    background-clip: padding-box;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.carousel-buttons li.on{
+    border: 2px solid orangered;
+    background-color: white;
+}
+
+
+
+/* carousel 轮播图 prev & next btn style */
+.arrow{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 36px;
+    background-color: gray;
+    opacity: 0.5;
+    color: white;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    /* 左右文本箭头不能选中 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.arrow:hover{
+    opacity: 1;
+    color: white;
+}
+.prev{
+    left: 0;
+    border-radius: 0 18px 18px 0;
+}
+.next{
+    right: 0;
+    border-radius: 18px 0 0 18px;
+}
