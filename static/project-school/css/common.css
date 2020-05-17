@@ -1,173 +1,198 @@
 /* 利用class选择器定义的通用样式 */
-*{
-    padding: 0;
-    margin: 0;
-} 
-body{
-    min-width: 500px;
-    background-color: #f1efe3;
+* {
+  padding: 0;
+  margin: 0;
 }
+
+body {
+  min-width: 500px;
+  background-color: #f1efe3;
+}
+
 /* 消除浮动的副作用：父元素高度塌陷 */
-.clearfix::after{
-    content: "";
-    display: block;
-    clear: both;
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 
 /* section title style common*/
-.title{
-    /* height: 40px; */
-    border-bottom: 3px solid #800d0a;
-    color: #800d0a;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 3px;
+.title {
+  /* height: 40px; */
+  border-bottom: 3px solid #800d0a;
+  color: #800d0a;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 3px;
 }
-.more{
-    float: right;
+
+.more {
+  float: right;
 }
-.more a{
-    display: block;
-    color: #575757;
-    font-size: 12px;
-    text-decoration: none;
-    letter-spacing: 0;
+
+.more a {
+  display: block;
+  color: #575757;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 0;
 }
 
 
 
 /* items && list style common */
 .items,
-.list{
-    list-style: none;
+.list {
+  list-style: none;
 }
-.items{
-    margin: 15px 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+
+.items {
+  margin: 15px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-.items li{
-    width: 45%;
-    margin: 10px 0;
+
+.items li {
+  width: 45%;
+  margin: 10px 0;
 }
-.items li a{
-    /* display: inline-block; */
-    /* width: 100%; */
-    display: block;
-    color: #820c0c;
-    text-decoration: none;
+
+.items li a {
+  /* display: inline-block; */
+  /* width: 100%; */
+  display: block;
+  color: #820c0c;
+  text-decoration: none;
 }
-.items li img{
-    width: 100%;
+
+.items li img {
+  width: 100%;
 }
-.items li span{
-    display: block;
-    margin: 10px 0;
-    overflow: hidden;
-    font-size: 14px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+.items li span {
+  display: block;
+  margin: 10px 0;
+  overflow: hidden;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.items li span.time{
-    color: #333;
-    font-size: 12px;
+
+.items li span.time {
+  color: #333;
+  font-size: 12px;
 }
-.items li:hover{
-    opacity: 0.9;
+
+.items li:hover {
+  opacity: 0.9;
 }
-.items li:hover span.time{
-    color: #910f0f;
+
+.items li:hover span.time {
+  color: #910f0f;
 }
 
 
 
 /* .list style css common*/
-.list{
-    list-style: none;
-    width: 100%;
-    margin: 20px 0;
-    background-color: #cdc9c0;
+.list {
+  list-style: none;
+  width: 100%;
+  margin: 20px 0;
+  background-color: #cdc9c0;
 }
-.list > li{
-    padding: 10px 0;
-    margin: 0 15px;
-    border-bottom: 1px solid #333;
-    position: relative;
+
+.list>li {
+  padding: 10px 0;
+  margin: 0 15px;
+  border-bottom: 1px solid #333;
+  position: relative;
 }
-.list > li::after{
-    content: "";
-    display: block;
-    clear: both;
+
+.list>li::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-.list > li:last-child{
-    border-bottom: none;
+
+.list>li:last-child {
+  border-bottom: none;
 }
-.list > li > ul{
-    list-style: none;
-    width: 55px;
-    height: 55px;
-    background-color: white;
-    float: left;
+
+.list>li>ul {
+  list-style: none;
+  width: 55px;
+  height: 55px;
+  background-color: white;
+  float: left;
 }
-.list > li > ul li{
-    height: 50%;
-    font-size: 12px;
-    line-height: 200%;
-    text-align: center;
+
+.list>li>ul li {
+  height: 50%;
+  font-size: 12px;
+  line-height: 200%;
+  text-align: center;
 }
-.list > li > ul li:first-child{
-    background-color: #800d0a;
-    color: white;
-    font-size: 14px;
+
+.list>li>ul li:first-child {
+  background-color: #800d0a;
+  color: white;
+  font-size: 14px;
 }
-.list > li:hover > ul li:nth-child(2){
-    background-color: #dfdfdf;
+
+.list>li:hover>ul li:nth-child(2) {
+  background-color: #dfdfdf;
 }
-.list > li p{
-    padding-left: 70px;
-    /* float: left; */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
+.list>li p {
+  padding-left: 70px;
+  /* float: left; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.list > li a{
-    display: block;
-    color: #000;
-    text-decoration: none;
+
+.list>li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
 }
-.list > li:hover a{
-    color: #820c0c;
+
+.list>li:hover a {
+  color: #820c0c;
 }
 
 
 
 /* icons style css common*/
-.icons{
-    margin-top: 40px;
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+.icons {
+  margin-top: 40px;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-.icons li{
-    width: 30%;
-    text-align: center;
+
+.icons li {
+  width: 30%;
+  text-align: center;
 }
-.icons li a{
-    display: inline-block;
-    width: 80px;
-    height: 20px;
-    padding-top: 60px;
-    background: url(../images/icon.png) no-repeat;
-    background-origin: padding-box;
-    color: #333;
-    font-size: 14px;
-    vertical-align: bottom;
-    text-decoration: none;
+
+.icons li a {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  padding-top: 60px;
+  background: url(../images/icon.png) no-repeat;
+  background-origin: padding-box;
+  color: #333;
+  font-size: 14px;
+  vertical-align: bottom;
+  text-decoration: none;
 }
-.icons a:hover{
-    opacity: 0.9;
-    color: #910f0f;
+
+.icons a:hover {
+  opacity: 0.9;
+  color: #910f0f;
 }

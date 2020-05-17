@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music player</title>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="./css/base.css" />
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="stylesheet" type="text/css" href="./css/media.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music player</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="./css/base.css" />
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <link rel="stylesheet" type="text/css" href="./css/media.css" />
 </head>
+
 <body>
 
-    <div id="app">
+  <div id="app">
 
-        <div class="wrap">
-            <div id="header">
-                <h1 class="logo">
-                    <i class="fa fa-music"></i>&nbsp;&nbsp;<span>Music Player</span>
-                </h1>
-                <div class="search">
-                    <!-- onkeypress="if(event.keyCode == 13) return false;" -->
-                    <input type="text" placeholder="输入曲名/歌手" v-model="keyword" @keyup.enter="getSongs" />
-                    <span class="fa fa-search" @click="getSongs"></span>
-                </div>
-            </div>
-    
-            <div id="main">
-                <div class="list">
-                    <ul v-for="item in songs">
-                        <li>
-                            <a class="song" @click="playMusic(item)"><i class="fa fa-play"></i>{{ item.name }}</a>
-                            <i class="fa fa-youtube-play" aria-hidden="true" v-if="item.mvId" @click="playMv(item.mvUrl)"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div class="picture">
-                    <h3>{{ this.music }}</h3>
-                    <div class="container" v-bind:class="{animated: isPlay}" v-on:click="change">        
-                        <img class="cover" v-bind:src="picUrl" />
-                        <img class="record" src="./images/record.png" alt="黑胶唱片"/>
-                    </div>  
-                </div>
-                <div class="comment">
-                    <h4>精选留言</h4>
-                    <ul>
-                        <li class="item" v-for="item in comments">
-                            <img v-bind:src="item.user.avatarUrl" alt="用户头像" />
-                            <div class="text">
-                                <h6>{{ item.user.nickname }}</h6>
-                                <p>{{ item.content }}</p>
-                            </div>                         
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="audio">
-                <audio ref="audio" v-bind:src="musicUrl" v-on:play="isPlay = true" v-on:pause="isPlay = false" autoplay controls volume loop></audio>
-            </div>
+    <div class="wrap">
+      <div id="header">
+        <h1 class="logo">
+          <i class="fa fa-music"></i>&nbsp;&nbsp;<span>Music Player</span>
+        </h1>
+        <div class="search">
+          <!-- onkeypress="if(event.keyCode == 13) return false;" -->
+          <input type="text" placeholder="输入曲名/歌手" v-model="keyword" @keyup.enter="getSongs" />
+          <span class="fa fa-search" @click="getSongs"></span>
         </div>
-        
-        <div v-bind:class="['video', mvUrl ? 'show' : 'hide']" v-on:click="stopMv">
-            <video v-bind:src="mvUrl" v-on:click.stop controls></video>
+      </div>
+
+      <div id="main">
+        <div class="list">
+          <ul v-for="item in songs">
+            <li>
+              <a class="song" @click="playMusic(item)"><i class="fa fa-play"></i>{{ item.name }}</a>
+              <i class="fa fa-youtube-play" aria-hidden="true" v-if="item.mvId" @click="playMv(item.mvUrl)"></i>
+            </li>
+          </ul>
         </div>
-    
+        <div class="picture">
+          <h3>{{ this.music }}</h3>
+          <div class="container" v-bind:class="{animated: isPlay}" v-on:click="change">
+            <img class="cover" v-bind:src="picUrl" />
+            <img class="record" src="./images/record.png" alt="黑胶唱片" />
+          </div>
+        </div>
+        <div class="comment">
+          <h4>精选留言</h4>
+          <ul>
+            <li class="item" v-for="item in comments">
+              <img v-bind:src="item.user.avatarUrl" alt="用户头像" />
+              <div class="text">
+                <h6>{{ item.user.nickname }}</h6>
+                <p>{{ item.content }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="audio">
+        <audio ref="audio" v-bind:src="musicUrl" v-on:play="isPlay = true" v-on:pause="isPlay = false" autoplay controls
+          volume loop></audio>
+      </div>
     </div>
 
-    <!-- javascript -->
-    <script src="../lib/jquery-3.4.1.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/app.js"></script>
+    <div v-bind:class="['video', mvUrl ? 'show' : 'hide']" v-on:click="stopMv">
+      <video v-bind:src="mvUrl" v-on:click.stop controls></video>
+    </div>
+
+  </div>
+
+  <!-- javascript -->
+  <script src="../lib/jquery-3.4.1.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/app.js"></script>
 
 </body>
+
 </html>

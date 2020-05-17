@@ -1,24 +1,29 @@
-*{
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-    box-sizing: border-box;
-}
-html{
-    --bg-color: hsl(0,100%, 30%);
-    font-size: 8px;
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
 }
 
-body{
-    /* overflow-y: scroll; */
-    font-size: 1.6rem;
-    line-height: 1.5;
+html {
+  --bg-color: hsl(0, 100%, 30%);
+  font-size: 8px;
 }
-ul, ol, li{
-    list-style-type: none;
+
+body {
+  /* overflow-y: scroll; */
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
-.clear::after{
-    display: block;
-    content: "";
-    clear: both;
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+.clear::after {
+  display: block;
+  content: "";
+  clear: both;
 }
